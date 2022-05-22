@@ -1,3 +1,5 @@
+//wondering where the extra space between lines is coming from - Lia
+
 // Practice with a single number
 const num = 12;
 
@@ -12,7 +14,7 @@ if (num > 10) {
     console.log('num is greater than 10');
 }
 
-//wondering where the extra space between lines is coming from - Lia
+
 process.stdout.write('\n2. ');
 /*
 2. Only print the message 'num is less than 100' when appropriate.
@@ -53,16 +55,17 @@ process.stdout.write('\n6. ');
 /*
 6. 'num is an even number between 20 and 30' (inclusive)
 */
-if (num % 2 === 0 && num > 10 && num < 100) {
-    console.log('num is even');
-} else {
-    console.log('num is odd');
+if (num % 2 === 0 && (num => 20) && (num <= 30)) {
+    console.log('num is even and between 20 and 30');
 }
 
 process.stdout.write('\n7. ');
 /*
 7. 'num is odd or negative'
 */
+if (num % 2 === 1 || num < 0) {
+    console.log('num is odd or negative');
+}
 
 
 // Practice comparing numbers
@@ -74,16 +77,21 @@ process.stdout.write('The bigger number is: ');
 /*
 8. Print either x or y, whichever is bigger.
 */
+if (x > y) {
+    console.log('x');
+} else { console.log('y'); }
 
 
 process.stdout.write('\n9. ');
 /*
 9. Print either the message 'x and y are equal' or 'x and y are not equal'.
 */
-
+if (x === y) {
+    console.log('x and y are equal');
+} else { console.log('x and y are not equal'); }
 
 // Let's add another number into the mix.
-const z = 2;
+const z = 10;
 
 process.stdout.write('\n10. ');
 process.stdout.write('The biggest number is: ');
@@ -91,6 +99,11 @@ process.stdout.write('The biggest number is: ');
 10. Print either x, y, or z, whichever is bigger.
 Remember to change the values of x, y, and z to make sure it works!
 */
+if (x > y && x > z) {
+    console.log('x');
+} else if (y > x && y > z) {
+    console.log('y is biggest');
+} else { console.log('z'); }
 
 
 // Practice with more operators
@@ -103,7 +116,13 @@ process.stdout.write('\n11. ');
 
 Notice that the wallet is in cents and the price is in dollars, so you'll have to do a bit of work to compare them.
 */
-
+const priceInCents = priceInDollars * 100;
+if (priceInCents === walletInCents) {
+    console.log('Exact amount!');
+} else
+if (priceInCents < walletInCents) {
+    console.log('More than enough');
+} else { console.log('Not enough money'); }
 
 process.stdout.write('\n12. ');
 /*
