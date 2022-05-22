@@ -8,25 +8,35 @@ process.stdout.write('1. ');
 1. Only print the following message if num is greater than 10.
 Try changing the value of num to make sure your code works.
 */
-console.log('num is greater than 10');
+if (num > 10) {
+    console.log('num is greater than 10');
+}
 
+//wondering where the extra space between lines is coming from - Lia
 process.stdout.write('\n2. ');
 /*
 2. Only print the message 'num is less than 100' when appropriate.
 */
+if (num < 100) {
+    console.log('num is less than 100');
+}
 
 
 process.stdout.write('\n3. ');
 /*
 3. Now do the same with 'num is a positive number'.
 */
-
+if (num >= 0) {
+    console.log('num is positive');
+}
 
 process.stdout.write('\n4. ');
 /*
 4. 'num is between 10 and 100' (exclusive)
 */
-
+if (num > 10 && num < 100) {
+    console.log('num is b/w 10 and 100');
+}
 
 process.stdout.write('\n5. ');
 /*
@@ -156,4 +166,3 @@ process.stdout.write('\n16. ');
 - Tripling it gives an even number
 - It is divisible by either 5 or 7
 */
-
