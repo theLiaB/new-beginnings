@@ -53,7 +53,11 @@ process.stdout.write('\n6. ');
 /*
 6. 'num is an even number between 20 and 30' (inclusive)
 */
-
+if (num % 2 === 0 && num > 10 && num < 100) {
+    console.log('num is even');
+} else {
+    console.log('num is odd');
+}
 
 process.stdout.write('\n7. ');
 /*
