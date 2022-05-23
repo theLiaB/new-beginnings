@@ -208,7 +208,11 @@ password and their salary is within the junior range, print 'Welcome, junior emp
 
 If you notice you're repeating a certain condition more than once, try nesting if statements to avoid the repeitition.
 */
+if ((myUsername === employeeUsername || myUsername === ceoUsername) && (myPassword === ceoPassword || )) {
 
+} else {
+    console.log('Incorrect username')
+}
 
 // Practice complex conditions
 const creditCard = 123;
