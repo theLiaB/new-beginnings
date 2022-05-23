@@ -142,13 +142,18 @@ if (priceInCents < walletInCents) {
 // Practice comparing strings
 let username = 'Alice';
 let password = '1234';
-const expectedUsername = 'Zed';
-const expectedPassword = '9876';
+const expectedUsername = 'Alice';
+const expectedPassword = '1234';
 
 process.stdout.write('\n13. ');
 /*
 13. To simulate authentication, we have a username, a password, and expected values for each. The login is successful if the username and password match the expected values. Otherwise, either the username is wrong or the password is wrong. Print appropriate messages for each of the 3 cases. (Don't worry about the case where the username and password are both wrong; one of the other cases will catch it.)
 */
+if (expectedUsername === username && expectedPassword === password) {
+    console.log('Logged in!')
+} else if (expectedUsername !== username) {
+    console.log('username is wrong')
+} else { console.log('password is wrong'); }
 
 
 // Practice nesting conditionals
