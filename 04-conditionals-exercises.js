@@ -127,14 +127,15 @@ if (priceInCents < walletInCents) {
 process.stdout.write('\n12. ');
 /*
 12. Do the same thing as in 11, but let's add in some error handling. In the case where the wallet is negative, print 'Wallet cannot be negative.' When the price is negative, print 'Price cannot be negative.' Think about the importance of the order of the */
-if (priceInCents === walletInCents) {
+if (walletInCents <0) { 
+console.log('wallet cannot be negative')}
+else if (priceInCents <0) {console.log('price cannot be negative')} 
+else if (priceInCents === walletInCents) {
     console.log('Exact amount!');
 } else
 if (priceInCents < walletInCents) {
     console.log('More than enough');
-} else if (walletInCents <0) { 
-console.log('wallet cannot be negative')}
-
+}
 else { console.log('Not enough money'); }
 
 
