@@ -1,7 +1,7 @@
 // Practice with more information
-const myUsername = 'Alice';
-const myPassword = '1234';
-const salary = 25000;
+const myUsername = 'Xyrho';
+const myPassword = '9876';
+const salary = 80000;
 
 const employeeUsername = 'Zarya';
 const employeePassword = '9876';
@@ -31,15 +31,17 @@ If you notice you're repeating a certain condition more than once, try nesting i
 if ((myUsername === employeeUsername || myUsername === ceoUsername) &&
     (myPassword === ceoPassword || myPassword === employeePassword)) {
     if (myUsername === employeeUsername && myPassword === employeePassword) {
-        if (juniorSalaryMaximum => salary <= juniorSalaryMinimum) {
+        if (salary <= juniorSalaryMaximum && salary >= juniorSalaryMinimum) {
             console.log('Welcome, junior employee Zarya.')
+        } else if (salary < juniorSalaryMinimum) {
+            console.log('You`re underpaid!')
         } else { console.log('Welcome, employee Zarya.') }
-        if (myUsername === ceoUsername && myPassword === ceoPassword) {
-            if (ceoSalaryMinimum > salary || ceoSalaryMaximum < salary) {
-                console.log('Welcome, CEO')
-            }
-        } else { console.log('Imposter!') }
-    } else {
-        console.log('Invalid login');
     }
-}
+    if (myUsername === ceoUsername && myPassword === ceoPassword) {
+        if (salary > ceoSalaryMinimum) {
+            console.log('Welcome, CEO!')
+        } else {
+            console.log('Imposter!')
+        }
+    }
+} else { console.log('Invalid login!') }
