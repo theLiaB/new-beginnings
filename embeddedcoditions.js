@@ -1,7 +1,7 @@
 // Practice with more information
-const myUsername = 'Xyrho';
-const myPassword = '9876';
-const salary = 80000;
+const myUsername = 'Zarya';
+const myPassword = 'hunter2';
+const salary = 10000;
 
 const employeeUsername = 'Zarya';
 const employeePassword = '9876';
@@ -28,8 +28,8 @@ password and their salary is within the junior range, print 'Welcome, junior emp
 
 If you notice you're repeating a certain condition more than once, try nesting if statements to avoid the repeitition.
 */
-if ((myUsername === employeeUsername || myUsername === ceoUsername) &&
-    (myPassword === ceoPassword || myPassword === employeePassword)) {
+if ((myUsername === employeeUsername && myPassword === employeePassword) ||
+    (myPassword === ceoPassword && myPassword === ceoPassword)) {
     if (myUsername === employeeUsername && myPassword === employeePassword) {
         if (salary <= juniorSalaryMaximum && salary >= juniorSalaryMinimum) {
             console.log('Welcome, junior employee Zarya.')
@@ -38,10 +38,8 @@ if ((myUsername === employeeUsername || myUsername === ceoUsername) &&
         } else { console.log('Welcome, employee Zarya.') }
     }
     if (myUsername === ceoUsername && myPassword === ceoPassword) {
-        if (salary > ceoSalaryMinimum) {
+        if (salary >= ceoSalaryMinimum) {
             console.log('Welcome, CEO!')
-        } else {
-            console.log('Imposter!')
-        }
+        } else { console.log('Imposter!') }
     }
 } else { console.log('Invalid login!') }
