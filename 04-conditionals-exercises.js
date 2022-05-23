@@ -208,18 +208,20 @@ password and their salary is within the junior range, print 'Welcome, junior emp
 
 If you notice you're repeating a certain condition more than once, try nesting if statements to avoid the repeitition.
 */
-if (myUsername === employeeUsername || myUsername === ceoUsername && myPassword === ceoPassword || myPassword === EmployeePassword) {
-    if (myUsername === employeeUsername) {
+if ((myUsername === employeeUsername || myUsername === ceoUsername) &&
+    (myPassword === ceoPassword || myPassword === employeePassword)) {
+    if (myUsername === employeeUsername && myPassword === employeePassword) {
         if (juniorSalaryMaximum => salary <= juniorSalaryMinimum) {
             console.log('Welcome, junior employee Zarya.')
         } else { console.log('Welcome, employee Zarya.') }
-        if (ceoSalaryMinimum => salary <= juniorSalaryMinimum) {
-            console.log('Welcome, junior employee Zarya.')
-            else if (salary < juniorSalaryMinimum || salary > seniorSalaryMaximum) { console.log('Welcome, employee Zarya.') } else { console.log('impostor!') }
-        }
+        if (myUsername === ceoUsername && myPassword === ceoPassword) {
+            if (ceoSalaryMinimum > salary || ceoSalaryMaximum < salary) {
+                console.log('Welcome, CEO')
+            }
+        } else { console.log('Imposter!') }
+    } else {
+        console.log('Invalid login');
     }
-} else {
-    console.log('Invalid login');
 }
 
 // Practice complex conditions
