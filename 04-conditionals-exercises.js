@@ -157,8 +157,8 @@ if (expectedUsername === username && expectedPassword === password) {
 
 
 // Practice nesting conditionals
-const a = 1;
-const b = 2;
+const a = -1;
+const b = 1;
 
 process.stdout.write('\n14. ');
 /*
@@ -170,7 +170,13 @@ No match of positive numbers.
 No match of negative numbers.
 No match.
 */
-
+if (a === b) {
+    if (a > 0) { console.log('Matching + #s') } else { console.log('Matching - #s') }
+} else if (a > 0 && b > 0) {
+    console.log('No match of positive numbers')
+} else if (a < 0 && b < 0) {
+    console.log('No match of negative numbers')
+} else { console.log('No match') }
 
 // Practice with more information
 const myUsername = 'Alice';
@@ -191,7 +197,14 @@ const ceoSalaryMinimum = 110000;
 
 process.stdout.write('\n15. ');
 /*
-15. We have another authentication, but this time with a salary as well. We want to print a personalized welcome message to users who log in. For example, if the username and password match the employee username and password and their salary is within the junior range, print 'Welcome, junior employee Zarya.' In the case where the salary is not within any of the set ranges, simply print 'Welcome, employee Zarya.' If the username and password match the CEO credentials but the salary is below the CEO's minimum salary, we have an imposter! For an invalid login, just print 'Invalid login.' (don't worry about whether it was the username or password that didn't match).
+15. We have another authentication, but this time with a salary as well. 
+We want to print a personalized welcome message to users who log in. 
+For example, if the username and password match the employee username and 
+password and their salary is within the junior range, print 'Welcome, junior employee Zarya.'
+ In the case where the salary is not within any of the set ranges, simply print 
+ 'Welcome, employee Zarya.' If the username and password match the CEO credentials 
+ but the salary is below the CEO's minimum salary, we have an imposter! For an invalid login, 
+ just print 'Invalid login.' (don't worry about whether it was the username or password that didn't match).
 
 If you notice you're repeating a certain condition more than once, try nesting if statements to avoid the repeitition.
 */
