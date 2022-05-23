@@ -107,8 +107,8 @@ if (x > y && x > z) {
 
 
 // Practice with more operators
-const walletInCents = 25;
-const priceInDollars = 1.25;
+const walletInCents = 126;
+const priceInDollars = -1.25;
 
 process.stdout.write('\n11. ');
 /*
@@ -127,16 +127,16 @@ if (priceInCents < walletInCents) {
 process.stdout.write('\n12. ');
 /*
 12. Do the same thing as in 11, but let's add in some error handling. In the case where the wallet is negative, print 'Wallet cannot be negative.' When the price is negative, print 'Price cannot be negative.' Think about the importance of the order of the */
-if (walletInCents <0) { 
-console.log('wallet cannot be negative')}
-else if (priceInCents <0) {console.log('price cannot be negative')} 
-else if (priceInCents === walletInCents) {
+if (walletInCents < 0 && priceInCents < 0) {
+    console.log('neither price or wallet value can be negative')
+} else if (walletInCents < 0) {
+    console.log('wallet cannot be negative')
+} else if (priceInCents < 0) { console.log('price cannot be negative') } else if (priceInCents === walletInCents) {
     console.log('Exact amount!');
 } else
 if (priceInCents < walletInCents) {
     console.log('More than enough');
-}
-else { console.log('Not enough money'); }
+} else { console.log('Not enough money'); }
 
 
 // Practice comparing strings
