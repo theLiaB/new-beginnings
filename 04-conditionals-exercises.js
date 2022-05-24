@@ -179,9 +179,9 @@ if (a === b) {
 } else { console.log('No match') }
 
 // Practice with more information
-const myUsername = 'Alice';
-const myPassword = '1234';
-const salary = 25000;
+const myUsername = 'Zarya';
+const myPassword = '9876';
+const salary = 80000;
 
 const employeeUsername = 'Zarya';
 const employeePassword = '9876';
@@ -208,21 +208,21 @@ password and their salary is within the junior range, print 'Welcome, junior emp
 
 If you notice you're repeating a certain condition more than once, try nesting if statements to avoid the repeitition.
 */
-if ((myUsername === employeeUsername || myUsername === ceoUsername) &&
-    (myPassword === ceoPassword || myPassword === employeePassword)) {
-    if (myUsername === employeeUsername && myPassword === employeePassword) {
-        if (juniorSalaryMaximum => salary <= juniorSalaryMinimum) {
-            console.log('Welcome, junior employee Zarya.')
-        } else { console.log('Welcome, employee Zarya.') }
-        if (myUsername === ceoUsername && myPassword === ceoPassword) {
-            if (ceoSalaryMinimum > salary || ceoSalaryMaximum < salary) {
-                console.log('Welcome, CEO')
-            }
-        } else { console.log('Imposter!') }
-    } else {
-        console.log('Invalid login');
-    }
-}
+if (myUsername === employeeUsername && myPassword === employeePassword) {
+    if (salary <= juniorSalaryMaximum && salary >= juniorSalaryMinimum) {
+        console.log('Welcome, junior employee Zarya.')
+    } else if (salary < juniorSalaryMinimum) {
+        console.log('You`re underpaid!')
+    } else { console.log('Welcome, employee Zarya.') }
+} else if (myPassword === ceoPassword && myUsername === ceoUsername) {
+    if (salary >= ceoSalaryMinimum) {
+        console.log('Welcome, CEO!')
+    } else { console.log('Imposter!') }
+} else { console.log('Invalid login!') }
+
+/*Thoughts on how to divide up the problem response:Error handling right away and do happy path after or the opposite.
+Benefit of doing error handling first is that there isn't digging down into the code block to get to changing things.
+Also consider going around the user journey. *\
 
 // Practice complex conditions
 const creditCard = 123;
