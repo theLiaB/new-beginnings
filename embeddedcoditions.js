@@ -1,7 +1,7 @@
 // Practice with more information
 const myUsername = 'Zarya';
-const myPassword = 'hunter2';
-const salary = 10000;
+const myPassword = '9876';
+const salary = 80000;
 
 const employeeUsername = 'Zarya';
 const employeePassword = '9876';
