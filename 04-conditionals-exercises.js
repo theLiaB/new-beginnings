@@ -225,13 +225,22 @@ Benefit of doing error handling first is that there isn't digging down into the 
 Also consider going around the user journey. *\
 
 // Practice complex conditions
-const creditCard = 123;
 
-process.stdout.write('\n16. ');
+
 /*
 16. Print a message saying whether the credit card number is valid or not. A valid credit card in this system must have all of the following properties:
 
-- It is exactly 5 digits and doesn't begin with any 0's
+- It is exactly 5 digits
+- doesn't begin with any 0's
 - Tripling it gives an even number
 - It is divisible by either 5 or 7
 */
+
+process.stdout.write('\n16. ');
+const creditCard = [1,2,4,7,3];
+
+if (creditCard[0]===0){
+  console.log("card number can't start with 0");} 
+else if (creditCard.length < 5){console.log("card number is too short");} 
+else if (creditCard.length < 5){console.log("card number is too short");} 
+else { console.log('payment works')}
