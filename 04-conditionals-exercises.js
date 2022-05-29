@@ -241,6 +241,8 @@ const creditCard = [1,2,4,7,3];
 
 if (creditCard[0]===0){
   console.log("card number can't start with 0");} 
-else if (creditCard.length < 5){console.log("card number is too short");} 
-else if (creditCard.length < 5){console.log("card number is too short");} 
+else if (creditCard.length < 5)
+{console.log("card number is too short");} 
+else if (creditCard.length < 5)
+{console.log("card number is too short");} 
 else { console.log('payment works')}
