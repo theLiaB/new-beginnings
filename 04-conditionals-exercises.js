@@ -4,113 +4,113 @@
 const num = 12;
 
 // Ignore any lines that look like this
-process.stdout.write('1. ');
+process.stdout.write("1. ");
 
 /*
 1. Only print the following message if num is greater than 10.
 Try changing the value of num to make sure your code works.
 */
 if (num > 10) {
-    console.log('num is greater than 10');
+    console.log("num is greater than 10");
 }
 
-
-process.stdout.write('\n2. ');
+process.stdout.write("\n2. ");
 /*
 2. Only print the message 'num is less than 100' when appropriate.
 */
 if (num < 100) {
-    console.log('num is less than 100');
+    console.log("num is less than 100");
 }
 
-
-process.stdout.write('\n3. ');
+process.stdout.write("\n3. ");
 /*
 3. Now do the same with 'num is a positive number'.
 */
 if (num >= 0) {
-    console.log('num is positive');
+    console.log("num is positive");
 }
 
-process.stdout.write('\n4. ');
+process.stdout.write("\n4. ");
 /*
 4. 'num is between 10 and 100' (exclusive)
 */
 if (num > 10 && num < 100) {
-    console.log('num is b/w 10 and 100');
+    console.log("num is b/w 10 and 100");
 }
 
-process.stdout.write('\n5. ');
+process.stdout.write("\n5. ");
 /*
 5. 'num is even'
 */
 if (num % 2 === 0) {
-    console.log('num is even');
+    console.log("num is even");
 } else {
-    console.log('num is odd');
+    console.log("num is odd");
 }
 
-
-process.stdout.write('\n6. ');
+process.stdout.write("\n6. ");
 /*
 6. 'num is an even number between 20 and 30' (inclusive)
 */
-if (num % 2 === 0 && (num => 20) && (num <= 30)) {
-    console.log('num is even and between 20 and 30');
+if (num % 2 === 0 && ((num) => 20) && num <= 30) {
+    console.log("num is even and between 20 and 30");
 }
 
-process.stdout.write('\n7. ');
+process.stdout.write("\n7. ");
 /*
 7. 'num is odd or negative'
 */
 if (num % 2 === 1 || num < 0) {
-    console.log('num is odd or negative');
+    console.log("num is odd or negative");
 }
-
 
 // Practice comparing numbers
 const x = 3;
 const y = 5;
 
-process.stdout.write('\n8. ');
-process.stdout.write('The bigger number is: ');
+process.stdout.write("\n8. ");
+process.stdout.write("The bigger number is: ");
 /*
 8. Print either x or y, whichever is bigger.
 */
 if (x > y) {
-    console.log('x');
-} else { console.log('y'); }
+    console.log("x");
+} else {
+    console.log("y");
+}
 
-
-process.stdout.write('\n9. ');
+process.stdout.write("\n9. ");
 /*
 9. Print either the message 'x and y are equal' or 'x and y are not equal'.
 */
 if (x === y) {
-    console.log('x and y are equal');
-} else { console.log('x and y are not equal'); }
+    console.log("x and y are equal");
+} else {
+    console.log("x and y are not equal");
+}
 
 // Let's add another number into the mix.
 const z = 10;
 
-process.stdout.write('\n10. ');
-process.stdout.write('The biggest number is: ');
+process.stdout.write("\n10. ");
+process.stdout.write("The biggest number is: ");
 /*
 10. Print either x, y, or z, whichever is bigger.
 Remember to change the values of x, y, and z to make sure it works!
 */
 if (x > y && x > z) {
-    console.log('x');
+    console.log("x");
 } else if (y > x && y > z) {
-    console.log('y is biggest');
-} else { console.log('z'); }
-
+    console.log("y is biggest");
+} else {
+    console.log("z");
+}
 
 // Practice with more operators
 const walletInCents = 126;
 const priceInDollars = -1.25;
 
-process.stdout.write('\n11. ');
+process.stdout.write("\n11. ");
 /*
 11. Print 'Exact amount!' when the wallet contains the exact amount for the price. Print 'More than enough.' when there is more than enough money in the wallet. Print 'Not enough money.' when there is not enough money in the wallet.
 
@@ -118,49 +118,53 @@ Notice that the wallet is in cents and the price is in dollars, so you'll have t
 */
 const priceInCents = priceInDollars * 100;
 if (priceInCents === walletInCents) {
-    console.log('Exact amount!');
-} else
-if (priceInCents < walletInCents) {
-    console.log('More than enough');
-} else { console.log('Not enough money'); }
+    console.log("Exact amount!");
+} else if (priceInCents < walletInCents) {
+    console.log("More than enough");
+} else {
+    console.log("Not enough money");
+}
 
-process.stdout.write('\n12. ');
+process.stdout.write("\n12. ");
 /*
 12. Do the same thing as in 11, but let's add in some error handling. In the case where the wallet is negative, print 'Wallet cannot be negative.' When the price is negative, print 'Price cannot be negative.' Think about the importance of the order of the */
 if (walletInCents < 0 && priceInCents < 0) {
-    console.log('neither price or wallet value can be negative')
+    console.log("neither price or wallet value can be negative");
 } else if (walletInCents < 0) {
-    console.log('wallet cannot be negative')
-} else if (priceInCents < 0) { console.log('price cannot be negative') } else if (priceInCents === walletInCents) {
-    console.log('Exact amount!');
-} else
-if (priceInCents < walletInCents) {
-    console.log('More than enough');
-} else { console.log('Not enough money'); }
-
+    console.log("wallet cannot be negative");
+} else if (priceInCents < 0) {
+    console.log("price cannot be negative");
+} else if (priceInCents === walletInCents) {
+    console.log("Exact amount!");
+} else if (priceInCents < walletInCents) {
+    console.log("More than enough");
+} else {
+    console.log("Not enough money");
+}
 
 // Practice comparing strings
-let username = 'Alice';
-let password = '1234';
-const expectedUsername = 'Alice';
-const expectedPassword = '1234';
+let username = "Alice";
+let password = "1234";
+const expectedUsername = "Alice";
+const expectedPassword = "1234";
 
-process.stdout.write('\n13. ');
+process.stdout.write("\n13. ");
 /*
 13. To simulate authentication, we have a username, a password, and expected values for each. The login is successful if the username and password match the expected values. Otherwise, either the username is wrong or the password is wrong. Print appropriate messages for each of the 3 cases. (Don't worry about the case where the username and password are both wrong; one of the other cases will catch it.)
 */
 if (expectedUsername === username && expectedPassword === password) {
-    console.log('Logged in!')
+    console.log("Logged in!");
 } else if (expectedUsername !== username) {
-    console.log('username is wrong')
-} else { console.log('password is wrong'); }
-
+    console.log("username is wrong");
+} else {
+    console.log("password is wrong");
+}
 
 // Practice nesting conditionals
 const a = -1;
 const b = 1;
 
-process.stdout.write('\n14. ');
+process.stdout.write("\n14. ");
 /*
 14. Print the appropriate message for any of the following cases comparing a and b:
 
@@ -171,22 +175,28 @@ No match of negative numbers.
 No match.
 */
 if (a === b) {
-    if (a > 0) { console.log('Matching + #s') } else { console.log('Matching - #s') }
+    if (a > 0) {
+        console.log("Matching + #s");
+    } else {
+        console.log("Matching - #s");
+    }
 } else if (a > 0 && b > 0) {
-    console.log('No match of positive numbers')
+    console.log("No match of positive numbers");
 } else if (a < 0 && b < 0) {
-    console.log('No match of negative numbers')
-} else { console.log('No match') }
+    console.log("No match of negative numbers");
+} else {
+    console.log("No match");
+}
 
 // Practice with more information
-const myUsername = 'Zarya';
-const myPassword = '9876';
+const myUsername = "Zarya";
+const myPassword = "9876";
 const salary = 80000;
 
-const employeeUsername = 'Zarya';
-const employeePassword = '9876';
-const ceoUsername = 'Xyrho';
-const ceoPassword = 'hunter2';
+const employeeUsername = "Zarya";
+const employeePassword = "9876";
+const ceoUsername = "Xyrho";
+const ceoPassword = "hunter2";
 const juniorSalaryMinimum = 50000;
 const juniorSalaryMaximum = 70000;
 const intermediateSalaryMinimum = 75000;
@@ -195,7 +205,7 @@ const seniorSalaryMinimum = 95000;
 const seniorSalaryMaximum = 120000;
 const ceoSalaryMinimum = 110000;
 
-process.stdout.write('\n15. ');
+process.stdout.write("\n15. ");
 /*
 15. We have another authentication, but this time with a salary as well. 
 We want to print a personalized welcome message to users who log in. 
@@ -210,15 +220,21 @@ If you notice you're repeating a certain condition more than once, try nesting i
 */
 if (myUsername === employeeUsername && myPassword === employeePassword) {
     if (salary <= juniorSalaryMaximum && salary >= juniorSalaryMinimum) {
-        console.log('Welcome, junior employee Zarya.')
+        console.log("Welcome, junior employee Zarya.");
     } else if (salary < juniorSalaryMinimum) {
-        console.log('You`re underpaid!')
-    } else { console.log('Welcome, employee Zarya.') }
+        console.log("You`re underpaid!");
+    } else {
+        console.log("Welcome, employee Zarya.");
+    }
 } else if (myPassword === ceoPassword && myUsername === ceoUsername) {
     if (salary >= ceoSalaryMinimum) {
-        console.log('Welcome, CEO!')
-    } else { console.log('Imposter!') }
-} else { console.log('Invalid login!') }
+        console.log("Welcome, CEO!");
+    } else {
+        console.log("Imposter!");
+    }
+} else {
+    console.log("Invalid login!");
+}
 
 /*Thoughts on how to divide up the problem response:Error handling right away and do happy path after or the opposite.
 Benefit of doing error handling first is that there isn't digging down into the code block to get to changing things.
@@ -236,13 +252,21 @@ Also consider going around the user journey. *\
 - It is divisible by either 5 or 7
 */
 
-process.stdout.write('\n16. ');
-const creditCard = [1,2,4,7,3];
+process.stdout.write("\n16. ");
+const creditCard = [1, 2, 4, 7, 7];
 
-if (creditCard[0]===0){
-  console.log("card number can't start with 0");} 
-else if (creditCard.length < 5)
-{console.log("card number is too short");} 
-else if (creditCard.length < 5)
-{console.log("card number is too short");} 
-else { console.log('payment works')}
+if (creditCard[0] === 0) {
+    console.log("card number can't start with 0");
+} else if (creditCard.length < 5) {
+    console.log("card number is too short");
+} else if (creditCard.length > 5) {
+    console.log("card number is too long");
+} else if (creditCard.length > 5) {
+    console.log("card number is too long");
+} else if (creditCard % 2 === 1) {
+    console.log("card number *3 is not even");
+} else {
+    console.log(creditCard);
+}
+/* Missing - Tripling it gives an even number and It is divisible by either 5 or 7.
+I can't figure out hwo ot convert fro an array to a single number comprised of the array in order */
