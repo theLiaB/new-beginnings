@@ -45,22 +45,35 @@ const sayHelloLanguage = (language) => {
         console.log("Unknown language");
     }
 };
+sayHelloLanguage("French");
 
 // Practice creating a function with one argument
 
 /*
-5.4 Create a function called 'greet' that takes a name as an argument. Call the function a few times to achieve the same goal as the following lines of code.
+5.4 Create a function called 'greet' that takes a name as an argument.
+Call the function a few times to achieve the same goal as the following lines of code.
 */
-console.log("Hello, Alice!");
-console.log("Hello, Bob!");
-console.log("Hello, Carol!");
-console.log("Hello, Dean!");
+const name = "Bob";
+const greet = (a) => {
+    console.log("Hello, " + a + "!");
+};
+greet(name); //it's telling me this declaration is deprecated,why?
 
 /*
 5.41 Create a function called 'isPositive' that takes a number as an argument and returns true if the number is positive (greater than 0), otherwise false.
 
 The following lines should help test if your function works correctly. They should print true.
 */
+
+const isPositive = (trial) => {
+    if (trial > 0) {
+        return true;
+    } else if (trial < 0) {
+        return false;
+    } else {
+        console.log("error");
+    }
+};
 
 console.log("10 is positive:", isPositive(10) === true);
 console.log("-10 is not positive:", isPositive(-10) === false);
