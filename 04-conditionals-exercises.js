@@ -255,7 +255,7 @@ Also consider going around the user journey. *\
 */
 
 process.stdout.write("\n16. ");
-const creditCard = [1, 2, 4, 7, 8];
+const creditCard = [8, 7, 1, 9, 2];
 const cardNumber = +creditCard.join("");
 const tripleCardNumber = cardNumber * 3;
 
@@ -267,12 +267,11 @@ if (creditCard[0] === 0) {
     console.log("card number is invalid. card number is too long");
 } else if (tripleCardNumber % 2 === 1) {
     console.log("card number is invalid. card number *3 is not even");
-} else if (cardNumber % 5 === 0) {
-    console.log("card number is invalid. card number not divisible by 5");
-} else if (cardNumber % 7 === 0) {
-    console.log("card number is invalid. card number not divisible by 7");
+} else if (cardNumber % 5 != 0 && cardNumber % 7 != 0) {
+    console.log(
+        "card number is invalid. card number not evenly divisible by either 5 or 7"
+    );
 } else {
     console.log("card number is valid");
 }
-/* Missing - Tripling it gives an even number and It is divisible by either 5 or 7.
-I can't figure out hwo ot convert fro an array to a single number comprised of the array in order */
+/* Missing 'is divisible by either 5 or 7'*/
