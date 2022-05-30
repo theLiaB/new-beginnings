@@ -1,5 +1,7 @@
 //wondering where the extra space between lines is coming from - Lia
 
+const { validate } = require("@babel/types");
+
 // Practice with a single number
 const num = 12;
 
@@ -253,20 +255,24 @@ Also consider going around the user journey. *\
 */
 
 process.stdout.write("\n16. ");
-const creditCard = [1, 2, 4, 7, 7];
+const creditCard = [1, 2, 4, 7, 8];
+const cardNumber = +creditCard.join("");
+const tripleCardNumber = cardNumber * 3;
 
 if (creditCard[0] === 0) {
-    console.log("card number can't start with 0");
+    console.log("card number is invalid. card number can't start with 0");
 } else if (creditCard.length < 5) {
-    console.log("card number is too short");
+    console.log("card number is invalid. card number is too short");
 } else if (creditCard.length > 5) {
-    console.log("card number is too long");
-} else if (creditCard.length > 5) {
-    console.log("card number is too long");
-} else if (creditCard % 2 === 1) {
-    console.log("card number *3 is not even");
+    console.log("card number is invalid. card number is too long");
+} else if (tripleCardNumber % 2 === 1) {
+    console.log("card number is invalid. card number *3 is not even");
+} else if (cardNumber % 5 === 0) {
+    console.log("card number is invalid. card number not divisible by 5");
+} else if (cardNumber % 7 === 0) {
+    console.log("card number is invalid. card number not divisible by 7");
 } else {
-    console.log(creditCard);
+    console.log("card number is valid");
 }
 /* Missing - Tripling it gives an even number and It is divisible by either 5 or 7.
 I can't figure out hwo ot convert fro an array to a single number comprised of the array in order */
