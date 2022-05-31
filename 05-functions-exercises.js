@@ -115,17 +115,10 @@ console.log("10 is even:", isEven(10) === true);
 5.421 Create a function called 'isOdd' similar to isEven. Can you use isEven to make this function?
 */
 
-const isOdd = (isEven()) => {
-    if (isEven === true) {
-        return false;
-    } else if (isEven === false) {
-        return true;
-    } else {
-        console.log("error");
-    }
-};
-console.log("2 is not odd:", isOdd() === false);
-console.log("1 is odd:", isOdd() === true);
+const isOdd = (testNumber) => !isEven(testNumber);
+
+console.log("2 is not odd:", isOdd(2) === false);
+console.log("1 is odd:", isOdd(1) === true);
 
 /*
         5.43 Create a function called 'isValidCreditCard' that takes a credit card number and returns true if it is valid, otherwise false. Refer to the credit card exercise in conditionals.
