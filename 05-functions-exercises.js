@@ -114,10 +114,10 @@ console.log("10 is even:", isEven(10) === true);
 5.421 Create a function called 'isOdd' similar to isEven. Can you use isEven to make this function?
 */
 
-const isOdd = (isEven(evenNumTest)) => {
-    if (isEven(evenNumTest) === true) {
+const isOdd = (isEven()) => {
+    if (isEven === true) {
         return false;
-    } else if (isEven(evenNumTest) === false) {
+    } else if (isEven === false) {
         return true;
     } else {
         console.log("error");
