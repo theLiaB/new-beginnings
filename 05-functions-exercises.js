@@ -53,10 +53,11 @@ sayHelloLanguage("French");
 5.4 Create a function called 'greet' that takes a name as an argument.
 Call the function a few times to achieve the same goal as the following lines of code.
 */
-const greet = (a) => {
-    console.log("Hello, " + a + "!");
+const greet = (personName) => {
+    console.log("Hello, " + personName + "!");
 };
 greet("Bob");
+greet("alice");
 
 /*
 5.41 Create a function called 'isPositive' that takes a number as an argument and returns true if the number is positive (greater than 0), otherwise false.
