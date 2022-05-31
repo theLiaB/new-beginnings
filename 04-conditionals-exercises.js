@@ -256,22 +256,18 @@ Also consider going around the user journey. *\
 
 process.stdout.write("\n16. ");
 const creditCard = [8, 7, 1, 9, 2];
-const cardNumber = +creditCard.join("");
+const cardNumber = Number(creditCard.join(""));
 const tripleCardNumber = cardNumber * 3;
 
-if (creditCard[0] === 0) {
-    console.log("card number is invalid. card number can't start with 0");
-} else if (creditCard.length < 5) {
-    console.log("card number is invalid. card number is too short");
-} else if (creditCard.length > 5) {
-    console.log("card number is invalid. card number is too long");
-} else if (tripleCardNumber % 2 === 1) {
-    console.log("card number is invalid. card number *3 is not even");
-} else if (cardNumber % 5 != 0 && cardNumber % 7 != 0) {
-    console.log(
-        "card number is invalid. card number not evenly divisible by either 5 or 7"
-    );
+if (
+    creditCard[0] === 0 ||
+    creditCard.length < 5 ||
+    creditCard.length > 5 ||
+    tripleCardNumber % 2 === 1 ||
+    (cardNumber % 5 !== 0 && cardNumber % 7 !== 0)
+) {
+    console.log("card number is invalid");
 } else {
     console.log("card number is valid");
 }
-/* Missing 'is divisible by either 5 or 7'*/
+/*try this without array*/
