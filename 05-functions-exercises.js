@@ -123,8 +123,8 @@ const isOdd = (isEven()) => {
         console.log("error");
     }
 };
-console.log("2 is not odd:", isOdd(isEven(2)) === false);
-console.log("1 is odd:", isOdd(isEven(1)) === true);
+console.log("2 is not odd:", isOdd() === false);
+console.log("1 is odd:", isOdd() === true);
 
 /*
         5.43 Create a function called 'isValidCreditCard' that takes a credit card number and returns true if it is valid, otherwise false. Refer to the credit card exercise in conditionals.
