@@ -114,32 +114,39 @@ console.log("10 is even:", isEven(10) === true);
 5.421 Create a function called 'isOdd' similar to isEven. Can you use isEven to make this function?
 */
 
-const isOdd = isEven() => { return }
-
-console.log("2 is not odd:", isOdd(2) === false);
-console.log("1 is odd:", isOdd(1) === true);
-
-/*
-5.43 Create a function called 'isValidCreditCard' that takes a credit card number and returns true if it is valid, otherwise false. Refer to the credit card exercise in conditionals.
-*/
-
-/*
-5.44 Create a function called 'dollarsToCents' that takes a value in dollars and returns the corresponding value in cents.
-*/
-
-/*
-                5.45 Create a function called 'fToC' that takes a temperature in Fahrenheit and returns the temperature in Celsius.
-                */
+const isOdd = (isEven(evenNumTest)) => {
+    if (isEven(evenNumTest) === true) {
+        return false;
+    } else if (isEven(evenNumTest) === false) {
+        return true;
+    } else {
+        console.log("error");
+    }
+};
+console.log("2 is not odd:", isOdd(isEven(2)) === false);
+console.log("1 is odd:", isOdd(isEven(1)) === true);
 
 /*
-                5.451 Create a function called 'cToF' that takes a temperature in Celsius and returns the temperature in Fahrenheit.
-                */
+        5.43 Create a function called 'isValidCreditCard' that takes a credit card number and returns true if it is valid, otherwise false. Refer to the credit card exercise in conditionals.
+        */
+
+/*
+        5.44 Create a function called 'dollarsToCents' that takes a value in dollars and returns the corresponding value in cents.
+        */
+
+/*
+                        5.45 Create a function called 'fToC' that takes a temperature in Fahrenheit and returns the temperature in Celsius.
+                        */
+
+/*
+                        5.451 Create a function called 'cToF' that takes a temperature in Celsius and returns the temperature in Fahrenheit.
+                        */
 
 // Practice calling a function with multiple arguments
 
 /*
-                5.5 Call the following function, providing a name and a language.
-                */
+                        5.5 Call the following function, providing a name and a language.
+                        */
 const greetLanguage = (name, language) => {
     if (language === "English") {
         console.log("Hello, " + name + "!");
@@ -153,8 +160,8 @@ const greetLanguage = (name, language) => {
 };
 
 /*
-                5.51 Write some lines of code to test if the following function multiplies 3 numbers together correctly.
-                */
+                        5.51 Write some lines of code to test if the following function multiplies 3 numbers together correctly.
+                        */
 const multiplyAll = (a, b, c) => {
     return a * b * c;
 };
@@ -162,10 +169,10 @@ const multiplyAll = (a, b, c) => {
 // Practice creating a function with multiple arguments
 
 /*
-                5.6 Create a function called 'languageGreeting' that takes a name and a language and returns a greeting instead of printing it.
+                        5.6 Create a function called 'languageGreeting' that takes a name and a language and returns a greeting instead of printing it.
 
-                The following lines should help test if your function works correctly. They should print true.
-                */
+                        The following lines should help test if your function works correctly. They should print true.
+                        */
 
 console.log(
     "English greeting works:",
@@ -185,28 +192,28 @@ console.log(
 );
 
 /*
-                5.61 Create a function called 'lovers' that takes two names and returns a string that the first name loves the second name.
+                        5.61 Create a function called 'lovers' that takes two names and returns a string that the first name loves the second name.
 
-                The following lines should help test if your function works correctly. They should print true.
-                */
+                        The following lines should help test if your function works correctly. They should print true.
+                        */
 
 console.log("Alice loves Bob:", lovers("Alice", "Bob") === "Alice loves Bob");
 console.log("Bob loves Alice:", lovers("Bob", "Alice") === "Bob loves Alice");
 
 /*
-                5.62 Create a function called 'convertTemperature' that takes a number and either 'FtoC' or 'CtoF', and returns the converted temperature. How can you use the functions from 5.45 and 5.451 to make this easier?
+                        5.62 Create a function called 'convertTemperature' that takes a number and either 'FtoC' or 'CtoF', and returns the converted temperature. How can you use the functions from 5.45 and 5.451 to make this easier?
 
-                The following lines should help test if your function works correctly. They should print true.
-                */
+                        The following lines should help test if your function works correctly. They should print true.
+                        */
 
 console.log("32 F = 0 C:", convertTemperature(32, "FtoC") === 0);
 console.log("0 C = 32 F:", convertTemperature(0, "CtoF") === 32);
 
 /*
-                5.63 Create a function called 'divisibleBy' that takes two numbers and returns true if the first number is divisible by the second, otherwise false.
+                        5.63 Create a function called 'divisibleBy' that takes two numbers and returns true if the first number is divisible by the second, otherwise false.
 
-                The following lines should help test if your function works correctly. They should print true.
-                */
+                        The following lines should help test if your function works correctly. They should print true.
+                        */
 
 console.log("5 is not divisible by 3:", divisibleBy(5, 3) === false);
 console.log("1 is divisible by 1:", divisibleBy(1, 1) === true);
@@ -214,13 +221,13 @@ console.log("6 is divisible by 2:", divisibleBy(6, 2) === true);
 console.log("6 is divisible by 3:", divisibleBy(6, 3) === true);
 
 /*
-                5.64 Create a function called 'bonusTime' that takes a number (salary) and a boolean (bonus). If the second argument is true, return the salary multiplied by 10, otherwise the original salary.
+                        5.64 Create a function called 'bonusTime' that takes a number (salary) and a boolean (bonus). If the second argument is true, return the salary multiplied by 10, otherwise the original salary.
 
-                Write some lines of code to test if your function works correctly.
-                */
+                        Write some lines of code to test if your function works correctly.
+                        */
 
 /*
-                5.65 Create a function called 'rps' for playing the game Rock, Paper, Scissors. It should take two arguments, which should each be either 'rock', 'paper', or 'scissors'. If the first hand beats the second hand, return 1. If the first hand loses, return -1. In the case of a draw, return 0.
+                        5.65 Create a function called 'rps' for playing the game Rock, Paper, Scissors. It should take two arguments, which should each be either 'rock', 'paper', or 'scissors'. If the first hand beats the second hand, return 1. If the first hand loses, return -1. In the case of a draw, return 0.
 
-                Write some lines of code to test if your function works correctly.
-                */
+                        Write some lines of code to test if your function works correctly.
+                        */
