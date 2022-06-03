@@ -121,8 +121,35 @@ console.log("2 is not odd:", isOdd(2) === false);
 console.log("1 is odd:", isOdd(1) === true);
 
 /*
-        5.43 Create a function called 'isValidCreditCard' that takes a credit card number and returns true if it is valid, otherwise false. Refer to the credit card exercise in conditionals.
-        */
+5.43 Create a function called 'isValidCreditCard' that takes a credit card number 
+and returns true if it is valid, otherwise false.
+Refer to the credit card exercise in conditionals.
+*/
+const creditCard = [8, 7, 1, 9, 2];
+const cardNumber = Number(creditCard.join(""));
+const tripleCardNumber = cardNumber * 3;
+
+const isValidCreditCard = (creditCard) => {
+    if (
+        creditCard[0] === 0 ||
+        creditCard.length < 5 ||
+        creditCard.length > 5 ||
+        tripleCardNumber % 2 === 1 ||
+        (cardNumber % 5 !== 0 && cardNumber % 7 !== 0)
+    ) {
+        return false;
+    } else {
+        return true;
+    }
+};
+console.log(
+    "card number 87192 is invalid:",
+    isValidCreditCard(8, 7, 1, 9, 3) === false
+);
+console.log(
+    "card number 87193 is invalid:",
+    isValidCreditCard(8, 7, 1, 9, 3) === true
+);
 
 /*
         5.44 Create a function called 'dollarsToCents' that takes a value in dollars and returns the corresponding value in cents.
