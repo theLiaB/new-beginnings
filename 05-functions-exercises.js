@@ -244,10 +244,10 @@ console.log(
 );
 
 /*
-                        5.61 Create a function called 'lovers' that takes two names and returns a string that the first name loves the second name.
+5.61 Create a function called 'lovers' that takes two names and returns a string that the first name loves the second name.
 
-                        The following lines should help test if your function works correctly. They should print true.
-                        */
+The following lines should help test if your function works correctly. They should print true.
+*/
 
 console.log("Alice loves Bob:", lovers("Alice", "Bob") === "Alice loves Bob");
 console.log("Bob loves Alice:", lovers("Bob", "Alice") === "Bob loves Alice");
