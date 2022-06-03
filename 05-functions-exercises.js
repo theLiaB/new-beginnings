@@ -288,10 +288,25 @@ console.log("6 is divisible by 2:", divisibleBy(6, 2) === true);
 console.log("6 is divisible by 3:", divisibleBy(6, 3) === true);
 
 /*
-                                5.64 Create a function called 'bonusTime' that takes a number (salary) and a boolean (bonus). If the second argument is true, return the salary multiplied by 10, otherwise the original salary.
+5.64 Create a function called 'bonusTime' that takes a number (salary) and a boolean (bonus). If the second argument is true, return the salary multiplied by 10, otherwise the original salary.
+Write some lines of code to test if your function works correctly.*/
 
-                                Write some lines of code to test if your function works correctly.
-                                */
+const bonusTime = (salary, bonus) => {
+    if (bonus === true) {
+        return salary * 10;
+    } else {
+        return salary;
+    }
+};
+
+console.log(
+    "salary of 20 000 with bonus is 200 000:",
+    bonusTime(20000, true) === 200000
+);
+console.log(
+    "salary of 20 000 without bonus is 20 000:",
+    bonusTime(20000, false) === 20000
+);
 
 /*
                                 5.65 Create a function called 'rps' for playing the game Rock, Paper, Scissors. It should take two arguments, which should each be either 'rock', 'paper', or 'scissors'. If the first hand beats the second hand, return 1. If the first hand loses, return -1. In the case of a draw, return 0.
