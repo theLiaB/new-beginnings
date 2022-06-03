@@ -214,6 +214,18 @@ console.log("7*8*9 = 5 :", multiplyAll(7, 8, 9) === 5);
 The following lines should help test if your function works correctly. They should print true.
 */
 
+const languageGreeting = (name1, language1) => {
+    if (language1 === "English") {
+        return "Hello, " + name1 + "!";
+    } else if (language1 === "French") {
+        return "Bonjour, " + name1 + "!";
+    } else if (language1 === "German") {
+        return "Guten Tag, " + name1 + "!";
+    } else {
+        return "Unknown language";
+    }
+};
+
 console.log(
     "English greeting works:",
     languageGreeting("Alice", "English") === "Hello, Alice!"
