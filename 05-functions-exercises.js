@@ -258,6 +258,13 @@ console.log("Bob loves Alice:", lovers("Bob", "Alice") === "Bob loves Alice");
 5.62 Create a function called 'convertTemperature' that takes a number and either 'FtoC' or 'CtoF', and returns the converted temperature. How can you use the functions from 5.45 and 5.451 to make this easier?
 
 The following lines should help test if your function works correctly. They should print true. */
+const convertTemperature = (numToConvert, functionName) => {
+    if (functionName === "FtoC") {
+        return fToC(numToConvert);
+    } else if (functionName === "CtoF") {
+        return cToF(numToConvert);
+    }
+};
 
 console.log("32 F = 0 C:", convertTemperature(32, "FtoC") === 0);
 console.log("0 C = 32 F:", convertTemperature(0, "CtoF") === 32);
