@@ -164,16 +164,26 @@ console.log("4 dollars is not 500 cents:", dollarsToCents(4) !== 500);
 /*
 5.45 Create a function called 'fToC' that takes a temperature in Fahrenheit and returns the temperature in Celsius.
 */
+const fToC = (Fahrenheit) => {
+    return Math.round((Fahrenheit - 32) * (5 / 9));
+};
 
+console.log("-30 F is about -34.4 C:", fToC(-30) === -34);
+console.log("-20 F is not -30 C", fToC(-20) !== -30);
 /*
-                        5.451 Create a function called 'cToF' that takes a temperature in Celsius and returns the temperature in Fahrenheit.
-                        */
+5.451 Create a function called 'cToF' that takes a temperature in Celsius and returns the temperature in Fahrenheit.
+*/
+const cToF = (Celsius) => {
+    return Math.round(Celsius * (9 / 5) + 32);
+};
 
+console.log("-34.4 C is about -30 F:", cToF(-34.4) === -30);
+console.log("-30 C is not -20 F", cToF(-30) !== -20);
 // Practice calling a function with multiple arguments
 
 /*
-                        5.5 Call the following function, providing a name and a language.
-                        */
+ 5.5 Call the following function, providing a name and a language.
+*/
 const greetLanguage = (name, language) => {
     if (language === "English") {
         console.log("Hello, " + name + "!");
