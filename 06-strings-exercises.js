@@ -44,21 +44,17 @@ console.log("e is at index 1 in hello:", isAtIndex("e", 1, "hello") === true);
 console.log("e is at index 4 in Alice:", isAtIndex("e", 4, "Alice") === true);
 
 // Practice using length
+/*6.2 Print the length of the alphabet string.*/
+console.log(alphabet.length);
 
-/*
-        6.2 Print the length of the alphabet string.
-        */
+/*6.21 Print the last letter of the alphabet string, using the length property.*/
+console.log(alphabet[alphabet.length - 1]);
 
-/*
-        6.21 Print the last letter of the alphabet string, using the length property.
-        */
-
-/*
-        6.22 Try to figure out the length of the string c in your head, then print it to see if you got it right.
-        */
+/*6.22 Try to figure out the length of the string c in your head, then print it to see if you got it right.*/
 const a = "alpha";
 const b = "bet";
 const c = a + b;
+console.log(c.length);
 
 // Practice using methods
 
