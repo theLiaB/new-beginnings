@@ -248,7 +248,9 @@ console.log(
 
 The following lines should help test if your function works correctly. They should print true.
 */
-
+const lovers = (love1, love2) => {
+    return love1 + " loves " + love2;
+};
 console.log("Alice loves Bob:", lovers("Alice", "Bob") === "Alice loves Bob");
 console.log("Bob loves Alice:", lovers("Bob", "Alice") === "Bob loves Alice");
 
