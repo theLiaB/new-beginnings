@@ -195,21 +195,24 @@ const greetLanguage = (name, language) => {
         console.log("Unknown language");
     }
 };
+greetLanguage("Henry", "French");
+greetLanguage("Marie", "German");
 
 /*
-                        5.51 Write some lines of code to test if the following function multiplies 3 numbers together correctly.
-                        */
+5.51 Write some lines of code to test if the following function multiplies 3 numbers together correctly.
+*/
 const multiplyAll = (a, b, c) => {
     return a * b * c;
 };
 
+console.log("1*2*3 = 6 :", multiplyAll(1, 2, 3) === 6);
+console.log("7*8*9 = 5 :", multiplyAll(7, 8, 9) === 5);
 // Practice creating a function with multiple arguments
 
 /*
-                        5.6 Create a function called 'languageGreeting' that takes a name and a language and returns a greeting instead of printing it.
-
-                        The following lines should help test if your function works correctly. They should print true.
-                        */
+5.6 Create a function called 'languageGreeting' that takes a name and a language and returns a greeting instead of printing it.
+The following lines should help test if your function works correctly. They should print true.
+*/
 
 console.log(
     "English greeting works:",
