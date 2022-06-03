@@ -309,7 +309,33 @@ console.log(
 );
 
 /*
-                                5.65 Create a function called 'rps' for playing the game Rock, Paper, Scissors. It should take two arguments, which should each be either 'rock', 'paper', or 'scissors'. If the first hand beats the second hand, return 1. If the first hand loses, return -1. In the case of a draw, return 0.
+5.65 Create a function called 'rps' for playing the game Rock, Paper, Scissors. It should take two arguments, which should each be either 'rock', 'paper', or 'scissors'. If the first hand beats the second hand, return 1. If the first hand loses, return -1. In the case of a draw, return 0.
+Write some lines of code to test if your function works correctly.*/
 
-                                Write some lines of code to test if your function works correctly.
-                                */
+const rps = (first, second) => {
+    if (
+        (first === "rock" && second === "scissors") ||
+        (first === "scissors" && second === "paper") ||
+        (first === "paper" && second === "rock")
+    ) {
+        return 1;
+    } else if (
+        (second === "rock" && first === "scissors") ||
+        (second === "scissors" && first === "paper") ||
+        (second === "paper" && first === "rock")
+    ) {
+        return -1;
+    } else {
+        return 0;
+    }
+};
+
+console.log(
+    "rock, scissors and paper beats scissors, paper and rock respectively",
+    rps("rock", "scissors") === 1
+);
+console.log(
+    "scissors, paper and rock are respectively beaten by rock, scissors and paper",
+    rps("rock", "paper") === -1
+);
+console.log("two of the same response make a tie", rps("paper", "paper") === 0);
