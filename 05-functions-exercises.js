@@ -143,8 +143,8 @@ const isValidCreditCard = (creditCard) => {
     }
 };
 console.log(
-    "card number 87192 is invalid:",
-    isValidCreditCard(8, 7, 1, 9, 3) === false
+    "card number 87192 is valid:",
+    isValidCreditCard(8, 7, 1, 9, 3) === true
 );
 console.log(
     "card number 87193 is invalid:",
@@ -152,12 +152,18 @@ console.log(
 );
 
 /*
-        5.44 Create a function called 'dollarsToCents' that takes a value in dollars and returns the corresponding value in cents.
-        */
+5.44 Create a function called 'dollarsToCents' that takes a value in dollars and returns the corresponding value in cents.
+ */
+const dollarsToCents = (dollars) => {
+    return dollars * 100;
+};
+
+console.log("2 dollars is 200 cents:", dollarsToCents(2) === 200);
+console.log("4 dollars is not 500 cents:", dollarsToCents(4) !== 500);
 
 /*
-                        5.45 Create a function called 'fToC' that takes a temperature in Fahrenheit and returns the temperature in Celsius.
-                        */
+5.45 Create a function called 'fToC' that takes a temperature in Fahrenheit and returns the temperature in Celsius.
+*/
 
 /*
                         5.451 Create a function called 'cToF' that takes a temperature in Celsius and returns the temperature in Fahrenheit.
