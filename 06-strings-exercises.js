@@ -258,6 +258,14 @@ console.log(
 
 /*6.35 Create a function called 'rhetorical' that takes a rhetorical question and returns the same question, but ending with a period instead of a question mark.
  */
+const rhetorical = (rQuest) => {
+    return rQuest.slice(0, rQuest.length - 1) + ".";
+};
+
+console.log(
+    "what's your problem? turns into what's your problem.",
+    rhetorical("what's your problem?") === "what's your problem."
+);
 
 /*6.36 Create a function called 'couldBeWord' that takes a made up word and returns true if it could be a word, otherwise false. Only made up words containing at least one vowel (a, e, i, o, u) could be words.
  */
@@ -266,12 +274,12 @@ console.log(
  */
 
 /*6.38 Create a function called 'alternating' that takes a number and returns an alternating string of that many 1s and 0s.
-1: 1
-2: 10
-3: 101
-4: 1010
-5: 10101
-... */
+        1: 1
+        2: 10
+        3: 101
+        4: 1010
+        5: 10101
+        ... */
 
 /*6.4 Create a function called 'hasDigit' that takes a string and returns true if it contains any digits, otherwise false.
  */
@@ -280,11 +288,11 @@ console.log(
  */
 
 /*6.42 Create a function called 'validPassword' that takes a password and returns true if it is valid, otherwise false.
-A valid password must:
-- be at least 6 characters long
-- contain a digit
-- contain a character of punctuation (., !, ?)
-*/
+        A valid password must:
+        - be at least 6 characters long
+        - contain a digit
+        - contain a character of punctuation (., !, ?)
+        */
 
 /* 6.43 Create a function called 'betterPassword' that takes two passwords and returns the better of the two. A password is considered better if it gets more points. Each character in the password counts for 1 point. Including any digits counts for an additional 5 points (flat, not for each digit). Including any punctuation (., !, ?) counts for an additional 10 points (flat, not for each punctuation).
  */
