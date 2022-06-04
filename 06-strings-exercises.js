@@ -186,9 +186,26 @@ console.log(
     "http://lia.cm is not a valid URL",
     validURL("http://lia.cm") === false
 );
-/*
-                                6.33 Create a function called 'firstSpace' that takes a string and returns the index of its first space character, or -1 if there is no space.
-                                */
+/*6.33 Create a function called 'firstSpace' that takes a string and 
+returns the index of its first space character, or -1 if there is no space.
+*/
+
+const firstSpace = (lookForSpace) => {
+    if (lookForSpace.includes(" ")) {
+        return lookForSpace.indexOf(" ");
+    } else {
+        return -1;
+    }
+};
+
+console.log(
+    "this sentence's first space is at index 4",
+    firstSpace("this sentence has spaces") === 4
+);
+console.log(
+    "Thissentencehasnospaces",
+    firstSpace("Thissentencehasnospaces") === -1
+);
 
 /*
                                 6.331 Create a function called 'firstOfLast' that takes a full name (e.g. "John Smith") and returns the first letter of the last name (e.g. "S"). How can you use the firstSpace() function to make this easier?
