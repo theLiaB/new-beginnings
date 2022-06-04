@@ -224,9 +224,9 @@ console.log(
     firstOfLast("Julie Andrews Dawson") === "A"
 );
 
-/*
-                                        6.332 Create a function called 'initials' that takes a full name (e.g. "Jane Doe") and returns the initials (e.g. "J.D."). How can you use firstOfLast() to make this easier?
-                                        */
+/*6.332 Create a function called 'initials' that takes a full name (e.g. "Jane Doe") 
+and returns the initials (e.g. "J.D."). How can you use firstOfLast() to make this easier?
+*/
 
 /*
                                         6.34 Create a function called 'capitalize' that takes a word (e.g. "hello") and returns the same word, but with the first letter capitalized (e.g. "Hello").
