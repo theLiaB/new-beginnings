@@ -76,10 +76,9 @@ console.log("lmno is in the alphabet:", inAlphabet("lmno") === true);
 console.log("1 is not in the alphabet:", inAlphabet("1") === false);
 
 /*
-        6.301 Create a function called 'isDigit' that takes a digit as a string and returns true if it is included in the following string, otherwise false.
-
-        The following lines should help test if your function works correctly. They should print true.
-        */
+6.301 Create a function called 'isDigit' that takes a digit as a string and 
+returns true if it is included in the following string, otherwise false.
+The following lines should help test if your function works correctly. They should print true.*/
 const digits = "1234567890";
 
 // console.log('1 is a digit:', isDigit('1') === true);
