@@ -238,53 +238,53 @@ console.log(
 );
 console.log(
     "Julie Andrews Dawson's initials are not J.D.",
-    initials("Julie Andrews Dawson") === "J. A."
+    initials("Julie Andrews Dawson") === "J.A."
 );
 
-/*
-                                                        6.34 Create a function called 'capitalize' that takes a word (e.g. "hello") and returns the same word, but with the first letter capitalized (e.g. "Hello").
-                                                        */
+/*6.34 Create a function called 'capitalize' that takes a word (e.g. "hello") and returns the same word, but with the first letter capitalized (e.g. "Hello").
+ */
+const capitalize = (wordUp) => {
+    const newWordUp = wordUp.toUpperCase();
+    return newWordUp[0];
+};
+console.log(
+    "john's first letter in upper case is J",
+    capitalize("john") === "J"
+);
+console.log(
+    "sally's first letter in upper case is not A",
+    capitalize("sally") === "S"
+);
 
-/*
-                                                        6.35 Create a function called 'rhetorical' that takes a rhetorical question and returns the same question, but ending with a period instead of a question mark.
-                                                        */
+/*6.35 Create a function called 'rhetorical' that takes a rhetorical question and returns the same question, but ending with a period instead of a question mark.
+ */
 
-/*
-                                                        6.36 Create a function called 'couldBeWord' that takes a made up word and returns true if it could be a word, otherwise false. Only made up words containing at least one vowel (a, e, i, o, u) could be words.
-                                                        */
+/*6.36 Create a function called 'couldBeWord' that takes a made up word and returns true if it could be a word, otherwise false. Only made up words containing at least one vowel (a, e, i, o, u) could be words.
+ */
 
-/*
-                                                        6.37 Create a function called 'fixSentence' that takes a sentence and returns the fixed version. The first letter should be capitalized, and a period should be added if the original does not end with punctuation (period, question mark, or exclamation mark).
-                                                        */
+/*6.37 Create a function called 'fixSentence' that takes a sentence and returns the fixed version. The first letter should be capitalized, and a period should be added if the original does not end with punctuation (period, question mark, or exclamation mark).
+ */
 
-/*
-                                                        6.38 Create a function called 'alternating' that takes a number and returns an alternating string of that many 1s and 0s.
+/*6.38 Create a function called 'alternating' that takes a number and returns an alternating string of that many 1s and 0s.
+1: 1
+2: 10
+3: 101
+4: 1010
+5: 10101
+... */
 
-                                                        1: 1
-                                                        2: 10
-                                                        3: 101
-                                                        4: 1010
-                                                        5: 10101
-                                                        ...
-                                                        */
+/*6.4 Create a function called 'hasDigit' that takes a string and returns true if it contains any digits, otherwise false.
+ */
 
-/*
-                                                        6.4 Create a function called 'hasDigit' that takes a string and returns true if it contains any digits, otherwise false.
-                                                        */
+/* 6.41 Create a function called 'hasPunctuation' that takes a string and returns true if it contains any punctuation (., !, ?), otherwise false.
+ */
 
-/*
-                                                        6.41 Create a function called 'hasPunctuation' that takes a string and returns true if it contains any punctuation (., !, ?), otherwise false.
-                                                        */
+/*6.42 Create a function called 'validPassword' that takes a password and returns true if it is valid, otherwise false.
+A valid password must:
+- be at least 6 characters long
+- contain a digit
+- contain a character of punctuation (., !, ?)
+*/
 
-/*
-                                                        6.42 Create a function called 'validPassword' that takes a password and returns true if it is valid, otherwise false.
-
-                                                        A valid password must:
-                                                        - be at least 6 characters long
-                                                        - contain a digit
-                                                        - contain a character of punctuation (., !, ?)
-                                                        */
-
-/*
-                                                        6.43 Create a function called 'betterPassword' that takes two passwords and returns the better of the two. A password is considered better if it gets more points. Each character in the password counts for 1 point. Including any digits counts for an additional 5 points (flat, not for each digit). Including any punctuation (., !, ?) counts for an additional 10 points (flat, not for each punctuation).
-                                                        */
+/* 6.43 Create a function called 'betterPassword' that takes two passwords and returns the better of the two. A password is considered better if it gets more points. Each character in the password counts for 1 point. Including any digits counts for an additional 5 points (flat, not for each digit). Including any punctuation (., !, ?) counts for an additional 10 points (flat, not for each punctuation).
+ */
