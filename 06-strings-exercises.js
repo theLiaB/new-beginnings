@@ -211,55 +211,67 @@ console.log(
 (e.g. "John Smith") and returns the first letter of the last name (e.g. "S").
  How can you use the firstSpace() function to make this easier?
 */
+const firstOfLast = (fullName) => {
+    return fullName.slice(firstSpace(fullName) + 1, firstSpace(fullName) + 2);
+};
+
+console.log(
+    "John Smith's last name's first letter is S",
+    firstOfLast("John Smith") === "S"
+);
+console.log(
+    "Julie Andrews Dawson's last name's first letter is A",
+    firstOfLast("Julie Andrews Dawson") === "A"
+);
 
 /*
-                                6.332 Create a function called 'initials' that takes a full name (e.g. "Jane Doe") and returns the initials (e.g. "J.D."). How can you use firstOfLast() to make this easier?
-                                */
+                                        6.332 Create a function called 'initials' that takes a full name (e.g. "Jane Doe") and returns the initials (e.g. "J.D."). How can you use firstOfLast() to make this easier?
+                                        */
 
 /*
-                                6.34 Create a function called 'capitalize' that takes a word (e.g. "hello") and returns the same word, but with the first letter capitalized (e.g. "Hello").
-                                */
+                                        6.34 Create a function called 'capitalize' that takes a word (e.g. "hello") and returns the same word, but with the first letter capitalized (e.g. "Hello").
+                                        */
 
 /*
-                                6.35 Create a function called 'rhetorical' that takes a rhetorical question and returns the same question, but ending with a period instead of a question mark.
-                                */
+                                        6.35 Create a function called 'rhetorical' that takes a rhetorical question and returns the same question, but ending with a period instead of a question mark.
+                                        */
 
 /*
-                                6.36 Create a function called 'couldBeWord' that takes a made up word and returns true if it could be a word, otherwise false. Only made up words containing at least one vowel (a, e, i, o, u) could be words.
-                                */
+                                        6.36 Create a function called 'couldBeWord' that takes a made up word and returns true if it could be a word, otherwise false. Only made up words containing at least one vowel (a, e, i, o, u) could be words.
+                                        */
 
 /*
-                                6.37 Create a function called 'fixSentence' that takes a sentence and returns the fixed version. The first letter should be capitalized, and a period should be added if the original does not end with punctuation (period, question mark, or exclamation mark).
-                                */
+                                        6.37 Create a function called 'fixSentence' that takes a sentence and returns the fixed version. The first letter should be capitalized, and a period should be added if the original does not end with punctuation (period, question mark, or exclamation mark).
+                                        */
 
 /*
-                                6.38 Create a function called 'alternating' that takes a number and returns an alternating string of that many 1s and 0s.
+                                        6.38 Create a function called 'alternating' that takes a number and returns an alternating string of that many 1s and 0s.
 
-                                1: 1
-                                2: 10
-                                3: 101
-                                4: 1010
-                                5: 10101
-                                ...
-                                */
-
-/*
-                                6.4 Create a function called 'hasDigit' that takes a string and returns true if it contains any digits, otherwise false.
-                                */
+                                        1: 1
+                                        2: 10
+                                        3: 101
+                                        4: 1010
+                                        5: 10101
+                                        ...
+                                        */
 
 /*
-                                6.41 Create a function called 'hasPunctuation' that takes a string and returns true if it contains any punctuation (., !, ?), otherwise false.
-                                */
+                                        6.4 Create a function called 'hasDigit' that takes a string and returns true if it contains any digits, otherwise false.
+                                        */
 
 /*
-                                6.42 Create a function called 'validPassword' that takes a password and returns true if it is valid, otherwise false.
-
-                                A valid password must:
-                                - be at least 6 characters long
-                                - contain a digit
-                                - contain a character of punctuation (., !, ?)
-                                */
+                                        6.41 Create a function called 'hasPunctuation' that takes a string and returns true if it contains any punctuation (., !, ?), otherwise false.
+                                        */
 
 /*
-                                6.43 Create a function called 'betterPassword' that takes two passwords and returns the better of the two. A password is considered better if it gets more points. Each character in the password counts for 1 point. Including any digits counts for an additional 5 points (flat, not for each digit). Including any punctuation (., !, ?) counts for an additional 10 points (flat, not for each punctuation).
-                                */
+                                        6.42 Create a function called 'validPassword' that takes a password and returns true if it is valid, otherwise false.
+
+                                        A valid password must:
+                                        - be at least 6 characters long
+                                        - contain a digit
+                                        - contain a character of punctuation (., !, ?)
+                                        */
+
+/*
+                                        6.43 Create a function called 'betterPassword' that takes two passwords and returns the better of the two. A password is considered better if it gets more points. Each character in the password counts for 1 point. Including any digits counts for an additional 5 points (flat, not for each digit). Including any punctuation (., !, ?) counts for an additional 10 points (flat, not for each punctuation).
+                                        */
