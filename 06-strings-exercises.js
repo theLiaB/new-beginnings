@@ -207,9 +207,10 @@ console.log(
     firstSpace("Thissentencehasnospaces") === -1
 );
 
-/*
-                                6.331 Create a function called 'firstOfLast' that takes a full name (e.g. "John Smith") and returns the first letter of the last name (e.g. "S"). How can you use the firstSpace() function to make this easier?
-                                */
+/*6.331 Create a function called 'firstOfLast' that takes a full name 
+(e.g. "John Smith") and returns the first letter of the last name (e.g. "S").
+ How can you use the firstSpace() function to make this easier?
+*/
 
 /*
                                 6.332 Create a function called 'initials' that takes a full name (e.g. "Jane Doe") and returns the initials (e.g. "J.D."). How can you use firstOfLast() to make this easier?
