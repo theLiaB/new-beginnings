@@ -91,14 +91,24 @@ console.log("1 is a digit:", isDigit("1") === true);
 console.log("9 is a digit:", isDigit("9") === true);
 console.log("a is not a digit:", isDigit("a") === false);
 
-/*
-        6.302 Create a function called 'isInTrouble' that takes a name and returns true if it is included in the email text.
-        */
+/*6.302 Create a function called 'isInTrouble' that takes a name and returns true 
+if it is included in the email text.*/
+
 const email = `Hello all.
 
 As you know, last quarter was suboptimal. We did not meet the expected revenue and things need to change. There are a few people invited to a special meeting at 1PM today in the conference room. From engineering, Dilbert, Wally, and Alice. Asok the intern. Mordac from management.
 
 If your name was not stated, continue work as usual. Sincerely, PHB.`;
+
+const isInTrouble = (nameOfEmployee) => {
+    if (email.includes(nameOfEmployee)) {
+        return true;
+    } else {
+        return false;
+    }
+};
+console.log("Wally is in trouble:", isInTrouble("Wally") === true);
+console.log("Steve is not in trouble", isInTrouble("Steve") === false);
 
 /*
         6.303 Create a function called 'badLanguage' that takes a message and returns true if it contains any bad language, otherwise false. The bad language phrases are: butt face, poopy head, and snot brain.
