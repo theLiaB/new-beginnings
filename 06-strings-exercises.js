@@ -110,13 +110,26 @@ const isInTrouble = (nameOfEmployee) => {
 console.log("Wally is in trouble:", isInTrouble("Wally") === true);
 console.log("Steve is not in trouble", isInTrouble("Steve") === false);
 
-/*
-        6.303 Create a function called 'badLanguage' that takes a message and returns true if it contains any bad language, otherwise false. The bad language phrases are: butt face, poopy head, and snot brain.
-        */
+/*6.303 Create a function called 'badLanguage' that takes a message and 
+returns true if it contains any bad language, otherwise false. 
+The bad language phrases are: butt face, poopy head, and snot brain.*/
+const badLanguage = (message) => {
+    if (
+        message.includes("butt face") ||
+        message.includes("poopy head") ||
+        message.includes("snot brain")
+    )
+        return true;
+    else {
+        return false;
+    }
+};
 
+console.log("butt is bad language", badLanguage("butt face") === true);
+console.log("pickles is not bad language", badLanguage("pickles") === false);
 /*
-        6.31 Create a function called 'IsBasicQuestion' that takes a sentence and returns true if it a basic question, otherwise false. A basic question begins with one of the five Ws (Who, What, When, Where, Why) and ends with a question mark.
-        */
+            6.31 Create a function called 'IsBasicQuestion' that takes a sentence and returns true if it a basic question, otherwise false. A basic question begins with one of the five Ws (Who, What, When, Where, Why) and ends with a question mark.
+            */
 
 /*
         6.32 Create a function called 'validURL' that takes a string and returns true if it is a valid URL, otherwise false. For our sake, a valid URL must start with either "http://" or "https://" and end with any of: ".com", ".ca", or ".org".
