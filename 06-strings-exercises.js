@@ -127,9 +127,9 @@ const badLanguage = (message) => {
 
 console.log("butt is bad language", badLanguage("butt face") === true);
 console.log("pickles is not bad language", badLanguage("pickles") === false);
-/*
-            6.31 Create a function called 'IsBasicQuestion' that takes a sentence and returns true if it a basic question, otherwise false. A basic question begins with one of the five Ws (Who, What, When, Where, Why) and ends with a question mark.
-            */
+/*6.31 Create a function called 'IsBasicQuestion' that takes a sentence and returns true if it a 
+basic question, otherwise false. A basic question begins with one of the five Ws
+ (Who, What, When, Where, Why) and ends with a question mark.*/
 
 /*
         6.32 Create a function called 'validURL' that takes a string and returns true if it is a valid URL, otherwise false. For our sake, a valid URL must start with either "http://" or "https://" and end with any of: ".com", ".ca", or ".org".
