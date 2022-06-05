@@ -288,16 +288,36 @@ const couldBeWord = (couldBWord) => {
 console.log("this is a word", couldBeWord("this") === true);
 console.log("thss is not a word", couldBeWord("thss") === false);
 
-/*6.37 Create a function called 'fixSentence' that takes a sentence and returns the fixed version. The first letter should be capitalized, and a period should be added if the original does not end with punctuation (period, question mark, or exclamation mark).
+/*6.37 Create a function called 'fixSentence' that takes a sentence and returns the fixed version. 
+The first letter should be capitalized, 
+and a period should be added if the original does not end with punctuation (period, question mark, or exclamation mark).
  */
+const fixSentence = (sentence) => {
+    const firstL = sentence.charAt(0);
+    const capitalize = firstL.toUpperCase();
+    //looks at the first character and capitalizes it no matter what
+
+    const end = sentence.charAt(sentence.length - 1);
+    //looks at final character
+    if (end !== "." || end !== "?" || end !== "!") {
+        return capitalize + sentence.slice(1, sentence.length) + ".";
+    } else {
+        return capitalize + sentence.slice(1, sentence.length);
+    }
+};
+
+console.log(fixSentence("hello there"));
+console.log(fixSentence("hesa?"));
 
 /*6.38 Create a function called 'alternating' that takes a number and returns an alternating string of that many 1s and 0s.
-        1: 1
-        2: 10
-        3: 101
-        4: 1010
-        5: 10101
-        ... */
+                1: 1
+                2: 10
+                3: 101
+                4: 1010
+                5: 10101
+                ... */
+
+const alternating = () => {};
 
 /*6.4 Create a function called 'hasDigit' that takes a string and returns true if it contains any digits, otherwise false.
  */
@@ -306,11 +326,11 @@ console.log("thss is not a word", couldBeWord("thss") === false);
  */
 
 /*6.42 Create a function called 'validPassword' that takes a password and returns true if it is valid, otherwise false.
-        A valid password must:
-        - be at least 6 characters long
-        - contain a digit
-        - contain a character of punctuation (., !, ?)
-        */
+                A valid password must:
+                - be at least 6 characters long
+                - contain a digit
+                - contain a character of punctuation (., !, ?)
+                */
 
 /* 6.43 Create a function called 'betterPassword' that takes two passwords and returns the better of the two. A password is considered better if it gets more points. Each character in the password counts for 1 point. Including any digits counts for an additional 5 points (flat, not for each digit). Including any punctuation (., !, ?) counts for an additional 10 points (flat, not for each punctuation).
  */
