@@ -238,7 +238,7 @@ console.log(
 );
 console.log(
     "Julie Andrews Dawson's initials are not J.D.",
-    initials("Julie Andrews Dawson") === "J.A."
+    initials("Julie Andrews Dawson") !== "J.D."
 );
 
 /*6.34 Create a function called 'capitalize' that takes a word (e.g. "hello") and returns the same word, but with the first letter capitalized (e.g. "Hello").
@@ -267,8 +267,26 @@ console.log(
     rhetorical("what's your problem?") === "what's your problem."
 );
 
-/*6.36 Create a function called 'couldBeWord' that takes a made up word and returns true if it could be a word, otherwise false. Only made up words containing at least one vowel (a, e, i, o, u) could be words.
+/*6.36 Create a function called 'couldBeWord' that takes a made up word and returns true 
+if it could be a word, otherwise false. Only made up words containing at least one vowel 
+(a, e, i, o, u) could be words.
  */
+const couldBeWord = (couldBWord) => {
+    if (
+        couldBWord.includes("a") === true ||
+        couldBWord.includes("e") === true ||
+        couldBWord.includes("i") === true ||
+        couldBWord.includes("o") === true ||
+        couldBWord.includes("u") === true
+    ) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+console.log("this is a word", couldBeWord("this") === true);
+console.log("thss is not a word", couldBeWord("thss") === false);
 
 /*6.37 Create a function called 'fixSentence' that takes a sentence and returns the fixed version. The first letter should be capitalized, and a period should be added if the original does not end with punctuation (period, question mark, or exclamation mark).
  */
