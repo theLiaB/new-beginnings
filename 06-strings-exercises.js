@@ -319,19 +319,65 @@ an alternating string of that many 1s and 0s.
                 5: 10101
                 ... */
 
-const alternating = (inNum) => {
-    const lotsOfZeroOnes = "101010101010101010101010101010101010";
-    return lotsOfZeroOnes.slice(0, inNum);
-};
+const alternating = (inNum) => {};
 console.log(alternating(7));
 
 /*6.4 Create a function called 'hasDigit' that takes a string and returns 
 true if it contains any digits, otherwise false.
  */
 
+const hasDigit = (string) => {
+    if (
+        string.includes(1) ||
+        string.includes(2) ||
+        string.includes(3) ||
+        string.includes(4) ||
+        string.includes(5) ||
+        string.includes(6) ||
+        string.includes(7) ||
+        string.includes(8) ||
+        string.includes(9) ||
+        string.includes(0)
+    ) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+hasDigit("feifibe032hj4r");
+hasDigit("feif");
+
+console.log("feifibe032hj4r had digits", hasDigit("feifibe032hj4r") === true);
+console.log("feif does not have digits", hasDigit("feif") === false);
+
 /* 6.41 Create a function called 'hasPunctuation' that takes a string and
 returns true if it contains any punctuation (., !, ?), otherwise false.
  */
+
+const hasPunctuation = (punct) => {
+    if (
+        punct.includes(",") ||
+        punct.includes(".") ||
+        punct.includes("?") ||
+        punct.includes("!")
+    ) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+hasDigit("feifibe032hj4r!!");
+hasDigit("feif234");
+console.log(
+    "feifibe032hj,4r! had punctuation",
+    hasPunctuation("feifibe032hj,4r!") === true
+);
+console.log(
+    "feif234 does not have punctuation",
+    hasPunctuation("feif234") === false
+);
 
 /*6.42 Create a function called 'validPassword' that takes a password and 
 returns true if it is valid, otherwise false.
