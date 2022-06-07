@@ -197,6 +197,7 @@ const firstSpace = (lookForSpace) => {
         return -1;
     }
 };
+// refactor using just index
 
 console.log(
     "this sentence's first space is at index 4",
@@ -241,19 +242,20 @@ console.log(
     initials("Julie Andrews Dawson") !== "J.D."
 );
 
-/*6.34 Create a function called 'capitalize' that takes a word (e.g. "hello") and returns the same word, but with the first letter capitalized (e.g. "Hello").
+/*6.34 Create a function called 'capitalize' that takes a word (e.g. "hello") 
+and returns the same word, but with the first letter capitalized (e.g. "Hello").
  */
 const capitalize = (wordUp) => {
     const newWordUp = wordUp.toUpperCase();
-    return newWordUp[0];
+    return newWordUp[0] + wordUp.slice(1);
 };
 console.log(
     "john's first letter in upper case is J",
-    capitalize("john") === "J"
+    capitalize("john") === "John"
 );
 console.log(
     "sally's first letter in upper case is not A",
-    capitalize("sally") === "S"
+    capitalize("sally") === "Sally"
 );
 
 /*6.35 Create a function called 'rhetorical' that takes a rhetorical question and returns the same question, but ending with a period instead of a question mark.
@@ -324,6 +326,7 @@ const alternating = (inNum) => {
     return theNumbers.slice(0, inNum);
 };
 console.log(alternating(7));
+// try with repeat function
 
 /*6.4 Create a function called 'hasDigit' that takes a string and returns 
 true if it contains any digits, otherwise false.
@@ -421,12 +424,12 @@ Including any punctuation (., !, ?) counts for an additional 10 points (flat, no
  */
 
 const betterPassword = (pass1, pass2) => {
-    pass1P1 = pass1.length;
-    pass2P1 = pass2.length;
-    pass1P2 = hasDigit(pass1);
-    pass2P2 = hasDigit(pass2);
-    pass1P3 = hasPunctuation(pass1);
-    pass2P3 = hasPunctuation(pass2);
+    const pass1P1 = pass1.length;
+    const pass2P1 = pass2.length;
+    const pass1P2 = hasDigit(pass1);
+    const pass2P2 = hasDigit(pass2);
+    const pass1P3 = hasPunctuation(pass1);
+    const pass2P3 = hasPunctuation(pass2);
 
     pass1Points = pass1P1 + pass1P2 + pass1P3;
     pass2Points = pass2P1 + pass2P2 + pass2P3;
@@ -442,3 +445,5 @@ const betterPassword = (pass1, pass2) => {
 betterPassword("123!!jfjfjfjfjfj", "abc");
 betterPassword("abc", "123!!jfjfjfjfjfj");
 betterPassword("144!!jfjfjfjfjfj", "123!!jfjfjfjfjfj");
+
+//use proper scoring for has digit and punctuation. try using ternary

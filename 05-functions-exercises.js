@@ -4,7 +4,7 @@
 5.1 Call the following function.
 */
 const sayHello = () => {
-  console.log("Hello, world!");
+    console.log("Hello, world!");
 };
 sayHello();
 
@@ -12,9 +12,9 @@ sayHello();
 5.11 Call the following function.
 */
 const sayHelloLonger = () => {
-  console.log("Hello!");
-  console.log("Bonjour!");
-  console.log("Guten Tag!");
+    console.log("Hello!");
+    console.log("Bonjour!");
+    console.log("Guten Tag!");
 };
 sayHelloLonger();
 
@@ -25,7 +25,7 @@ sayHelloLonger();
 */
 
 const sayWelcome = () => {
-  console.log("Welcome!");
+    console.log("Welcome!");
 };
 sayWelcome();
 
@@ -35,15 +35,15 @@ sayWelcome();
 5.3 Call the following function, providing a language as the argument.
 */
 const sayHelloLanguage = (language) => {
-  if (language === "English") {
-    console.log("Hello!");
-  } else if (language === "French") {
-    console.log("Bonjour!");
-  } else if (language === "German") {
-    console.log("Guten Tag!");
-  } else {
-    console.log("Unknown language");
-  }
+    if (language === "English") {
+        console.log("Hello!");
+    } else if (language === "French") {
+        console.log("Bonjour!");
+    } else if (language === "German") {
+        console.log("Guten Tag!");
+    } else {
+        console.log("Unknown language");
+    }
 };
 sayHelloLanguage("French");
 
@@ -54,7 +54,7 @@ sayHelloLanguage("French");
 Call the function a few times to achieve the same goal as the following lines of code.
 */
 const greet = (personName) => {
-  console.log("Hello, " + personName + "!");
+    console.log("Hello, " + personName + "!");
 };
 greet("Bob");
 greet("alice");
@@ -105,37 +105,37 @@ Refer to the credit card exercise in conditionals.
 */
 
 const isValidCreditCard = (creditCard) => {
-  const cardNumber = Number(creditCard.join(""));
-  const tripleCardNumber = cardNumber * 3;
-  if (
-    creditCard[0] === 0 ||
-    creditCard.length < 5 ||
-    creditCard.length > 5 ||
-    tripleCardNumber % 2 === 1 ||
-    (cardNumber % 5 !== 0 && cardNumber % 7 !== 0)
-  ) {
-    return false;
-  } else {
-    return true;
-  }
+    const cardNumber = Number(creditCard.join(""));
+    const tripleCardNumber = cardNumber * 3;
+    if (
+        creditCard[0] === 0 ||
+        creditCard.length < 5 ||
+        creditCard.length > 5 ||
+        tripleCardNumber % 2 === 1 ||
+        (cardNumber % 5 !== 0 && cardNumber % 7 !== 0)
+    ) {
+        return false;
+    } else {
+        return true;
+    }
 };
 console.log(
-  "card number 87192 is valid:",
-  isValidCreditCard([8, 7, 1, 9, 2]) === true
+    "card number 87192 is valid:",
+    isValidCreditCard([8, 7, 1, 9, 2]) === true
 );
 console.log(
-  "card number 87193 is invalid:",
-  isValidCreditCard([8, 7, 1, 9]) === false
+    "card number 87193 is invalid:",
+    isValidCreditCard([8, 7, 1, 9]) === false
 );
 console.log(
-  "card number 87193 is invalid:",
-  isValidCreditCard([8, 7, 1, 8, 3]) === true
+    "card number 87193 is invalid:",
+    isValidCreditCard([8, 7, 1, 8, 3]) === true
 );
 /*
 5.44 Create a function called 'dollarsToCents' that takes a value in dollars and returns the corresponding value in cents.
  */
 const dollarsToCents = (dollars) => {
-  return dollars * 100;
+    return dollars * 100;
 };
 
 console.log("2 dollars is 200 cents:", dollarsToCents(2) === 200);
@@ -145,7 +145,7 @@ console.log("4 dollars is not 500 cents:", dollarsToCents(4) !== 500);
 5.45 Create a function called 'fToC' that takes a temperature in Fahrenheit and returns the temperature in Celsius.
 */
 const fToC = (Fahrenheit) => {
-  return Math.round((Fahrenheit - 32) * (5 / 9));
+    return Math.round((Fahrenheit - 32) * (5 / 9));
 };
 
 console.log("-30 F is about -34.4 C:", fToC(-30) === -34);
@@ -154,7 +154,7 @@ console.log("-20 F is not -30 C", fToC(-20) !== -30);
 5.451 Create a function called 'cToF' that takes a temperature in Celsius and returns the temperature in Fahrenheit.
 */
 const cToF = (Celsius) => {
-  return Math.round(Celsius * (9 / 5) + 32);
+    return Math.round(Celsius * (9 / 5) + 32);
 };
 
 console.log("-34.4 C is about -30 F:", cToF(-34.4) === -30);
@@ -165,15 +165,15 @@ console.log("-30 C is not -20 F", cToF(-30) !== -20);
  5.5 Call the following function, providing a name and a language.
 */
 const greetLanguage = (name, language) => {
-  if (language === "English") {
-    console.log("Hello, " + name + "!");
-  } else if (language === "French") {
-    console.log("Bonjour, " + name + "!");
-  } else if (language === "German") {
-    console.log("Guten Tag, " + name + "!");
-  } else {
-    console.log("Unknown language");
-  }
+    if (language === "English") {
+        console.log("Hello, " + name + "!");
+    } else if (language === "French") {
+        console.log("Bonjour, " + name + "!");
+    } else if (language === "German") {
+        console.log("Guten Tag, " + name + "!");
+    } else {
+        console.log("Unknown language");
+    }
 };
 greetLanguage("Henry", "French");
 greetLanguage("Marie", "German");
@@ -182,7 +182,7 @@ greetLanguage("Marie", "German");
 5.51 Write some lines of code to test if the following function multiplies 3 numbers together correctly.
 */
 const multiplyAll = (a, b, c) => {
-  return a * b * c;
+    return a * b * c;
 };
 
 console.log("1*2*3 = 6 :", multiplyAll(1, 2, 3) === 6);
@@ -195,32 +195,32 @@ The following lines should help test if your function works correctly. They shou
 */
 
 const languageGreeting = (name1, language1) => {
-  if (language1 === "English") {
-    return "Hello, " + name1 + "!";
-  } else if (language1 === "French") {
-    return "Bonjour, " + name1 + "!";
-  } else if (language1 === "German") {
-    return "Guten Tag, " + name1 + "!";
-  } else {
-    return "Unknown language";
-  }
+    if (language1 === "English") {
+        return "Hello, " + name1 + "!";
+    } else if (language1 === "French") {
+        return "Bonjour, " + name1 + "!";
+    } else if (language1 === "German") {
+        return "Guten Tag, " + name1 + "!";
+    } else {
+        return "Unknown language";
+    }
 };
 
 console.log(
-  "English greeting works:",
-  languageGreeting("Alice", "English") === "Hello, Alice!"
+    "English greeting works:",
+    languageGreeting("Alice", "English") === "Hello, Alice!"
 );
 console.log(
-  "French greeting works:",
-  languageGreeting("Alice", "French") === "Bonjour, Alice!"
+    "French greeting works:",
+    languageGreeting("Alice", "French") === "Bonjour, Alice!"
 );
 console.log(
-  "German greeting works:",
-  languageGreeting("Alice", "German") === "Guten Tag, Alice!"
+    "German greeting works:",
+    languageGreeting("Alice", "German") === "Guten Tag, Alice!"
 );
 console.log(
-  "Unknown language works:",
-  languageGreeting("Alice", "gibberish") === "Unknown language"
+    "Unknown language works:",
+    languageGreeting("Alice", "gibberish") === "Unknown language"
 );
 
 /*
@@ -229,7 +229,7 @@ console.log(
 The following lines should help test if your function works correctly. They should print true.
 */
 const lovers = (love1, love2) => {
-  return love1 + " loves " + love2;
+    return love1 + " loves " + love2;
 };
 console.log("Alice loves Bob:", lovers("Alice", "Bob") === "Alice loves Bob");
 console.log("Bob loves Alice:", lovers("Bob", "Alice") === "Bob loves Alice");
@@ -239,11 +239,11 @@ console.log("Bob loves Alice:", lovers("Bob", "Alice") === "Bob loves Alice");
 
 The following lines should help test if your function works correctly. They should print true. */
 const convertTemperature = (numToConvert, functionName) => {
-  if (functionName === "FtoC") {
-    return fToC(numToConvert);
-  } else if (functionName === "CtoF") {
-    return cToF(numToConvert);
-  }
+    if (functionName === "FtoC") {
+        return fToC(numToConvert);
+    } else if (functionName === "CtoF") {
+        return cToF(numToConvert);
+    }
 };
 
 console.log("32 F = 0 C:", convertTemperature(32, "FtoC") === 0);
@@ -255,11 +255,11 @@ console.log("0 C = 32 F:", convertTemperature(0, "CtoF") === 32);
 The following lines should help test if your function works correctly. They should print true.*/
 
 const divisibleBy = (numtoDiv, divideByThisNum) => {
-  if (numtoDiv % divideByThisNum === 0) {
-    return true;
-  } else {
-    return false;
-  }
+    if (numtoDiv % divideByThisNum === 0) {
+        return true;
+    } else {
+        return false;
+    }
 };
 
 console.log("5 is not divisible by 3:", divisibleBy(5, 3) === false);
@@ -272,20 +272,20 @@ console.log("6 is divisible by 3:", divisibleBy(6, 3) === true);
 Write some lines of code to test if your function works correctly.*/
 
 const bonusTime = (salary, bonus) => {
-  if (bonus === true) {
-    return salary * 10;
-  } else {
-    return salary;
-  }
+    if (bonus === true) {
+        return salary * 10;
+    } else {
+        return salary;
+    }
 };
 
 console.log(
-  "salary of 20 000 with bonus is 200 000:",
-  bonusTime(20000, true) === 200000
+    "salary of 20 000 with bonus is 200 000:",
+    bonusTime(20000, true) === 200000
 );
 console.log(
-  "salary of 20 000 without bonus is 20 000:",
-  bonusTime(20000, false) === 20000
+    "salary of 20 000 without bonus is 20 000:",
+    bonusTime(20000, false) === 20000
 );
 
 /*
@@ -293,29 +293,29 @@ console.log(
 Write some lines of code to test if your function works correctly.*/
 
 const rps = (first, second) => {
-  if (
-    (first === "rock" && second === "scissors") ||
-    (first === "scissors" && second === "paper") ||
-    (first === "paper" && second === "rock")
-  ) {
-    return 1;
-  } else if (
-    (second === "rock" && first === "scissors") ||
-    (second === "scissors" && first === "paper") ||
-    (second === "paper" && first === "rock")
-  ) {
-    return -1;
-  } else {
-    return 0;
-  }
+    if (
+        (first === "rock" && second === "scissors") ||
+        (first === "scissors" && second === "paper") ||
+        (first === "paper" && second === "rock")
+    ) {
+        return 1;
+    } else if (
+        (second === "rock" && first === "scissors") ||
+        (second === "scissors" && first === "paper") ||
+        (second === "paper" && first === "rock")
+    ) {
+        return -1;
+    } else {
+        return 0;
+    }
 };
 
 console.log(
-  "rock, scissors and paper beats scissors, paper and rock respectively",
-  rps("rock", "scissors") === 1
+    "rock, scissors and paper beats scissors, paper and rock respectively",
+    rps("rock", "scissors") === 1
 );
 console.log(
-  "scissors, paper and rock are respectively beaten by rock, scissors and paper",
-  rps("rock", "paper") === -1
+    "scissors, paper and rock are respectively beaten by rock, scissors and paper",
+    rps("rock", "paper") === -1
 );
 console.log("two of the same response make a tie", rps("paper", "paper") === 0);
