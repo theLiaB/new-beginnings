@@ -432,7 +432,7 @@ const betterPassword = (pass1, pass2) => {
     } else if (pass1Points < pass2Points) {
         return console.log("Password 2 is better");
     } else {
-        return console.log("They are equal");
+        return console.log("Password 1 and Password 2 are equal");
     }
 };
 
