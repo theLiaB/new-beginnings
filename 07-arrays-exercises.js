@@ -25,6 +25,11 @@ console.log(varriedArray);
 /*
 7.13 Print a 2-dimensional array of numbers.
 */
+const dArray = [
+    [1, 2, 3],
+    [4, 5, 6],
+];
+console.log(dArray);
 
 // Practice using array index
 
