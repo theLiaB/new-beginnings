@@ -345,9 +345,6 @@ const hasDigit = (string) => {
     }
 };
 
-hasDigit("feifibe032hj4r");
-hasDigit("feif");
-
 console.log("feifibe032hj4r had digits", hasDigit("feifibe032hj4r") === true);
 console.log("feif does not have digits", hasDigit("feif") === false);
 
@@ -419,3 +416,25 @@ Each character in the password counts for 1 point.
 Including any digits counts for an additional 5 points (flat, not for each digit). 
 Including any punctuation (., !, ?) counts for an additional 10 points (flat, not for each punctuation).
  */
+
+const betterPassword = (pass1, pass2) => {
+    pass1P1 = pass1.length;
+    pass2P1 = pass2.length;
+    pass1P2 = hasDigit(pass1);
+    pass2P2 = hasDigit(pass2);
+    pass1P3 = hasPunctuation(pass1);
+    pass2P3 = hasPunctuation(pass2);
+
+    pass1Points = pass1P1 + pass1P2 + pass1P3;
+    pass2Points = pass2P1 + pass2P2 + pass2P3;
+    if (pass1Points > pass2Points) {
+        return console.log("Password 1 is better");
+    } else if (pass1Points < pass2Points) {
+        return console.log("Password 2 is better");
+    } else {
+        return console.log("They are equal");
+    }
+};
+
+betterPassword("123!!jfjfjfjfjfj", "abc");
+betterPassword("abc", "123!!jfjfjfjfjfj");
