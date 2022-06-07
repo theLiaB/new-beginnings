@@ -49,10 +49,20 @@ console.log(names[5]);
 console.log(names[0], names[2], names[4]);
 /*
 7.23 Create a function called 'head' that takes an array and returns its first element. 
-What does it return when given an empty array?
+What does it return when given an empty array? Remember to write tests!*/
 
-Remember to write tests!
-*/
+const head = (array1) => {
+    return array1[0];
+};
+console.log(
+    "1 is the first character in array [1,2,4,5]",
+    head([1, 3, 4, 5]) === 1
+);
+console.log(
+    "1 is the first character in array [abc, 123, doremi] ",
+    head(["abc", 123, "doremi"]) === "abc"
+);
+//console.log( "if we call head() with no input we get an 'undefined' response", head() === undefined);
 
 /*
 7.24 Create a function called 'isAtIndex' that takes a value, a number, and an array. It should return true if the value is found at the index number of the array, otherwise false.
