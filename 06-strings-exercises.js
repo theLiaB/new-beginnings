@@ -386,6 +386,32 @@ returns true if it is valid, otherwise false.
                 - contain a digit
                 - contain a character of punctuation (., !, ?)
                 */
+const validPassword = (vPass) => {
+    if (
+        vPass.length >= 6 &&
+        hasDigit(vPass) === true &&
+        hasPunctuation(vPass) === true
+    ) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+console.log(
+    "feifibe032hj4r! is a valid pass",
+    validPassword("feifibe032hj4r!") === true
+);
+console.log(
+    "feifurr does not have digits or punctuation",
+    validPassword("feifurr") === false
+);
+console.log(
+    "feif12 does not have punctuation",
+    validPassword("feif12") === false
+);
+console.log("feif!! does not have digits", validPassword("feif!!") === false);
+console.log("feif is too short", validPassword("feif") === false);
 
 /* 6.43 Create a function called 'betterPassword' that takes two passwords and 
 returns the better of the two. A password is considered better if it gets more points. 
