@@ -310,7 +310,8 @@ console.log(fixSentence("hesa?"));
 console.log(fixSentence("hes shs rer."));
 console.log(fixSentence("?hes shs rer"));
 
-/*6.38 Create a function called 'alternating' that takes a number and returns an alternating string of that many 1s and 0s.
+/*6.38 Create a function called 'alternating' that takes a number and returns 
+an alternating string of that many 1s and 0s.
                 1: 1
                 2: 10
                 3: 101
@@ -324,18 +325,25 @@ const alternating = (inNum) => {
 };
 console.log(alternating(7));
 
-/*6.4 Create a function called 'hasDigit' that takes a string and returns true if it contains any digits, otherwise false.
+/*6.4 Create a function called 'hasDigit' that takes a string and returns 
+true if it contains any digits, otherwise false.
  */
 
-/* 6.41 Create a function called 'hasPunctuation' that takes a string and returns true if it contains any punctuation (., !, ?), otherwise false.
+/* 6.41 Create a function called 'hasPunctuation' that takes a string and
+returns true if it contains any punctuation (., !, ?), otherwise false.
  */
 
-/*6.42 Create a function called 'validPassword' that takes a password and returns true if it is valid, otherwise false.
+/*6.42 Create a function called 'validPassword' that takes a password and 
+returns true if it is valid, otherwise false.
                 A valid password must:
                 - be at least 6 characters long
                 - contain a digit
                 - contain a character of punctuation (., !, ?)
                 */
 
-/* 6.43 Create a function called 'betterPassword' that takes two passwords and returns the better of the two. A password is considered better if it gets more points. Each character in the password counts for 1 point. Including any digits counts for an additional 5 points (flat, not for each digit). Including any punctuation (., !, ?) counts for an additional 10 points (flat, not for each punctuation).
+/* 6.43 Create a function called 'betterPassword' that takes two passwords and 
+returns the better of the two. A password is considered better if it gets more points. 
+Each character in the password counts for 1 point. 
+Including any digits counts for an additional 5 points (flat, not for each digit). 
+Including any punctuation (., !, ?) counts for an additional 10 points (flat, not for each punctuation).
  */
