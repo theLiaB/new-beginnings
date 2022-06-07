@@ -55,26 +55,34 @@ const head = (array1) => {
     return array1[0];
 };
 console.log(
-    "1 is the first character in array [1,2,4,5]",
+    "1 is the first value in array [1,2,4,5]",
     head([1, 3, 4, 5]) === 1
 );
 console.log(
-    "1 is the first character in array [abc, 123, doremi] ",
+    "abc is the first value in array [abc, 123, doremi] ",
     head(["abc", 123, "doremi"]) === "abc"
 );
 //console.log( "if we call head() with no input we get an 'undefined' response", head() === undefined);
 
 /*
-7.24 Create a function called 'isAtIndex' that takes a value, a number, and an array. It should return true if the value is found at the index number of the array, otherwise false.
-
+7.24 Create a function called 'isAtIndex' that takes a value, a number, and an array. 
+It should return true if the value is found at the index number of the array, otherwise false.
 The following lines should help test if your function works correctly. They should print true.
 */
+const isAtIndex = (value, num, array) => {
+    if (array[num] === value) {
+        return true;
+    } else {
+        return false;
+    }
+};
 
-// console.log('Bob is at index 1 in names:', isAtIndex('Bob', 1, names));
-// console.log('Bob is not at index 0 in names:', !isAtIndex('Bob', 0, names));
-// console.log('3 is at index 0 in these numbers:', isAtIndex(3, 0, [3, 2, 1]));
-// console.log('2 is not at index 2 in these numbers:', !isAtIndex(2, 2, [3, 2, 1]));
-
+console.log("Bob is at index 1 in names:", isAtIndex("Bob", 1, names));
+console.log("Bob is not at index 0 in names:", !isAtIndex("Bob", 0, names));
+console.log("3 is at index 0 in these numbers:", isAtIndex(3, 0, [3, 2, 1]));
+console.log(
+    "2 is not at index 2 in these numbers:", !isAtIndex(2, 2, [3, 2, 1])
+);
 /*
 7.25 Create a function called 'area' that takes a rectangle and returns its area. The rectangle is represented by an array with 2 numbers: [length, width].
 
