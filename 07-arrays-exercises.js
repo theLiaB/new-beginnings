@@ -37,17 +37,19 @@ console.log(dArray);
 7.2 Print the fourth name (Dave) of the array.
 */
 const names = ["Alice", "Bob", "Carol", "Dave", "Eve", "Frank"];
-
+console.log(names[3]);
 /*
 7.21 Print the last name of the array, without using the length property.
 */
+console.log(names[5]);
 
 /*
 7.22 Print each of the names at even indexes of the array.
 */
-
+console.log(names[0], names[2], names[4]);
 /*
-7.23 Create a function called 'head' that takes an array and returns its first element. What does it return when given an empty array?
+7.23 Create a function called 'head' that takes an array and returns its first element. 
+What does it return when given an empty array?
 
 Remember to write tests!
 */
