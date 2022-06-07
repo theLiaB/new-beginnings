@@ -438,3 +438,4 @@ const betterPassword = (pass1, pass2) => {
 
 betterPassword("123!!jfjfjfjfjfj", "abc");
 betterPassword("abc", "123!!jfjfjfjfjfj");
+betterPassword("144!!jfjfjfjfjfj", "123!!jfjfjfjfjfj");
