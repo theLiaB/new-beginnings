@@ -15,11 +15,13 @@ console.log(arraysForEveryone);
 /*
 7.11 Print an array of your top 3 favorite colors (as strings) without creating a variable.
 */
+console.log("purple", "orange", "green");
 
 /*
 7.12 Print an array of 4 different types of values.
 */
-
+const varriedArray = [2, "yellow", true, undefined];
+console.log(varriedArray);
 /*
 7.13 Print a 2-dimensional array of numbers.
 */
