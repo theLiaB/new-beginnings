@@ -76,16 +76,20 @@ console.log(
     "2 is not at index 2 in these numbers:", !isAtIndex(2, 2, [3, 2, 1])
 );
 /*
-7.25 Create a function called 'area' that takes a rectangle and returns its area. The rectangle is represented by an array with 2 numbers: [length, width].
-
+7.25 Create a function called 'area' that takes a rectangle and returns its area. 
+The rectangle is represented by an array with 2 numbers: [length, width].
 The following lines should help test if your function works correctly. They should print true.
 */
+const area = ([length, width]) => {
+    const number = length * width;
+    return number;
+};
 
-// console.log('area tests');
-// console.log(area([1, 2]) === 2);
-// console.log(area([2, 2]) === 4);
-// console.log(area([6, 3]) === 18);
-// console.log(area([0, 9]) === 0);
+console.log("area tests");
+console.log(area([1, 2]) === 2);
+console.log(area([2, 2]) === 4);
+console.log(area([6, 3]) === 18);
+console.log(area([0, 9]) === 0);
 
 /*
 7.251 Create a function called 'areaDifference' that takes two rectangles and returns the difference between the areas of the rectangles. Each rectangle is represented by an array with 2 numbers: [length, width].
