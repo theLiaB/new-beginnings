@@ -281,8 +281,6 @@ const alternating = (inNum) => {
 console.log(alternating(7));
 console.log(alternating(2));
 console.log(alternating(1));
-console.log(alternating(0.5));
-// try with repeat function
 
 /*6.4 Create a function called 'hasDigit' that takes a string and returns 
 true if it contains any digits, otherwise false.
