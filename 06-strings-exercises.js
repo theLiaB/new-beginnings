@@ -262,24 +262,31 @@ console.log(fixSentence("hes shs rer."));
 console.log(fixSentence("?hes shs rer"));
 
 /*6.38 Create a function called 'alternating' that takes a number and returns 
-                an alternating string of that many 1s and 0s.
-                                1: 1
-                                2: 10
-                                3: 101
-                                4: 1010
-                                5: 10101
-                                ... */
-const theNumbers =
-    "101010101010101010101011010101010101010101010110101010101010101010101101010101010101010101011010101010101010101010110101010101010101010101101010101010101010101011010101010101010101010110101010101010101010101101010101010101010101011010101010101010101010110101010101010101010101101010101010101010101011010101010101010101010110101010101010101010101";
+an alternating string of that many 1s and 0s.
+1: 1
+3: 101
+4: 1010
+5: 10101
+... */
+
 const alternating = (inNum) => {
-    return theNumbers.slice(0, inNum);
+    const string = "10";
+    const repeats = string.repeat(inNum / 2);
+    if (inNum % 2 === 0) {
+        return repeats;
+    } else {
+        return repeats + "1";
+    }
 };
 console.log(alternating(7));
+console.log(alternating(2));
+console.log(alternating(1));
+console.log(alternating(0.5));
 // try with repeat function
 
 /*6.4 Create a function called 'hasDigit' that takes a string and returns 
-                true if it contains any digits, otherwise false.
-                 */
+true if it contains any digits, otherwise false.
+*/
 
 const hasDigit = (string) =>
     string.includes(1) ||
