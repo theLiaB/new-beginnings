@@ -20,8 +20,8 @@ console.log("purple", "orange", "green");
 /*
 7.12 Print an array of 4 different types of values.
 */
-const varriedArray = [2, "yellow", true, undefined];
-console.log(varriedArray);
+const variedArray = [2, "yellow", true, undefined];
+console.log(variedArray);
 /*
 7.13 Print a 2-dimensional array of numbers.
 */
@@ -51,9 +51,7 @@ console.log(names[0], names[2], names[4]);
 7.23 Create a function called 'head' that takes an array and returns its first element. 
 What does it return when given an empty array? Remember to write tests!*/
 
-const head = (array1) => {
-    return array1[0];
-};
+const head = (array1) => array1[0];
 console.log(
     "1 is the first value in array [1,2,4,5]",
     head([1, 3, 4, 5]) === 1
@@ -69,13 +67,7 @@ console.log(
 It should return true if the value is found at the index number of the array, otherwise false.
 The following lines should help test if your function works correctly. They should print true.
 */
-const isAtIndex = (value, num, array) => {
-    if (array[num] === value) {
-        return true;
-    } else {
-        return false;
-    }
-};
+const isAtIndex = (value, num, array) => array[num] === value;
 
 console.log("Bob is at index 1 in names:", isAtIndex("Bob", 1, names));
 console.log("Bob is not at index 0 in names:", !isAtIndex("Bob", 0, names));
