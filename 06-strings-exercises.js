@@ -32,16 +32,14 @@ console.log("The 5th letter of the alphabet is not c: ", numLetter(5) !== "c");
 It should return true if the character is found at the index number of the string, otherwise false.
 The following lines should help test if your function works correctly. They should print true.
 */
-const isAtIndex = (inputChar, inputNum, inputStr) => {
-    if (inputStr[inputNum] === inputChar) {
-        return true;
-    } else {
-        return false;
-    }
-};
+const isAtIndex = (inputChar, inputNum, inputStr) =>
+    inputStr[inputNum] === inputChar;
 
 console.log("e is at index 1 in hello:", isAtIndex("e", 1, "hello") === true);
-console.log("e is at index 4 in Alice:", isAtIndex("e", 4, "Alice") === true);
+console.log(
+    "e is not at index 3 in Alice:",
+    isAtIndex("e", 3, "Alice") === false
+);
 
 // Practice using length
 /*6.2 Print the length of the alphabet string.*/
@@ -63,13 +61,8 @@ It only needs to work on lowercase letters.
 Use the includes() method.
 The following lines should help test if your function works correctly. They should print true.*/
 
-const inAlphabet = (isInAlphabestInput) => {
-    if (alphabet.includes(isInAlphabestInput)) {
-        return true;
-    } else {
-        return false;
-    }
-};
+const inAlphabet = (isInAlphabestInput) =>
+    alphabet.includes(isInAlphabestInput);
 
 console.log("a is in the alphabet:", inAlphabet("a") === true);
 console.log("lmno is in the alphabet:", inAlphabet("lmno") === true);
@@ -80,13 +73,8 @@ console.log("1 is not in the alphabet:", inAlphabet("1") === false);
 returns true if it is included in the following string, otherwise false.
 The following lines should help test if your function works correctly. They should print true.*/
 const digits = "1234567890";
-const isDigit = (testDigit) => {
-    if (digits.includes(testDigit)) {
-        return true;
-    } else {
-        return false;
-    }
-};
+const isDigit = (testDigit) => digits.includes(testDigit);
+
 console.log("1 is a digit:", isDigit("1") === true);
 console.log("9 is a digit:", isDigit("9") === true);
 console.log("a is not a digit:", isDigit("a") === false);
@@ -100,37 +88,25 @@ As you know, last quarter was suboptimal. We did not meet the expected revenue a
 
 If your name was not stated, continue work as usual. Sincerely, PHB.`;
 
-const isInTrouble = (nameOfEmployee) => {
-    if (email.includes(nameOfEmployee)) {
-        return true;
-    } else {
-        return false;
-    }
-};
+const isInTrouble = (nameOfEmployee) => email.includes(nameOfEmployee);
+
 console.log("Wally is in trouble:", isInTrouble("Wally") === true);
 console.log("Steve is not in trouble", isInTrouble("Steve") === false);
 
 /*6.303 Create a function called 'badLanguage' that takes a message and 
 returns true if it contains any bad language, otherwise false. 
 The bad language phrases are: butt face, poopy head, and snot brain.*/
-const badLanguage = (message) => {
-    if (
-        message.includes("butt face") ||
-        message.includes("poopy head") ||
-        message.includes("snot brain")
-    )
-        return true;
-    else {
-        return false;
-    }
-};
+const badLanguage = (message) =>
+    message.includes("butt face") ||
+    message.includes("poopy head") ||
+    message.includes("snot brain");
 
 console.log("butt is bad language", badLanguage("butt face") === true);
 console.log("pickles is not bad language", badLanguage("pickles") === false);
 
 /*6.31 Create a function called 'IsBasicQuestion' that takes a sentence and returns true if it is a 
 basic question, otherwise false. A basic question begins with one of the five Ws
- (Who, What, When, Where, Why) and ends with a question mark.*/
+(Who, What, When, Where, Why) and ends with a question mark.*/
 const IsBasicQuestion = (question) => {
     if (
         (question.startsWith("Who") ||
@@ -158,21 +134,14 @@ console.log(
     IsBasicQuestion("Do you have coke") === false
 );
 /*
-6.32 Create a function called 'validURL' that takes a string and returns true if it is a valid URL,
- otherwise false. For our sake, a valid URL must start with either "http://" or "https://" and 
- end with any of: ".com", ".ca", or ".org".*/
-const validURL = (inputString) => {
-    if (
-        (inputString.startsWith("http://") || inputString.startsWith("https://")) &&
-        (inputString.endsWith(".com") ||
-            inputString.endsWith(".ca") ||
-            inputString.endsWith(".org"))
-    ) {
-        return true;
-    } else {
-        return false;
-    }
-};
+        6.32 Create a function called 'validURL' that takes a string and returns true if it is a valid URL,
+        otherwise false. For our sake, a valid URL must start with either "http://" or "https://" and 
+        end with any of: ".com", ".ca", or ".org".*/
+const validURL = (inputString) =>
+    (inputString.startsWith("http://") || inputString.startsWith("https://")) &&
+    (inputString.endsWith(".com") ||
+        inputString.endsWith(".ca") ||
+        inputString.endsWith(".org"));
 
 console.log(
     "http://lia.com is a valid URL",
@@ -187,17 +156,10 @@ console.log(
     validURL("http://lia.cm") === false
 );
 /*6.33 Create a function called 'firstSpace' that takes a string and 
-returns the index of its first space character, or -1 if there is no space.
-*/
+                returns the index of its first space character, or -1 if there is no space.
+                */
 
-const firstSpace = (lookForSpace) => {
-    if (lookForSpace.includes(" ")) {
-        return lookForSpace.indexOf(" ");
-    } else {
-        return -1;
-    }
-};
-// refactor using just index
+const firstSpace = (lookForSpace) => lookForSpace.indexOf(" ");
 
 console.log(
     "this sentence's first space is at index 4",
@@ -210,11 +172,9 @@ console.log(
 
 /*6.331 Create a function called 'firstOfLast' that takes a full name 
 (e.g. "John Smith") and returns the first letter of the last name (e.g. "S").
- How can you use the firstSpace() function to make this easier?
-*/
-const firstOfLast = (fullName) => {
-    return fullName.slice(firstSpace(fullName) + 1, firstSpace(fullName) + 2);
-};
+How can you use the firstSpace() function to make this easier?*/
+const firstOfLast = (fullName) =>
+    fullName.slice(firstSpace(fullName) + 1, firstSpace(fullName) + 2);
 
 console.log(
     "John Smith's last name's first letter is S",
@@ -229,9 +189,7 @@ console.log(
 and returns the initials (e.g. "J.D."). How can you use firstOfLast() to make this easier?
 */
 
-const initials = (fullN) => {
-    return fullN[0] + "." + firstOfLast(fullN) + ".";
-};
+const initials = (fullN) => fullN[0] + "." + firstOfLast(fullN) + ".";
 
 console.log(
     "John Smith's initials are J.S.",
@@ -243,8 +201,8 @@ console.log(
 );
 
 /*6.34 Create a function called 'capitalize' that takes a word (e.g. "hello") 
-and returns the same word, but with the first letter capitalized (e.g. "Hello").
- */
+                and returns the same word, but with the first letter capitalized (e.g. "Hello").
+                 */
 const capitalize = (wordUp) => {
     const newWordUp = wordUp.toUpperCase();
     return newWordUp[0] + wordUp.slice(1);
@@ -260,9 +218,7 @@ console.log(
 
 /*6.35 Create a function called 'rhetorical' that takes a rhetorical question and returns the same question, but ending with a period instead of a question mark.
  */
-const rhetorical = (rQuest) => {
-    return rQuest.slice(0, rQuest.length - 1) + ".";
-};
+const rhetorical = (rQuest) => rQuest.slice(0, rQuest.length - 1) + ".";
 
 console.log(
     "what's your problem? turns into what's your problem.",
@@ -271,21 +227,14 @@ console.log(
 
 /*6.36 Create a function called 'couldBeWord' that takes a made up word and returns true 
 if it could be a word, otherwise false. Only made up words containing at least one vowel 
-(a, e, i, o, u) could be words.
- */
-const couldBeWord = (couldBWord) => {
-    if (
-        couldBWord.includes("a") === true ||
-        couldBWord.includes("e") === true ||
-        couldBWord.includes("i") === true ||
-        couldBWord.includes("o") === true ||
-        couldBWord.includes("u") === true
-    ) {
-        return true;
-    } else {
-        return false;
-    }
-};
+(a, e, i, o, u) could be words. */
+
+const couldBeWord = (couldBWord) =>
+    couldBWord.includes("a") === true ||
+    couldBWord.includes("e") === true ||
+    couldBWord.includes("i") === true ||
+    couldBWord.includes("o") === true ||
+    couldBWord.includes("u") === true;
 
 console.log("this is a word", couldBeWord("this") === true);
 console.log("thss is not a word", couldBeWord("thss") === false);
@@ -295,11 +244,11 @@ The first letter should be capitalized,
 and a period should be added if the original does not end with punctuation (period, question mark, or exclamation mark).
 */
 const fixSentence = (sentence) => {
-    const firstL = sentence.charAt(0);
+    const firstL = sentence[0];
     const capitalize = firstL.toUpperCase();
     //looks at the first character and capitalizes it no matter what
 
-    const end = sentence.charAt(sentence.length - 1);
+    const end = sentence[sentence.length - 1];
     if (end === "." || end === "?" || end === "!") {
         return capitalize + sentence.slice(1, sentence.length);
     } else {
@@ -313,13 +262,13 @@ console.log(fixSentence("hes shs rer."));
 console.log(fixSentence("?hes shs rer"));
 
 /*6.38 Create a function called 'alternating' that takes a number and returns 
-an alternating string of that many 1s and 0s.
-                1: 1
-                2: 10
-                3: 101
-                4: 1010
-                5: 10101
-                ... */
+                an alternating string of that many 1s and 0s.
+                                1: 1
+                                2: 10
+                                3: 101
+                                4: 1010
+                                5: 10101
+                                ... */
 const theNumbers =
     "101010101010101010101011010101010101010101010110101010101010101010101101010101010101010101011010101010101010101010110101010101010101010101101010101010101010101011010101010101010101010110101010101010101010101101010101010101010101011010101010101010101010110101010101010101010101101010101010101010101011010101010101010101010110101010101010101010101";
 const alternating = (inNum) => {
@@ -329,52 +278,38 @@ console.log(alternating(7));
 // try with repeat function
 
 /*6.4 Create a function called 'hasDigit' that takes a string and returns 
-true if it contains any digits, otherwise false.
- */
+                true if it contains any digits, otherwise false.
+                 */
 
-const hasDigit = (string) => {
-    if (
-        string.includes(1) ||
-        string.includes(2) ||
-        string.includes(3) ||
-        string.includes(4) ||
-        string.includes(5) ||
-        string.includes(6) ||
-        string.includes(7) ||
-        string.includes(8) ||
-        string.includes(9) ||
-        string.includes(0)
-    ) {
-        return true;
-    } else {
-        return false;
-    }
-};
+const hasDigit = (string) =>
+    string.includes(1) ||
+    string.includes(2) ||
+    string.includes(3) ||
+    string.includes(4) ||
+    string.includes(5) ||
+    string.includes(6) ||
+    string.includes(7) ||
+    string.includes(8) ||
+    string.includes(9) ||
+    string.includes(0);
 
 console.log("feifibe032hj4r had digits", hasDigit("feifibe032hj4r") === true);
 console.log("feif does not have digits", hasDigit("feif") === false);
 
 /* 6.41 Create a function called 'hasPunctuation' that takes a string and
-returns true if it contains any punctuation (., !, ?), otherwise false.
- */
+                returns true if it contains any punctuation (., !, ?), otherwise false.
+                 */
 
-const hasPunctuation = (punct) => {
-    if (
-        punct.includes(",") ||
-        punct.includes(".") ||
-        punct.includes("?") ||
-        punct.includes("!")
-    ) {
-        return true;
-    } else {
-        return false;
-    }
-};
+const hasPunctuation = (punct) =>
+    punct.includes(",") ||
+    punct.includes(".") ||
+    punct.includes("?") ||
+    punct.includes("!");
 
 hasDigit("feifibe032hj4r!!");
 hasDigit("feif234");
 console.log(
-    "feifibe032hj,4r! had punctuation",
+    "feifibe032hj,4r! has punctuation",
     hasPunctuation("feifibe032hj,4r!") === true
 );
 console.log(
@@ -384,22 +319,15 @@ console.log(
 
 /*6.42 Create a function called 'validPassword' that takes a password and 
 returns true if it is valid, otherwise false.
-                A valid password must:
-                - be at least 6 characters long
-                - contain a digit
-                - contain a character of punctuation (., !, ?)
-                */
-const validPassword = (vPass) => {
-    if (
-        vPass.length >= 6 &&
-        hasDigit(vPass) === true &&
-        hasPunctuation(vPass) === true
-    ) {
-        return true;
-    } else {
-        return false;
-    }
-};
+A valid password must:
+- be at least 6 characters long
+- contain a digit
+- contain a character of punctuation (., !, ?)
+*/
+const validPassword = (vPass) =>
+    vPass.length >= 6 &&
+    hasDigit(vPass) === true &&
+    hasPunctuation(vPass) === true;
 
 console.log(
     "feifibe032hj4r! is a valid pass",
@@ -417,11 +345,11 @@ console.log("feif!! does not have digits", validPassword("feif!!") === false);
 console.log("feif is too short", validPassword("feif") === false);
 
 /* 6.43 Create a function called 'betterPassword' that takes two passwords and 
-returns the better of the two. A password is considered better if it gets more points. 
-Each character in the password counts for 1 point. 
-Including any digits counts for an additional 5 points (flat, not for each digit). 
-Including any punctuation (., !, ?) counts for an additional 10 points (flat, not for each punctuation).
- */
+                returns the better of the two. A password is considered better if it gets more points. 
+                Each character in the password counts for 1 point. 
+                Including any digits counts for an additional 5 points (flat, not for each digit). 
+                Including any punctuation (., !, ?) counts for an additional 10 points (flat, not for each punctuation).
+                 */
 
 const betterPassword = (pass1, pass2) => {
     const pass1P1 = pass1.length;
