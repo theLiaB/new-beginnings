@@ -1,9 +1,12 @@
-const volumeDifference = ([a1, b1, c1], [a2, b2, c2]) => {
-    const vol1 = a1 * b1 * c1;
-    const vol2 = a2 * b2 * c2;
-    return Math.abs(vol1 - vol2);
+const matrix1 = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+];
+
+const valueInMatrix = (number, row, column, matrix) => {
+    matrix[row][column] === number;
 };
-console.log(
-    "The difference between 6 and 210 is 204",
-    volumeDifference([1, 2, 3], [5, 6, 7]) === 204
-);
+
+console.log(valueInMatrix(6, 1, 2, matrix1));
+console.log(valueInMatrix(10, 3, 2, matrix1));
