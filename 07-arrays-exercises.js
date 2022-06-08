@@ -210,7 +210,7 @@ row and column in the 2D array matrix, otherwise false.
 For example, the number 10 is found at row 3, column 2 in the previous matrix.
 */
 const valueInMatrix = (number, row, column, matrix) => {
-    matrix[row][column] === number;
+    return matrix[row][column] === number;
 };
 
 console.log(valueInMatrix(6, 1, 2, matrix1));
