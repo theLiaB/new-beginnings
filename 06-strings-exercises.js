@@ -345,25 +345,23 @@ console.log("feif!! does not have digits", validPassword("feif!!") === false);
 console.log("feif is too short", validPassword("feif") === false);
 
 /* 6.43 Create a function called 'betterPassword' that takes two passwords and 
-                returns the better of the two. A password is considered better if it gets more points. 
-                Each character in the password counts for 1 point. 
-                Including any digits counts for an additional 5 points (flat, not for each digit). 
-                Including any punctuation (., !, ?) counts for an additional 10 points (flat, not for each punctuation).
-                 */
+returns the better of the two. A password is considered better if it gets more points. 
+Each character in the password counts for 1 point. 
+Including any digits counts for an additional 5 points (flat, not for each digit). 
+Including any punctuation (., !, ?) counts for an additional 10 points (flat, not for each punctuation).
+*/
 
 const betterPassword = (pass1, pass2) => {
     const pass1P1 = pass1.length;
     const pass2P1 = pass2.length;
-    const pass1P2 = hasDigit(pass1);
-    const pass2P2 = hasDigit(pass2);
-    const pass1P3 = hasPunctuation(pass1);
-    const pass2P3 = hasPunctuation(pass2);
+    const pass1P2 = hasDigit(pass1) ? pass1P1 + 5 : pass1P1;
+    const pass2P2 = hasDigit(pass2) ? pass2P1 + 5 : pass2P1;
+    const pass1P3 = hasPunctuation(pass1) ? pass1P2 + 10 : pass1P2;
+    const pass2P3 = hasPunctuation(pass2) ? pass2P2 + 10 : pass2P2;
 
-    pass1Points = pass1P1 + pass1P2 + pass1P3;
-    pass2Points = pass2P1 + pass2P2 + pass2P3;
-    if (pass1Points > pass2Points) {
+    if (pass1P3 > pass2P3) {
         return console.log("Password 1 is better");
-    } else if (pass1Points < pass2Points) {
+    } else if (pass1P3 < pass2P3) {
         return console.log("Password 2 is better");
     } else {
         return console.log("Password 1 and Password 2 are equal");
@@ -373,5 +371,3 @@ const betterPassword = (pass1, pass2) => {
 betterPassword("123!!jfjfjfjfjfj", "abc");
 betterPassword("abc", "123!!jfjfjfjfjfj");
 betterPassword("144!!jfjfjfjfjfj", "123!!jfjfjfjfjfj");
-
-//use proper scoring for has digit and punctuation. try using ternary
