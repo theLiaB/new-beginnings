@@ -92,11 +92,24 @@ console.log(area([6, 3]) === 18);
 console.log(area([0, 9]) === 0);
 
 /*
-7.251 Create a function called 'areaDifference' that takes two rectangles and returns the difference between the areas of the rectangles. Each rectangle is represented by an array with 2 numbers: [length, width].
+7.251 Create a function called 'areaDifference' that takes two rectangles 
+and returns the difference between the areas of the rectangles. 
+Each rectangle is represented by an array with 2 numbers: [length, width].
 */
-
+const areaDifference = ([length1, width1], [length2, width2]) => {
+    const area1 = length1 * width1;
+    const area2 = length2 * width2;
+    return Math.abs(area1 - area2);
+};
+console.log(
+    "The diffference between 2 and 9 is 7",
+    areaDifference([1, 2], [3, 3]) === 7
+);
 /*
-7.252 Create a function called 'volumeDifference' that takes two cuboids and returns the difference between the volumes of the cuboids. Each cuboid is represented by an array with 3 numbers: [length, width, height]. The volume of a cuboid can be calculated by multiplying length x width x height.
+7.252 Create a function called 'volumeDifference' that takes two cuboids 
+and returns the difference between the volumes of the cuboids. 
+Each cuboid is represented by an array with 3 numbers: [length, width, height].
+The volume of a cuboid can be calculated by multiplying length x width x height.
 */
 
 /*
