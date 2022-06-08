@@ -102,8 +102,16 @@ const areaDifference = ([length1, width1], [length2, width2]) => {
     return Math.abs(area1 - area2);
 };
 console.log(
-    "The diffference between 2 and 9 is 7",
+    "The difference between 2 and 9 is 7",
     areaDifference([1, 2], [3, 3]) === 7
+);
+console.log(
+    "The difference between 14 and 18 is 7",
+    areaDifference([7, 2], [6, 3]) === 4
+);
+console.log(
+    "The difference between 49 and 18 is not 9",
+    areaDifference([7, 7], [6, 3]) !== 9
 );
 /*
 7.252 Create a function called 'volumeDifference' that takes two cuboids 
