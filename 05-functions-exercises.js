@@ -254,13 +254,8 @@ console.log("0 C = 32 F:", convertTemperature(0, "CtoF") === 32);
 
 The following lines should help test if your function works correctly. They should print true.*/
 
-const divisibleBy = (numtoDiv, divideByThisNum) => {
-    if (numtoDiv % divideByThisNum === 0) {
-        return true;
-    } else {
-        return false;
-    }
-};
+const divisibleBy = (numtoDiv, divideByThisNum) =>
+    numtoDiv % divideByThisNum === 0;
 
 console.log("5 is not divisible by 3:", divisibleBy(5, 3) === false);
 console.log("1 is divisible by 1:", divisibleBy(1, 1) === true);
