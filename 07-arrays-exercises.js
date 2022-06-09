@@ -208,26 +208,23 @@ number, row, column, matrix.
 It should return true if the number is found at the specified 
 row and column in the 2D array matrix, otherwise false. 
 For example, the number 10 is found at row 3, column 2 in the previous matrix.
-*/
-const valueInMatrix = (number, row, column, matrix) => {
-    return matrix[row][column] === number;
-};
+
+const valueInMatrix = (number, row, column, matrix) =>
+    matrix[row][column] === number;
 
 console.log(valueInMatrix(6, 1, 2, matrix1));
 console.log(valueInMatrix(10, 3, 2, matrix1));
-
+*/
 // Practice using length
 /*
 7.3 Print the length of the names array.*/
 console.log(names.length);
 
-/*
-                    7.31 Print the last name in the array, using the length property.
-                    */
+/*7.31 Print the last name in the array, using the length property.*/
 
-/*
-                    7.32 Print the sum of the lengths of the following arrays.
-                    */
+console.log(names[names.length - 1]);
+
+/*7.32 Print the sum of the lengths of the following arrays.*/
 const groceries = [
     "rice",
     "bananas",
@@ -239,22 +236,22 @@ const groceries = [
 ];
 const officeSupplies = ["pen", "paper", "tape", "stapler"];
 
-/*
-                    7.33 Print the length of the first row in the following 2D array.
-                    */
+console.log(groceries.length + officeSupplies.length);
+
+/*7.33 Print the length of the first row in the following 2D array. */
 const matrix2 = [
     ["a", "b", "c", "d", "e", "f", "g", "h"],
     ["i", "j", "k", "l", "m", "n", "o", "p"],
     ["q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
 ];
+console.log(matrix2[0].length);
 
-/*
-                    7.34 Create a function called 'last' that takes an array and returns its last element.
-                    */
+/*7.34 Create a function called 'last' that takes an array and returns its last element.*/
+const last = (array) => array[array.length - 1];
+console.log(last(names));
+console.log(last(matrix1));
 
-/*
-                    7.35 Print the length of the last row in the following 2D array.
-                    */
+/*7.35 Print the length of the last row in the following 2D array.*/
 const bigMatrix = [
     [45, 39, 89, 67, 7, 71, 85, 44, 47, 39],
     [89, 32, 81, 19, 43, 17, 47, 10, 6, 58],
@@ -267,10 +264,9 @@ const bigMatrix = [
     [60, 1, 54, 49, 44, 61, 42, 50, 18, 43],
     [91, 46, 7, 50, 95, 14, 45, 4, 98, 22],
 ];
-
-/*
-                    7.36 Create a function called 'isEmpty' that takes an array and returns true if it is empty, otherwise false.
-                    */
+console.log(bigMatrix[bigMatrix.length - 1].length);
+/*7.36 Create a function called 'isEmpty' that takes an array and returns true if it is empty, otherwise false.
+ */
 
 // Practice using the includes() method
 
