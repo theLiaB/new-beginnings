@@ -1,21 +1,13 @@
-const matrix1 = [
-    [1, 2, 3, 4],
-    [5, 6, 7, 8],
-    [9, 10, 11, 12],
+const matrix2 = [
+    ["a", "b", "c", "d", "e", "f", "g", "h"],
+    ["i", "j", "k", "l", "m", "n", "o", "p"],
+    ["q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
 ];
-console.log(matrix1[1][3]);
-/*
-7.271 Create a function called 'valueInMatrix' that takes 4 arguments: 
-number, row, column, matrix. 
-It should return true if the number is found at the specified 
-row and column in the 2D array matrix, otherwise false. 
-For example, the number 10 is found at row 3, column 2 in the previous matrix.
-*/
-const valueInMatrix = (number, row, column, matrix) =>
-    matrix[row - 1][column - 1] === number;
+console.log(matrix2[0].length);
 
-console.log(valueInMatrix(2, 1, 2, matrix1));
-console.log(valueInMatrix(10, 3, 2, matrix1));
-
-console.log(valueInMatrix(6, 1, 1, matrix1));
-console.log(valueInMatrix(10, 2, 1, matrix1));
+/*7.34 Create a function called 'last' that takes an array and returns its last element.*/
+const last = (array) => {
+    inEnvelope = array[array.length - 1];
+    return inEnvelope[inEnvelope.length - 1];
+};
+console.log(last(matrix2));

@@ -212,7 +212,7 @@ For example, the number 10 is found at row 3, column 2 in the previous matrix.
 const valueInMatrix = (number, row, column, matrix) =>
     matrix[row - 1][column - 1] === number;
 
-console.log(valueInMatrix(6, 1, 2, matrix1));
+console.log(valueInMatrix(2, 1, 2, matrix1));
 console.log(valueInMatrix(10, 3, 2, matrix1));
 
 // Practice using length
@@ -247,7 +247,10 @@ const matrix2 = [
 console.log(matrix2[0].length);
 
 /*7.34 Create a function called 'last' that takes an array and returns its last element.*/
-const last = (array) => array[array.length - 1];
+const last = (array) => {
+    inEnvelope = array[array.length - 1];
+    return inEnvelope[inEnvelope.length - 1];
+};
 console.log(last(names));
 console.log(last(matrix1));
 
