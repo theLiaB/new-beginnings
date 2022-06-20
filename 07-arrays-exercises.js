@@ -208,13 +208,13 @@ number, row, column, matrix.
 It should return true if the number is found at the specified 
 row and column in the 2D array matrix, otherwise false. 
 For example, the number 10 is found at row 3, column 2 in the previous matrix.
-
+*/
 const valueInMatrix = (number, row, column, matrix) =>
-    matrix[row][column] === number;
+    matrix[row - 1][column - 1] === number;
 
 console.log(valueInMatrix(6, 1, 2, matrix1));
 console.log(valueInMatrix(10, 3, 2, matrix1));
-*/
+
 // Practice using length
 /*
 7.3 Print the length of the names array.*/
