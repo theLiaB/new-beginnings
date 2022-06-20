@@ -270,34 +270,39 @@ const bigMatrix = [
 console.log(bigMatrix[bigMatrix.length - 1].length);
 /*7.36 Create a function called 'isEmpty' that takes an array and returns true if it is empty, otherwise false.
  */
+const isEmpty = (array) => (array.length > 0 ? true : false);
+
+const noRay = [];
+console.log("bigMatrix has items in it:", isEmpty(bigMatrix) === true);
+console.log("noRay has no items in it:", isEmpty(noRay) === false);
 
 // Practice using the includes() method
 
 /*
-                    7.4 Create a function called 'goodColor' that takes a single color (string) and an array of good colors (strings). It should return true if the color is in the array, otherwise false.
-                    */
+                      7.4 Create a function called 'goodColor' that takes a single color (string) and an array of good colors (strings). It should return true if the color is in the array, otherwise false.
+                      */
 
 /*
-                    7.41 Create a function called 'needToBuy' that takes a single item (string) and an array of owned items (strings). It should return true if the item isn't in the owned list (meaning we need to buy it!), otherwise false.
-                    */
+                      7.41 Create a function called 'needToBuy' that takes a single item (string) and an array of owned items (strings). It should return true if the item isn't in the owned list (meaning we need to buy it!), otherwise false.
+                      */
 
 /*
-                    7.42 Create a function called 'hasNull' that takes an array and returns true if any of the values are null, otherwise false.
-                    */
+                      7.42 Create a function called 'hasNull' that takes an array and returns true if any of the values are null, otherwise false.
+                      */
 
 /*
-                    7.43 Create a function called 'badMatrix' that takes a 2D array with 3 rows. It should return true if any of the 3 rows contain a null value, otherwise false.
-                    */
+                      7.43 Create a function called 'badMatrix' that takes a 2D array with 3 rows. It should return true if any of the 3 rows contain a null value, otherwise false.
+                      */
 
 /*
-                    7.44 Create a function called 'goodMatrix' that takes a 2D array with 3 rows. It should return true if none of the 3 rows contain a null value, otherwise false.
-                    */
+                      7.44 Create a function called 'goodMatrix' that takes a 2D array with 3 rows. It should return true if none of the 3 rows contain a null value, otherwise false.
+                      */
 
 /*
-                    7.45 Create a function called 'middleIndex' that takes an array and returns the index of the middle element, as per the following tests.
+                      7.45 Create a function called 'middleIndex' that takes an array and returns the index of the middle element, as per the following tests.
 
-                    Tip: Look up the Math.floor() function.
-                    */
+                      Tip: Look up the Math.floor() function.
+                      */
 
 console.log("-- middleIndex tests");
 console.log(middleIndex([1]) === 0);
