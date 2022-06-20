@@ -1,12 +1,12 @@
-const goodColor = (string, strings) =>
-    strings.includes(string) ? true : false;
+const needToBuy = (string, strings) =>
+    strings.includes(string) ? false : true;
 
-const sampleRay1 = ["silver", "green", "blue", "purple", "gold"];
+const sampleRay2 = ["dog", "car", "lamp"];
 console.log(
-    "sampleRay1 has blue in it:",
-    goodColor("blue", sampleRay1) === true
+    "sampleRay2 says we have a dog:",
+    needToBuy("dog", sampleRay2) === false
 );
 console.log(
-    "sampleRay1 doesn't have yellow in it:",
-    goodColor("yellow", sampleRay1) === false
+    "sampleRay2 says we need a tiger:",
+    needToBuy("tiger", sampleRay2) === true
 );

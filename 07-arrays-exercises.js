@@ -292,13 +292,22 @@ console.log(
     "sampleRay1 doesn't have yellow in it:",
     goodColor("yellow", sampleRay1) === false
 );
-/*
-                      7.41 Create a function called 'needToBuy' that takes a single item (string) and an array of owned items (strings). It should return true if the item isn't in the owned list (meaning we need to buy it!), otherwise false.
-                      */
+/*7.41 Create a function called 'needToBuy' that takes a single item (string) and an array of owned items (strings). It should return true if the item isn't in the owned list (meaning we need to buy it!), otherwise false.
+ */
+const needToBuy = (string, strings) =>
+    strings.includes(string) ? false : true;
 
-/*
-                      7.42 Create a function called 'hasNull' that takes an array and returns true if any of the values are null, otherwise false.
-                      */
+const sampleRay2 = ["dog", "car", "lamp"];
+console.log(
+    "sampleRay2 says we have a dog:",
+    needToBuy("dog", sampleRay2) === false
+);
+console.log(
+    "sampleRay2 says we need a tiger:",
+    needToBuy("tiger", sampleRay2) === true
+);
+/*7.42 Create a function called 'hasNull' that takes an array and returns true if any of the values are null, otherwise false.
+ */
 
 /*
                       7.43 Create a function called 'badMatrix' that takes a 2D array with 3 rows. It should return true if any of the 3 rows contain a null value, otherwise false.
