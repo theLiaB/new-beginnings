@@ -306,9 +306,14 @@ console.log(
     "sampleRay2 says we need a tiger:",
     needToBuy("tiger", sampleRay2) === true
 );
-/*7.42 Create a function called 'hasNull' that takes an array and returns true if any of the values are null, otherwise false.
+/*7.42 Create a function called 'hasNull' that takes an array and returns true
+if any of the values are null, otherwise false.
  */
+const hasNull = (array) => (array.includes(null) ? true : false);
 
+const noRay2 = [null, "5", 8];
+console.log("noRay2 has null in it", hasNull(noRay2) === true);
+console.log("sampleRay2 has no null in it", hasNull(sampleRay2) === false);
 /*
                       7.43 Create a function called 'badMatrix' that takes a 2D array with 3 rows. It should return true if any of the 3 rows contain a null value, otherwise false.
                       */
