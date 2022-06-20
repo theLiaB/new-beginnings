@@ -278,10 +278,20 @@ console.log("noRay has no items in it:", isEmpty(noRay) === false);
 
 // Practice using the includes() method
 
-/*
-                      7.4 Create a function called 'goodColor' that takes a single color (string) and an array of good colors (strings). It should return true if the color is in the array, otherwise false.
-                      */
+/*7.4 Create a function called 'goodColor' that takes a single color (string) and an array of good colors (strings). It should return true if the color is in the array, otherwise false.
+ */
+const goodColor = (string, strings) =>
+    strings.includes(string) ? true : false;
 
+const sampleRay1 = ["silver", "green", "blue", "purple", "gold"];
+console.log(
+    "sampleRay1 has blue in it:",
+    goodColor("blue", sampleRay1) === true
+);
+console.log(
+    "sampleRay1 doesn't have yellow in it:",
+    goodColor("yellow", sampleRay1) === false
+);
 /*
                       7.41 Create a function called 'needToBuy' that takes a single item (string) and an array of owned items (strings). It should return true if the item isn't in the owned list (meaning we need to buy it!), otherwise false.
                       */
