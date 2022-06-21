@@ -343,11 +343,11 @@ const goodMatrix = (array) => (badMatrix(array) ? false : true);
 
 console.log("weeMatrix is a good matrix", goodMatrix(weeMatrix) === true);
 console.log("nullriffic is a bad matrix", goodMatrix(nullriffic) === false);
-/*
-                              7.45 Create a function called 'middleIndex' that takes an array and returns the index of the middle element, as per the following tests.
 
-                              Tip: Look up the Math.floor() function.
-                              */
+/*7.45 Create a function called 'middleIndex' that takes an array and returns the index of the middle element, as per the following tests.
+Tip: Look up the Math.floor() function.*/
+
+const middleIndex = (array) => Math.floor(array.length * 0.5);
 
 console.log("-- middleIndex tests");
 console.log(middleIndex([1]) === 0);
@@ -356,9 +356,8 @@ console.log(middleIndex([1, 2, 3]) === 1);
 console.log(middleIndex([1, 2, 3, 4]) === 2);
 console.log(middleIndex([1, 2, 3, 4, 5]) === 2);
 
-/*
-                            7.46 Create a function called 'middle' that takes an array and returns the middle element, as per the following tests.
-                            */
+/*7.46 Create a function called 'middle' that takes an array and returns the middle element, as per the following tests.
+ */
 
 console.log("-- middle tests");
 console.log(middle([1]) === 1);
