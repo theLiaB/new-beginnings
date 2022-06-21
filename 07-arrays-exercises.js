@@ -358,6 +358,7 @@ console.log(middleIndex([1, 2, 3, 4, 5]) === 2);
 
 /*7.46 Create a function called 'middle' that takes an array and returns the middle element, as per the following tests.
  */
+const middle = (array) => array[Math.floor(array.length * 0.5)];
 
 console.log("-- middle tests");
 console.log(middle([1]) === 1);
@@ -369,24 +370,23 @@ console.log(middle([1, 2, 3, 4, 5, 6]) === 4);
 
 // Practice using the slice() method
 
-/*
-                            7.5 Print the first 3 elements of the following array, using slice().
-                            */
+/*7.5 Print the first 3 elements of the following array, using slice().
+ */
 const randomNumbers = [82, 31, 21, 59, 67, 2, 36, 86, 18];
+console.log(randomNumbers.slice(0, 3));
+
+/*7.501 Print the middle 3 random numbers, using slice().
+ */
 
 /*
-                            7.501 Print the middle 3 random numbers, using slice().
-                            */
+                                    7.502 Print the last 3 random numbers, using slice().
+                                    */
 
 /*
-                            7.502 Print the last 3 random numbers, using slice().
-                            */
+                                    7.51 Create a function called 'tail' that takes an array and returns the "tail" end of it; everything but the first element.
 
-/*
-                            7.51 Create a function called 'tail' that takes an array and returns the "tail" end of it; everything but the first element.
-
-                            We can't use equality for comparing arrays, so it's tricky to write proper tests for functions like this, which return an array. For now, we can simply print the result and see if it looks right. The following lines should help you see if your function works correctly.
-                            */
+                                    We can't use equality for comparing arrays, so it's tricky to write proper tests for functions like this, which return an array. For now, we can simply print the result and see if it looks right. The following lines should help you see if your function works correctly.
+                                    */
 
 console.log("-- tail tests");
 console.log(tail([1, 2, 3]), "=== [2, 3]");
@@ -395,14 +395,14 @@ console.log(tail([1]), "=== []");
 console.log(tail([]), "=== []");
 
 /*
-                            7.511 Create a function called 'firstIsRepeated' that takes an array and returns true if the first element exists more than once in the array, otherwise false.
-                            */
+                                    7.511 Create a function called 'firstIsRepeated' that takes an array and returns true if the first element exists more than once in the array, otherwise false.
+                                    */
 
 /*
-                            7.52 Create a function called 'init' that takes an array and returns all the elements except the last one.
+                                    7.52 Create a function called 'init' that takes an array and returns all the elements except the last one.
 
-                            The following lines should help you see if your function works correctly.
-                            */
+                                    The following lines should help you see if your function works correctly.
+                                    */
 
 console.log("-- init tests");
 console.log(init([1, 2, 3, 4]), "=== [1, 2, 3]");
@@ -411,18 +411,18 @@ console.log(init([9]), "=== []");
 console.log(init([]), "=== []");
 
 /*
-                            7.521 Create a function called 'lastIsRepeated' that takes an array and returns true if the last element exists more than once in the array, otherwise false.
-                            */
+                                    7.521 Create a function called 'lastIsRepeated' that takes an array and returns true if the last element exists more than once in the array, otherwise false.
+                                    */
 
 /*
-                            7.522 Create a function called 'inner' that takes an array and returns all the elements except the first and last.
-                            */
+                                    7.522 Create a function called 'inner' that takes an array and returns all the elements except the first and last.
+                                    */
 
 /*
-                            7.53 Create a function called 'take' that takes a number (n) and an array. It should return the first n elements of the array.
+                                    7.53 Create a function called 'take' that takes a number (n) and an array. It should return the first n elements of the array.
 
-                            The following lines should help you see if your function works correctly.
-                            */
+                                    The following lines should help you see if your function works correctly.
+                                    */
 
 console.log("-- take tests");
 console.log(take(3, [1, 2, 3, 4]), "=== [1, 2, 3]");
@@ -431,10 +431,10 @@ console.log(take(0, [1, 2, 3, 4]), "=== []");
 console.log(take(9, [1, 2, 3, 4]), "=== [1, 2, 3, 4]");
 
 /*
-                            7.54 Create a function called 'drop' that takes a number (n) and an array. It should drop the first n elements of the array and return the rest.
+                                    7.54 Create a function called 'drop' that takes a number (n) and an array. It should drop the first n elements of the array and return the rest.
 
-                            The following lines should help you see if your function works correctly.
-                            */
+                                    The following lines should help you see if your function works correctly.
+                                    */
 
 console.log("-- drop tests");
 console.log(drop(0, [1, 2, 3, 4]), "=== [1, 2, 3, 4]");
@@ -445,10 +445,10 @@ console.log(drop(4, [1, 2, 3, 4]), "=== []");
 console.log(drop(9, [1, 2, 3, 4]), "=== []");
 
 /*
-                            7.55 Create a function called 'middle3' that takes an array (of at least 3 elements) and returns the middle 3 elements (as an array), as per the following tests.
+                                    7.55 Create a function called 'middle3' that takes an array (of at least 3 elements) and returns the middle 3 elements (as an array), as per the following tests.
 
-                            The following lines should help you see if your function works correctly.
-                            */
+                                    The following lines should help you see if your function works correctly.
+                                    */
 
 console.log("-- middle3 tests");
 console.log(middle3([1, 2, 3]), "=== [1, 2, 3]");
@@ -458,10 +458,10 @@ console.log(middle3([1, 2, 3, 4, 5, 6]), "=== [3, 4, 5]");
 console.log(middle3([1, 2, 3, 4, 5, 6, 7]), "=== [3, 4, 5]");
 
 /*
-                            7.551 Create a function called 'middleN' that takes a number (n) and an array (of at least n elements). It should return the middle n elements.
+                                    7.551 Create a function called 'middleN' that takes a number (n) and an array (of at least n elements). It should return the middle n elements.
 
-                            The following lines should help you see if your function works correctly.
-                            */
+                                    The following lines should help you see if your function works correctly.
+                                    */
 
 console.log("-- middleN tests");
 console.log(middleN(3, [1, 2, 3, 4, 5]), "=== [2, 3, 4]");
@@ -471,10 +471,10 @@ console.log(middleN(1, [1, 2, 3, 4, 5, 6]), "=== [4]");
 // Practice using the sort() method
 
 /*
-                            7.6 Create a function called 'top3' that takes an array (of at least 3 strings) and returns the first 3 strings that occur in alphabetical order.
+                                    7.6 Create a function called 'top3' that takes an array (of at least 3 strings) and returns the first 3 strings that occur in alphabetical order.
 
-                            The following lines should help you see if your function works correctly.
-                            */
+                                    The following lines should help you see if your function works correctly.
+                                    */
 
 console.log("-- top3 tests");
 console.log(
@@ -495,10 +495,10 @@ console.log(
 );
 
 /*
-                            7.61 Create a function called 'topN' that takes a number (n) and an array (of at least n strings). It should return the first n strings that occur in alphabetical order.
+                                    7.61 Create a function called 'topN' that takes a number (n) and an array (of at least n strings). It should return the first n strings that occur in alphabetical order.
 
-                            The following lines should help you see if your function works correctly.
-                            */
+                                    The following lines should help you see if your function works correctly.
+                                    */
 
 console.log("-- topN tests");
 console.log(
@@ -518,10 +518,10 @@ console.log(topN(1, ["apple"]), "=== ['apple']");
 // Practice using the reverse() method
 
 /*
-                            7.7 Create a function called 'bottom3' that takes an array (of at least 3 strings) and returns the last 3 strings that occur in reverse alphabetical order.
+                                    7.7 Create a function called 'bottom3' that takes an array (of at least 3 strings) and returns the last 3 strings that occur in reverse alphabetical order.
 
-                            The following lines should help you see if your function works correctly.
-                            */
+                                    The following lines should help you see if your function works correctly.
+                                    */
 
 console.log("-- bottom3 tests");
 console.log(
@@ -538,10 +538,10 @@ console.log(
 );
 
 /*
-                            7.71 Create a function called 'bottomN' that takes a number (n) and an array (of at least n strings). It should return the last n strings that occur in reverse alphabetical order.
+                                    7.71 Create a function called 'bottomN' that takes a number (n) and an array (of at least n strings). It should return the last n strings that occur in reverse alphabetical order.
 
-                            The following lines should help you see if your function works correctly.
-                            */
+                                    The following lines should help you see if your function works correctly.
+                                    */
 
 console.log("-- bottomN tests");
 console.log(
@@ -561,75 +561,75 @@ console.log(bottomN(1, ["apple"]), "=== ['apple']");
 // Practice adding elements to arrays
 
 /*
-                            7.8 Print the following array with the number 4 added to the end, so we get [1, 2, 3, 4].
-                            */
+                                    7.8 Print the following array with the number 4 added to the end, so we get [1, 2, 3, 4].
+                                    */
 const oneTwoThree = [1, 2, 3];
 
 /*
-                            7.801 Print the following array with the number 1 added to the beginning, so we get [1, 2, 3, 4].
-                            */
+                                    7.801 Print the following array with the number 1 added to the beginning, so we get [1, 2, 3, 4].
+                                    */
 const twoThreeFour = [2, 3, 4];
 
 /*
-                            7.802 Print the following array with the name 'Dave' added to the end, so we get ['Alice', 'Bob', 'Carol', 'Dave'].
-                            */
+                                    7.802 Print the following array with the name 'Dave' added to the end, so we get ['Alice', 'Bob', 'Carol', 'Dave'].
+                                    */
 const someNames = ["Alice", "Bob", "Carol"];
 
 /*
-                            7.803 Print the following two arrays added together, so we get ['apple', 'banana', 'cherry', 'date', 'elderberry'].
-                            */
+                                    7.803 Print the following two arrays added together, so we get ['apple', 'banana', 'cherry', 'date', 'elderberry'].
+                                    */
 const fruits = ["apple", "banana", "cherry"];
 const moreFruits = ["date", "elderberry"];
 
 /*
-                            7.804 Print the following 2D array with another row added to the end.
-                            */
+                                    7.804 Print the following 2D array with another row added to the end.
+                                    */
 const matrix3 = [
     [1, 2, 3],
     [4, 5, 6],
 ];
 
 /*
-                            7.81 Create a function called 'nullHead' that takes an array and returns a new array with the first element replaced with null.
+                                    7.81 Create a function called 'nullHead' that takes an array and returns a new array with the first element replaced with null.
 
-                            The following lines should help you see if your function works correctly.
-                            */
+                                    The following lines should help you see if your function works correctly.
+                                    */
 
 console.log("-- nullHead tests");
 console.log(nullHead([1, 2, 3]), "=== [null, 2, 3]");
 console.log(nullHead(["a", "b", "c"]), "=== [null, b, c]");
 
 /*
-                            7.82 Create a function called 'append' that takes a value and an array, and returns a new array with the value added to the end.
-                            */
+                                    7.82 Create a function called 'append' that takes a value and an array, and returns a new array with the value added to the end.
+                                    */
 
 /*
-                            7.821 Create a function called 'appendHead' that takes an array and returns a new array with its first value added to the end.
-                            */
+                                    7.821 Create a function called 'appendHead' that takes an array and returns a new array with its first value added to the end.
+                                    */
 
 /*
-                            7.83 Create a function called 'swapEnds' that takes an array and returns a new array with the first and last elements swapped.
+                                    7.83 Create a function called 'swapEnds' that takes an array and returns a new array with the first and last elements swapped.
 
-                            Tip: Try using our head(), last(), and inner() functions to help.
-                            */
+                                    Tip: Try using our head(), last(), and inner() functions to help.
+                                    */
 
 /*
-                            7.84 Create a function called 'countUp' that takes an array of numbers counting up and returns a new array with the next number added to the end.
+                                    7.84 Create a function called 'countUp' that takes an array of numbers counting up and returns a new array with the next number added to the end.
 
-                            The following lines should help you see if your function works correctly.
+                                    The following lines should help you see if your function works correctly.
 
-                            Tip: Try using our last() function to help.
-                            */
+                                    Tip: Try using our last() function to help.
+                                    */
 
 console.log("-- countUp tests");
 console.log(countUp([1, 2, 3]), "=== [1, 2, 3, 4]");
 console.log(countUp([25, 26, 27, 28, 29]), "=== [25, 26, 27, 28, 29, 30]");
 
 /*
-                            7.841 Create a function called 'countMore' that takes an array of numbers in a sequence (with a constant interval) and returns a new array with the next number in the sequence added to the end.
+                                    7.841 Create a function called 'countMore' that takes an array of numbers in a sequence (with a constant interval) and returns a new array with the next number in the sequence added to the end.
 
-                            The following lines should help you see if your function works correctly.
-                            */
+                                    The following lines should help you see if your function works correctly.
+                                    */
 
 console.log("-- countMore tests");
 console.log(countMore([1, 2, 3]), "=== [1, 2, 3, 4]");
@@ -639,12 +639,12 @@ console.log(countMore([10, 20, 30, 40, 50]), "=== [10, 20, 30, 40, 50, 60]");
 console.log(countMore([-1, -2, -3]), "=== [-1, -2, -3, -4]");
 
 /*
-                            7.85 Create a function called 'insertAt' that takes an index, a value, and an array. It should return a new array with the given value inserted at the given index.
+                                    7.85 Create a function called 'insertAt' that takes an index, a value, and an array. It should return a new array with the given value inserted at the given index.
 
-                            The following lines should help you see if your function works correctly.
+                                    The following lines should help you see if your function works correctly.
 
-                            Tip: Try using our take() and drop() functions to help.
-                            */
+                                    Tip: Try using our take() and drop() functions to help.
+                                    */
 
 console.log("-- insertAt tests");
 console.log(insertAt(3, 4, [1, 2, 3, 5]), "=== [1, 2, 3, 4, 5]");
@@ -652,5 +652,5 @@ console.log(insertAt(4, 5, [1, 2, 3, 4]), "=== [1, 2, 3, 4, 5]");
 console.log(insertAt(2, "c", ["a", "b", "d"]), "=== [a, b, c, d]");
 
 /*
-                            7.86 Create a function called 'addToShoppingList' that takes a shopping list (array of strings) and an item (string). It should return a shopping list with the new item added to it. If the item is already in the shopping list, return the shopping list unchanged.
-                            */
+                                    7.86 Create a function called 'addToShoppingList' that takes a shopping list (array of strings) and an item (string). It should return a shopping list with the new item added to it. If the item is already in the shopping list, return the shopping list unchanged.
+                                    */
