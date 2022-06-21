@@ -377,7 +377,7 @@ console.log(randomNumbers.slice(0, 3));
 
 /*7.501 Print the middle 3 random numbers, using slice().
  */
-
+console.log(randomNumbers.slice(3, 6));
 /*
                                     7.502 Print the last 3 random numbers, using slice().
                                     */
