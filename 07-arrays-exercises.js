@@ -379,14 +379,15 @@ console.log(randomNumbers.slice(0, 3));
  */
 console.log(randomNumbers.slice(3, 6));
 /*
-                                    7.502 Print the last 3 random numbers, using slice().
-                                    */
-
+7.502 Print the last 3 random numbers, using slice().*/
+console.log(randomNumbers.slice(6));
 /*
-                                    7.51 Create a function called 'tail' that takes an array and returns the "tail" end of it; everything but the first element.
-
-                                    We can't use equality for comparing arrays, so it's tricky to write proper tests for functions like this, which return an array. For now, we can simply print the result and see if it looks right. The following lines should help you see if your function works correctly.
-                                    */
+7.51 Create a function called 'tail' that takes an array and returns the "tail" end of it; everything but the first element.
+We can't use equality for comparing arrays, so it's tricky to write proper tests for functions like this, which return an array. 
+For now, we can simply print the result and see if it looks right. 
+The following lines should help you see if your function works correctly.
+*/
+const tail = (array) => array.slice(1);
 
 console.log("-- tail tests");
 console.log(tail([1, 2, 3]), "=== [2, 3]");
