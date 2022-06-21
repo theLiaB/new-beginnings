@@ -26,8 +26,8 @@ console.log(variedArray);
 7.13 Print a 2-dimensional array of numbers.
 */
 const dArray = [
-    [1, 2, 3],
-    [4, 5, 6],
+  [1, 2, 3],
+  [4, 5, 6],
 ];
 console.log(dArray);
 
@@ -53,12 +53,12 @@ What does it return when given an empty array? Remember to write tests!*/
 
 const head = (array1) => array1[0];
 console.log(
-    "1 is the first value in array [1,2,4,5]",
-    head([1, 3, 4, 5]) === 1
+  "1 is the first value in array [1,2,4,5]",
+  head([1, 3, 4, 5]) === 1
 );
 console.log(
-    "abc is the first value in array [abc, 123, doremi] ",
-    head(["abc", 123, "doremi"]) === "abc"
+  "abc is the first value in array [abc, 123, doremi] ",
+  head(["abc", 123, "doremi"]) === "abc"
 );
 //console.log( "if we call head() with no input we get an 'undefined' response", head() === undefined);
 
@@ -73,7 +73,8 @@ console.log("Bob is at index 1 in names:", isAtIndex("Bob", 1, names));
 console.log("Bob is not at index 0 in names:", !isAtIndex("Bob", 0, names));
 console.log("3 is at index 0 in these numbers:", isAtIndex(3, 0, [3, 2, 1]));
 console.log(
-    "2 is not at index 2 in these numbers:", !isAtIndex(2, 2, [3, 2, 1])
+  "2 is not at index 2 in these numbers:",
+  !isAtIndex(2, 2, [3, 2, 1])
 );
 /*
 7.25 Create a function called 'area' that takes a rectangle and returns its area. 
@@ -81,8 +82,8 @@ The rectangle is represented by an array with 2 numbers: [length, width].
 The following lines should help test if your function works correctly. They should print true.
 */
 const area = ([length, width]) => {
-    const number = length * width;
-    return number;
+  const number = length * width;
+  return number;
 };
 
 console.log("area tests");
@@ -97,21 +98,21 @@ and returns the difference between the areas of the rectangles.
 Each rectangle is represented by an array with 2 numbers: [length, width].
 */
 const areaDifference = ([length1, width1], [length2, width2]) => {
-    const area1 = length1 * width1;
-    const area2 = length2 * width2;
-    return Math.abs(area1 - area2);
+  const area1 = length1 * width1;
+  const area2 = length2 * width2;
+  return Math.abs(area1 - area2);
 };
 console.log(
-    "The difference between 2 and 9 is 7",
-    areaDifference([1, 2], [3, 3]) === 7
+  "The difference between 2 and 9 is 7",
+  areaDifference([1, 2], [3, 3]) === 7
 );
 console.log(
-    "The difference between 14 and 18 is 7",
-    areaDifference([7, 2], [6, 3]) === 4
+  "The difference between 14 and 18 is 7",
+  areaDifference([7, 2], [6, 3]) === 4
 );
 console.log(
-    "The difference between 49 and 18 is not 9",
-    areaDifference([7, 7], [6, 3]) !== 9
+  "The difference between 49 and 18 is not 9",
+  areaDifference([7, 7], [6, 3]) !== 9
 );
 /*
 7.252 Create a function called 'volumeDifference' that takes two cuboids 
@@ -120,17 +121,17 @@ Each cuboid is represented by an array with 3 numbers: [length, width, height].
 The volume of a cuboid can be calculated by multiplying length x width x height.
 */
 const volumeDifference = ([a1, b1, c1], [a2, b2, c2]) => {
-    const vol1 = a1 * b1 * c1;
-    const vol2 = a2 * b2 * c2;
-    return Math.abs(vol1 - vol2);
+  const vol1 = a1 * b1 * c1;
+  const vol2 = a2 * b2 * c2;
+  return Math.abs(vol1 - vol2);
 };
 console.log(
-    "The difference between 6 and 210 is 204",
-    volumeDifference([1, 2, 3], [5, 6, 7]) === 204
+  "The difference between 6 and 210 is 204",
+  volumeDifference([1, 2, 3], [5, 6, 7]) === 204
 );
 console.log(
-    "The difference between 14 and 84 is not 204",
-    volumeDifference([1, 2, 7], [2, 6, 7]) !== 204
+  "The difference between 14 and 84 is not 204",
+  volumeDifference([1, 2, 7], [2, 6, 7]) !== 204
 );
 /*
 7.26 Create a function called 'suitValue' that takes a card suit 
@@ -144,17 +145,17 @@ spades: 3
 */
 
 const suitValue = (suit) => {
-    if (suit === "clubs") {
-        return 0;
-    }
-    if (suit === "diamonds") {
-        return 1;
-    }
-    if (suit === "hearts") {
-        return 2;
-    } else {
-        return 3;
-    }
+  if (suit === "clubs") {
+    return 0;
+  }
+  if (suit === "diamonds") {
+    return 1;
+  }
+  if (suit === "hearts") {
+    return 2;
+  } else {
+    return 3;
+  }
 };
 
 console.log("spades is worth 3 points", suitValue("spades") === 3);
@@ -172,34 +173,34 @@ Given the two cards [11, 'spades'] and [11, 'hearts'], the first one is the high
 */
 
 const highCard = ([cardValue1, cardSuit1], [cardValue2, cardSuit2]) => {
-    if (cardValue1 > cardValue2) {
-        return true;
-    } else if (cardValue1 === cardValue2) {
-        if (suitValue(cardSuit1) > suitValue(cardSuit2)) {
-            return true;
-        } else {
-            return false;
-        }
+  if (cardValue1 > cardValue2) {
+    return true;
+  } else if (cardValue1 === cardValue2) {
+    if (suitValue(cardSuit1) > suitValue(cardSuit2)) {
+      return true;
     } else {
-        return false;
+      return false;
     }
+  } else {
+    return false;
+  }
 };
 
 console.log(
-    "4 of Hearts is higher than 3 of Spades",
-    highCard([3, "spades"], [4, "hearts"]) === false
+  "4 of Hearts is higher than 3 of Spades",
+  highCard([3, "spades"], [4, "hearts"]) === false
 );
 
 console.log(
-    "Jack of Spades beats the Jack of Hearts",
-    highCard([11, "spades"], [11, "hearts"]) === true
+  "Jack of Spades beats the Jack of Hearts",
+  highCard([11, "spades"], [11, "hearts"]) === true
 );
 
 /*7.27 Print the number 8 from the following 2D array.*/
 const matrix1 = [
-    [1, 2, 3, 4],
-    [5, 6, 7, 8],
-    [9, 10, 11, 12],
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
 ];
 console.log(matrix1[1][3]);
 /*
@@ -210,7 +211,7 @@ row and column in the 2D array matrix, otherwise false.
 For example, the number 10 is found at row 3, column 2 in the previous matrix.
 */
 const valueInMatrix = (number, row, column, matrix) =>
-    matrix[row - 1][column - 1] === number;
+  matrix[row - 1][column - 1] === number;
 
 console.log(valueInMatrix(2, 1, 2, matrix1));
 console.log(valueInMatrix(10, 3, 2, matrix1));
@@ -226,13 +227,13 @@ console.log(names[names.length - 1]);
 
 /*7.32 Print the sum of the lengths of the following arrays.*/
 const groceries = [
-    "rice",
-    "bananas",
-    "avocados",
-    "blueberries",
-    "spinach",
-    "chickpeas",
-    "canned beans",
+  "rice",
+  "bananas",
+  "avocados",
+  "blueberries",
+  "spinach",
+  "chickpeas",
+  "canned beans",
 ];
 const officeSupplies = ["pen", "paper", "tape", "stapler"];
 
@@ -240,32 +241,32 @@ console.log(groceries.length + officeSupplies.length);
 
 /*7.33 Print the length of the first row in the following 2D array. */
 const matrix2 = [
-    ["a", "b", "c", "d", "e", "f", "g", "h"],
-    ["i", "j", "k", "l", "m", "n", "o", "p"],
-    ["q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
+  ["a", "b", "c", "d", "e", "f", "g", "h"],
+  ["i", "j", "k", "l", "m", "n", "o", "p"],
+  ["q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
 ];
 console.log(matrix2[0].length);
 
 /*7.34 Create a function called 'last' that takes an array and returns its last element.*/
 const last = (array) => {
-    inEnvelope = array[array.length - 1];
-    return inEnvelope[inEnvelope.length - 1];
+  inEnvelope = array[array.length - 1];
+  return inEnvelope[inEnvelope.length - 1];
 };
 console.log(last(names));
 console.log(last(matrix1));
 
 /*7.35 Print the length of the last row in the following 2D array.*/
 const bigMatrix = [
-    [45, 39, 89, 67, 7, 71, 85, 44, 47, 39],
-    [89, 32, 81, 19, 43, 17, 47, 10, 6, 58],
-    [8, 59, 79, 3, 14, 21, 83, 18, 27, 49],
-    [24, 32, 72, 3, 22, 32, 5, 69, 15, 61],
-    [64, 31, 73, 28, 5, 98, 6, 29, 90, 4],
-    [54, 6, 92, 92, 56, 84, 81, 7, 53, 62],
-    [6, 33, 41, 77, 23, 3, 46, 19, 57, 40],
-    [3, 79, 65, 30, 79, 54, 25, 53, 35, 71],
-    [60, 1, 54, 49, 44, 61, 42, 50, 18, 43],
-    [91, 46, 7, 50, 95, 14, 45, 4, 98, 22],
+  [45, 39, 89, 67, 7, 71, 85, 44, 47, 39],
+  [89, 32, 81, 19, 43, 17, 47, 10, 6, 58],
+  [8, 59, 79, 3, 14, 21, 83, 18, 27, 49],
+  [24, 32, 72, 3, 22, 32, 5, 69, 15, 61],
+  [64, 31, 73, 28, 5, 98, 6, 29, 90, 4],
+  [54, 6, 92, 92, 56, 84, 81, 7, 53, 62],
+  [6, 33, 41, 77, 23, 3, 46, 19, 57, 40],
+  [3, 79, 65, 30, 79, 54, 25, 53, 35, 71],
+  [60, 1, 54, 49, 44, 61, 42, 50, 18, 43],
+  [91, 46, 7, 50, 95, 14, 45, 4, 98, 22],
 ];
 console.log(bigMatrix[bigMatrix.length - 1].length);
 /*7.36 Create a function called 'isEmpty' that takes an array and returns true if it is empty, otherwise false.
@@ -281,30 +282,30 @@ console.log("noRay has no items in it:", isEmpty(noRay) === false);
 /*7.4 Create a function called 'goodColor' that takes a single color (string) and an array of good colors (strings). It should return true if the color is in the array, otherwise false.
  */
 const goodColor = (string, strings) =>
-    strings.includes(string) ? true : false;
+  strings.includes(string) ? true : false;
 
 const sampleRay1 = ["silver", "green", "blue", "purple", "gold"];
 console.log(
-    "sampleRay1 has blue in it:",
-    goodColor("blue", sampleRay1) === true
+  "sampleRay1 has blue in it:",
+  goodColor("blue", sampleRay1) === true
 );
 console.log(
-    "sampleRay1 doesn't have yellow in it:",
-    goodColor("yellow", sampleRay1) === false
+  "sampleRay1 doesn't have yellow in it:",
+  goodColor("yellow", sampleRay1) === false
 );
 /*7.41 Create a function called 'needToBuy' that takes a single item (string) and an array of owned items (strings). It should return true if the item isn't in the owned list (meaning we need to buy it!), otherwise false.
  */
 const needToBuy = (string, strings) =>
-    strings.includes(string) ? false : true;
+  strings.includes(string) ? false : true;
 
 const sampleRay2 = ["dog", "car", "lamp"];
 console.log(
-    "sampleRay2 says we have a dog:",
-    needToBuy("dog", sampleRay2) === false
+  "sampleRay2 says we have a dog:",
+  needToBuy("dog", sampleRay2) === false
 );
 console.log(
-    "sampleRay2 says we need a tiger:",
-    needToBuy("tiger", sampleRay2) === true
+  "sampleRay2 says we need a tiger:",
+  needToBuy("tiger", sampleRay2) === true
 );
 /*7.42 Create a function called 'hasNull' that takes an array and returns true
 if any of the values are null, otherwise false.
@@ -319,19 +320,19 @@ console.log("sampleRay2 has no null in it", hasNull(sampleRay2) === false);
 It should return true if any of the 3 rows contain a null value, otherwise false.
 */
 const badMatrix = (array) =>
-    array[0].includes(null) | array[1].includes(null) | array[2].includes(null) ?
-    true :
-    false;
+  array[0].includes(null) | array[1].includes(null) | array[2].includes(null)
+    ? true
+    : false;
 
 const weeMatrix = [
-    [45, 39, 89, 67, 7, 71, 85, 44, 47, 39],
-    [89, 32, 81, 19, 43, 17, 47, 10, 6, 58],
-    [8, 59, 79, 3, 14, 21, 83, 18, 27, 49],
+  [45, 39, 89, 67, 7, 71, 85, 44, 47, 39],
+  [89, 32, 81, 19, 43, 17, 47, 10, 6, 58],
+  [8, 59, 79, 3, 14, 21, 83, 18, 27, 49],
 ];
 const nullriffic = [
-    [45, 39, 89, 67, null],
-    [89, 32, 81, 19, null, 47, 10, 6, 58],
-    [8, 59, 79, 3, 14, 21, 83, 18, 27, 49],
+  [45, 39, 89, 67, null],
+  [89, 32, 81, 19, null, 47, 10, 6, 58],
+  [8, 59, 79, 3, 14, 21, 83, 18, 27, 49],
 ];
 console.log("weeMatrix is a good matrix", badMatrix(weeMatrix) === false);
 console.log("nullriffic is a bad matrix", badMatrix(nullriffic) === true);
@@ -395,15 +396,20 @@ console.log(tail([1, 2]), "=== [2]");
 console.log(tail([1]), "=== []");
 console.log(tail([]), "=== []");
 
+/*7.511 Create a function called 'firstIsRepeated' that 
+takes an array and returns true if the first element 
+exists more than once in the array, otherwise false.
+*/
+const firstIsRepeated = (array) => {
+  const end = array.slice(1);
+  return end.includes(array[0]);
+};
+console.log(firstIsRepeated([1, 2, 3, 4, 4, 2, 4]));
 /*
-                                    7.511 Create a function called 'firstIsRepeated' that takes an array and returns true if the first element exists more than once in the array, otherwise false.
-                                    */
+                                      7.52 Create a function called 'init' that takes an array and returns all the elements except the last one.
 
-/*
-                                    7.52 Create a function called 'init' that takes an array and returns all the elements except the last one.
-
-                                    The following lines should help you see if your function works correctly.
-                                    */
+                                      The following lines should help you see if your function works correctly.
+                                      */
 
 console.log("-- init tests");
 console.log(init([1, 2, 3, 4]), "=== [1, 2, 3]");
@@ -479,20 +485,20 @@ console.log(middleN(1, [1, 2, 3, 4, 5, 6]), "=== [4]");
 
 console.log("-- top3 tests");
 console.log(
-    top3(["apple", "date", "cherry", "banana"]),
-    "=== ['apple', 'banana', 'cherry']"
+  top3(["apple", "date", "cherry", "banana"]),
+  "=== ['apple', 'banana', 'cherry']"
 );
 console.log(
-    top3(["apple", "date", "cherry", "apple", "apple", "banana"]),
-    "=== ['apple', 'apple', 'apple']"
+  top3(["apple", "date", "cherry", "apple", "apple", "banana"]),
+  "=== ['apple', 'apple', 'apple']"
 );
 console.log(
-    top3(["cherry", "banana", "apple"]),
-    "=== ['apple', 'banana', 'cherry']"
+  top3(["cherry", "banana", "apple"]),
+  "=== ['apple', 'banana', 'cherry']"
 );
 console.log(
-    top3(["date", "cherry", "banana", "Elderberry"]),
-    "=== ['Elderberry', 'banana', 'cherry']"
+  top3(["date", "cherry", "banana", "Elderberry"]),
+  "=== ['Elderberry', 'banana', 'cherry']"
 );
 
 /*
@@ -503,16 +509,16 @@ console.log(
 
 console.log("-- topN tests");
 console.log(
-    topN(3, ["apple", "date", "cherry", "banana"]),
-    "=== ['apple', 'banana', 'cherry']"
+  topN(3, ["apple", "date", "cherry", "banana"]),
+  "=== ['apple', 'banana', 'cherry']"
 );
 console.log(
-    topN(2, ["apple", "date", "cherry", "apple", "apple", "banana"]),
-    "=== ['apple', 'apple']"
+  topN(2, ["apple", "date", "cherry", "apple", "apple", "banana"]),
+  "=== ['apple', 'apple']"
 );
 console.log(
-    topN(1, ["apple", "date", "cherry", "Elderberry", "apple", "banana"]),
-    "=== ['Elderberry']"
+  topN(1, ["apple", "date", "cherry", "Elderberry", "apple", "banana"]),
+  "=== ['Elderberry']"
 );
 console.log(topN(1, ["apple"]), "=== ['apple']");
 
@@ -526,16 +532,16 @@ console.log(topN(1, ["apple"]), "=== ['apple']");
 
 console.log("-- bottom3 tests");
 console.log(
-    bottom3(["apple", "date", "cherry", "banana"]),
-    "=== ['date', 'cherry', 'banana']"
+  bottom3(["apple", "date", "cherry", "banana"]),
+  "=== ['date', 'cherry', 'banana']"
 );
 console.log(
-    bottom3(["apple", "date", "cherry", "apple", "apple", "banana"]),
-    "=== ['date', 'cherry', 'banana']"
+  bottom3(["apple", "date", "cherry", "apple", "apple", "banana"]),
+  "=== ['date', 'cherry', 'banana']"
 );
 console.log(
-    bottom3(["apple", "banana", "cherry"]),
-    "=== ['cherry', 'banana', 'apple']"
+  bottom3(["apple", "banana", "cherry"]),
+  "=== ['cherry', 'banana', 'apple']"
 );
 
 /*
@@ -546,16 +552,16 @@ console.log(
 
 console.log("-- bottomN tests");
 console.log(
-    bottomN(3, ["apple", "date", "cherry", "banana"]),
-    "=== ['date', 'cherry', 'banana']"
+  bottomN(3, ["apple", "date", "cherry", "banana"]),
+  "=== ['date', 'cherry', 'banana']"
 );
 console.log(
-    bottomN(2, ["apple", "date", "cherry", "apple", "apple", "banana"]),
-    "=== ['date', 'cherry']"
+  bottomN(2, ["apple", "date", "cherry", "apple", "apple", "banana"]),
+  "=== ['date', 'cherry']"
 );
 console.log(
-    bottomN(1, ["apple", "date", "cherry", "Elderberry", "apple", "banana"]),
-    "=== ['date']"
+  bottomN(1, ["apple", "date", "cherry", "Elderberry", "apple", "banana"]),
+  "=== ['date']"
 );
 console.log(bottomN(1, ["apple"]), "=== ['apple']");
 
@@ -586,8 +592,8 @@ const moreFruits = ["date", "elderberry"];
                                     7.804 Print the following 2D array with another row added to the end.
                                     */
 const matrix3 = [
-    [1, 2, 3],
-    [4, 5, 6],
+  [1, 2, 3],
+  [4, 5, 6],
 ];
 
 /*
