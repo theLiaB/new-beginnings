@@ -333,13 +333,16 @@ const nullriffic = [
     [89, 32, 81, 19, null, 47, 10, 6, 58],
     [8, 59, 79, 3, 14, 21, 83, 18, 27, 49],
 ];
-console.log("weeMatrix has no null in it", badMatrix(weeMatrix) === false);
-console.log("nullriffic has null in it", badMatrix(nullriffic) === true);
+console.log("weeMatrix is a good matrix", badMatrix(weeMatrix) === false);
+console.log("nullriffic is a bad matrix", badMatrix(nullriffic) === true);
 
-/*
-                              7.44 Create a function called 'goodMatrix' that takes a 2D array with 3 rows. It should return true if none of the 3 rows contain a null value, otherwise false.
-                              */
+/* 7.44 Create a function called 'goodMatrix' that takes a 2D array with 3 rows. It should return true if none of the 3 rows contain a null value, otherwise false.
+ */
+const goodMatrix = (array) => (badMatrix(array) ? false : true);
+//there has to be a way to do this using the 'not' aka '!' condition
 
+console.log("weeMatrix is a good matrix", goodMatrix(weeMatrix) === true);
+console.log("nullriffic is a bad matrix", goodMatrix(nullriffic) === false);
 /*
                               7.45 Create a function called 'middleIndex' that takes an array and returns the index of the middle element, as per the following tests.
 
