@@ -431,9 +431,9 @@ console.log(
 );
 
 /* 7.53 Create a function called 'take' that takes a number (n) and an array. It should return the first n elements of the array.
+The following lines should help you see if your function works correctly.*/
 
-                                    The following lines should help you see if your function works correctly.
-                                    */
+const take = (numberTake, arrayTake) => arrayTake.slice(0, numberTake);
 
 console.log("-- take tests");
 console.log(take(3, [1, 2, 3, 4]), "=== [1, 2, 3]");
@@ -441,11 +441,10 @@ console.log(take(1, [1, 2, 3, 4]), "=== [1]");
 console.log(take(0, [1, 2, 3, 4]), "=== []");
 console.log(take(9, [1, 2, 3, 4]), "=== [1, 2, 3, 4]");
 
-/*
-                                    7.54 Create a function called 'drop' that takes a number (n) and an array. It should drop the first n elements of the array and return the rest.
-
-                                    The following lines should help you see if your function works correctly.
-                                    */
+/*7.54 Create a function called 'drop' that takes a number (n) and an array. 
+It should drop the first n elements of the array and return the rest.
+The following lines should help you see if your function works correctly.*/
+const drop = (numberDrop, arrayDrop) => arrayDrop.slice(numberDrop);
 
 console.log("-- drop tests");
 console.log(drop(0, [1, 2, 3, 4]), "=== [1, 2, 3, 4]");
@@ -455,11 +454,11 @@ console.log(drop(3, [1, 2, 3, 4]), "=== [4]");
 console.log(drop(4, [1, 2, 3, 4]), "=== []");
 console.log(drop(9, [1, 2, 3, 4]), "=== []");
 
-/*
-                                    7.55 Create a function called 'middle3' that takes an array (of at least 3 elements) and returns the middle 3 elements (as an array), as per the following tests.
+/*7.55 Create a function called 'middle3' that takes an array (of at least 3 elements) and returns the middle 3 elements (as an array), as per the following tests.
+The following lines should help you see if your function works correctly.*/
 
-                                    The following lines should help you see if your function works correctly.
-                                    */
+const middle3 = (midArray) =>
+  midArray.slice(midArray.length / 2 - 1, midArray.length / 2 + 2);
 
 console.log("-- middle3 tests");
 console.log(middle3([1, 2, 3]), "=== [1, 2, 3]");
@@ -468,11 +467,15 @@ console.log(middle3([1, 2, 3, 4, 5]), "=== [2, 3, 4]");
 console.log(middle3([1, 2, 3, 4, 5, 6]), "=== [3, 4, 5]");
 console.log(middle3([1, 2, 3, 4, 5, 6, 7]), "=== [3, 4, 5]");
 
-/*
-                                    7.551 Create a function called 'middleN' that takes a number (n) and an array (of at least n elements). It should return the middle n elements.
-
-                                    The following lines should help you see if your function works correctly.
-                                    */
+/*7.551 Create a function called 'middleN' that takes a number (n) and an array (of at least n elements). It should return the middle n elements.
+The following lines should help you see if your function works correctly. */
+const middleN = (midN, midNArray) =>
+  midNArray.length >= midN
+    ? midNArray.slice(
+        midNArray.length / 2 - Math.floor(midN / 2),
+        midNArray.length / 2 + Math.ceil(midN / 2)
+      )
+    : "error";
 
 console.log("-- middleN tests");
 console.log(middleN(3, [1, 2, 3, 4, 5]), "=== [2, 3, 4]");
