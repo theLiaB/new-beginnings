@@ -15,7 +15,7 @@ console.log(arraysForEveryone);
 /*
 7.11 Print an array of your top 3 favorite colors (as strings) without creating a variable.
 */
-console.log("purple", "orange", "green");
+console.log(["purple", "orange", "green"]);
 
 /*
 7.12 Print an array of 4 different types of values.
@@ -60,7 +60,10 @@ console.log(
   "abc is the first value in array [abc, 123, doremi] ",
   head(["abc", 123, "doremi"]) === "abc"
 );
-//console.log( "if we call head() with no input we get an 'undefined' response", head() === undefined);
+console.log(
+  "if we call head() with no input we get an 'undefined' response",
+  head([]) === undefined
+);
 
 /*
 7.24 Create a function called 'isAtIndex' that takes a value, a number, and an array. 
@@ -81,10 +84,7 @@ console.log(
 The rectangle is represented by an array with 2 numbers: [length, width].
 The following lines should help test if your function works correctly. They should print true.
 */
-const area = ([length, width]) => {
-  const number = length * width;
-  return number;
-};
+const area = ([length, width]) => length * width;
 
 console.log("area tests");
 console.log(area([1, 2]) === 2);
@@ -144,22 +144,11 @@ hearts: 2
 spades: 3
 */
 
-const suitValue = (suit) => {
-  if (suit === "clubs") {
-    return 0;
-  }
-  if (suit === "diamonds") {
-    return 1;
-  }
-  if (suit === "hearts") {
-    return 2;
-  } else {
-    return 3;
-  }
-};
+const suitValue = (suit) =>
+  suit === "clubs" ? 0 : suit === "diamonds" ? 1 : suit === "hearts" ? 2 : 3;
 
 console.log("spades is worth 3 points", suitValue("spades") === 3);
-console.log("hearts is not worth 3 points", suitValue("hearts") === 2);
+console.log("hearts is not worth 3 points", suitValue("hearts") !== 3);
 
 /*
 7.261 Create a function called 'highCard' that takes two cards and returns the higher card of the two. 
@@ -185,6 +174,7 @@ const highCard = ([cardValue1, cardSuit1], [cardValue2, cardSuit2]) => {
     return false;
   }
 };
+// try this with a ternary
 
 console.log(
   "4 of Hearts is higher than 3 of Spades",
@@ -248,12 +238,12 @@ const matrix2 = [
 console.log(matrix2[0].length);
 
 /*7.34 Create a function called 'last' that takes an array and returns its last element.*/
-const last = (array) => {
-  inEnvelope = array[array.length - 1];
-  return inEnvelope[inEnvelope.length - 1];
-};
+const last = (array) => array[array.length - 1];
+
 console.log(last(names));
 console.log(last(matrix1));
+
+//write tests with a true or false answer
 
 /*7.35 Print the length of the last row in the following 2D array.*/
 const bigMatrix = [
@@ -269,20 +259,20 @@ const bigMatrix = [
   [91, 46, 7, 50, 95, 14, 45, 4, 98, 22],
 ];
 console.log(bigMatrix[bigMatrix.length - 1].length);
+
 /*7.36 Create a function called 'isEmpty' that takes an array and returns true if it is empty, otherwise false.
  */
-const isEmpty = (array) => (array.length > 0 ? true : false);
+const isEmpty = (array) => array.length === 0;
 
 const noRay = [];
-console.log("bigMatrix has items in it:", isEmpty(bigMatrix) === true);
-console.log("noRay has no items in it:", isEmpty(noRay) === false);
+console.log("bigMatrix has items in it:", isEmpty(bigMatrix) === false);
+console.log("noRay has no items in it:", isEmpty(noRay) === true);
 
 // Practice using the includes() method
 
 /*7.4 Create a function called 'goodColor' that takes a single color (string) and an array of good colors (strings). It should return true if the color is in the array, otherwise false.
  */
-const goodColor = (string, strings) =>
-  strings.includes(string) ? true : false;
+const goodColor = (color, palette) => palette.includes(color);
 
 const sampleRay1 = ["silver", "green", "blue", "purple", "gold"];
 console.log(
@@ -295,8 +285,7 @@ console.log(
 );
 /*7.41 Create a function called 'needToBuy' that takes a single item (string) and an array of owned items (strings). It should return true if the item isn't in the owned list (meaning we need to buy it!), otherwise false.
  */
-const needToBuy = (string, strings) =>
-  strings.includes(string) ? false : true;
+const needToBuy = (string, strings) => !strings.includes(string);
 
 const sampleRay2 = ["dog", "car", "lamp"];
 console.log(
@@ -310,7 +299,7 @@ console.log(
 /*7.42 Create a function called 'hasNull' that takes an array and returns true
 if any of the values are null, otherwise false.
  */
-const hasNull = (array) => (array.includes(null) ? true : false);
+const hasNull = (array) => array.includes(null);
 
 const noRay2 = [null, "5", 8];
 console.log("noRay2 has null in it", hasNull(noRay2) === true);
@@ -320,9 +309,7 @@ console.log("sampleRay2 has no null in it", hasNull(sampleRay2) === false);
 It should return true if any of the 3 rows contain a null value, otherwise false.
 */
 const badMatrix = (array) =>
-  array[0].includes(null) | array[1].includes(null) | array[2].includes(null)
-    ? true
-    : false;
+  array[0].includes(null) || array[1].includes(null) || array[2].includes(null);
 
 const weeMatrix = [
   [45, 39, 89, 67, 7, 71, 85, 44, 47, 39],
@@ -339,8 +326,7 @@ console.log("nullriffic is a bad matrix", badMatrix(nullriffic) === true);
 
 /* 7.44 Create a function called 'goodMatrix' that takes a 2D array with 3 rows. It should return true if none of the 3 rows contain a null value, otherwise false.
  */
-const goodMatrix = (array) => (badMatrix(array) ? false : true);
-//there has to be a way to do this using the 'not' aka '!' condition
+const goodMatrix = (matrix) => !badMatrix(matrix);
 
 console.log("weeMatrix is a good matrix", goodMatrix(weeMatrix) === true);
 console.log("nullriffic is a bad matrix", goodMatrix(nullriffic) === false);
@@ -348,7 +334,7 @@ console.log("nullriffic is a bad matrix", goodMatrix(nullriffic) === false);
 /*7.45 Create a function called 'middleIndex' that takes an array and returns the index of the middle element, as per the following tests.
 Tip: Look up the Math.floor() function.*/
 
-const middleIndex = (array) => Math.floor(array.length * 0.5);
+const middleIndex = (array) => Math.floor(array.length / 2);
 
 console.log("-- middleIndex tests");
 console.log(middleIndex([1]) === 0);
@@ -359,7 +345,7 @@ console.log(middleIndex([1, 2, 3, 4, 5]) === 2);
 
 /*7.46 Create a function called 'middle' that takes an array and returns the middle element, as per the following tests.
  */
-const middle = (array) => array[Math.floor(array.length * 0.5)];
+const middle = (array) => array[middleIndex(array)];
 
 console.log("-- middle tests");
 console.log(middle([1]) === 1);
@@ -381,7 +367,7 @@ console.log(randomNumbers.slice(0, 3));
 console.log(randomNumbers.slice(3, 6));
 /*
 7.502 Print the last 3 random numbers, using slice().*/
-console.log(randomNumbers.slice(6));
+console.log(randomNumbers.slice(-3));
 /*
 7.51 Create a function called 'tail' that takes an array and returns the "tail" end of it; everything but the first element.
 We can't use equality for comparing arrays, so it's tricky to write proper tests for functions like this, which return an array. 
@@ -400,16 +386,16 @@ console.log(tail([]), "=== []");
 takes an array and returns true if the first element 
 exists more than once in the array, otherwise false.
 */
-const firstIsRepeated = (array) => {
-  const end = array.slice(1);
-  return end.includes(array[0]);
-};
+const firstIsRepeated = (array) => tail(array).includes(array[0]);
+
+//yes, we can use the functions inside the method statement but you have to give it a value inside before the method part
+
 console.log(firstIsRepeated([1, 2, 3, 4, 4, 2, 4]));
 /*
-                                      7.52 Create a function called 'init' that takes an array and returns all the elements except the last one.
+7.52 Create a function called 'init' that takes an array and returns all the elements except the last one.
+The following lines should help you see if your function works correctly. */
 
-                                      The following lines should help you see if your function works correctly.
-                                      */
+const init = (initArray) => initArray.slice(0, initArray.length - 1);
 
 console.log("-- init tests");
 console.log(init([1, 2, 3, 4]), "=== [1, 2, 3]");
@@ -418,15 +404,33 @@ console.log(init([9]), "=== []");
 console.log(init([]), "=== []");
 
 /*
-                                    7.521 Create a function called 'lastIsRepeated' that takes an array and returns true if the last element exists more than once in the array, otherwise false.
-                                    */
+7.521 Create a function called 'lastIsRepeated' that takes an array and returns true if the last element exists more than once in the array, otherwise false.
+ */
+const lastIsRepeated = (lastArray) =>
+  lastArray.slice(0, -1).includes(lastArray[lastArray.length - 1]);
 
-/*
-                                    7.522 Create a function called 'inner' that takes an array and returns all the elements except the first and last.
-                                    */
+console.log(
+  "The array [3,4,1,5,3,4] has a final element of 4 more than once in it",
+  lastIsRepeated([3, 4, 1, 5, 3, 4])
+);
+console.log(
+  "The array [3,7,1,5,3,4] has a final element of 4 once in it",
+  lastIsRepeated([3, 7, 1, 5, 3, 4]) === false
+);
+/* 7.522 Create a function called 'inner' that takes an array and returns all the elements except the first and last.
+ */
+const inner = (innerArray) => innerArray.slice(0, -1);
 
-/*
-                                    7.53 Create a function called 'take' that takes a number (n) and an array. It should return the first n elements of the array.
+console.log(
+  "The array [3,4,1,5,3,4] chopped at the middle is [4,1,5,3]",
+  inner([3, 4, 1, 5, 3, 4]) === true
+);
+console.log(
+  "The array [3,7,1,5,3,4] chopped at the middle is not [4,1,5,3]",
+  inner([3, 7, 1, 5, 3, 4]) === false
+);
+
+/* 7.53 Create a function called 'take' that takes a number (n) and an array. It should return the first n elements of the array.
 
                                     The following lines should help you see if your function works correctly.
                                     */
