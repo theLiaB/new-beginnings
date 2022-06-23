@@ -579,11 +579,10 @@ console.log(bottomN(1, ["apple"]), "=== ['apple']");
 
 // Practice adding elements to arrays
 
-/*
-                                    7.8 Print the following array with the number 4 added to the end, so we get [1, 2, 3, 4].
-                                    */
+/*7.8 Print the following array with the number 4 added to the end, so we get [1, 2, 3, 4].
+ */
 const oneTwoThree = [1, 2, 3];
-
+console.log(oneTwoThree);
 /*
                                     7.801 Print the following array with the number 1 added to the beginning, so we get [1, 2, 3, 4].
                                     */
