@@ -484,11 +484,11 @@ console.log(middleN(1, [1, 2, 3, 4, 5, 6]), "=== [4]");
 
 // Practice using the sort() method
 
-/*
-                                    7.6 Create a function called 'top3' that takes an array (of at least 3 strings) and returns the first 3 strings that occur in alphabetical order.
-
-                                    The following lines should help you see if your function works correctly.
-                                    */
+/*7.6 Create a function called 'top3' that takes an array (of at least 3 strings) and returns the first 3 strings that occur in alphabetical order.
+The following lines should help you see if your function works correctly.
+*/
+const top3 = (array) =>
+  array.length >= 3 ? array.sort().slice(0, 3) : "error";
 
 console.log("-- top3 tests");
 console.log(
@@ -508,11 +508,12 @@ console.log(
   "=== ['Elderberry', 'banana', 'cherry']"
 );
 
-/*
-                                    7.61 Create a function called 'topN' that takes a number (n) and an array (of at least n strings). It should return the first n strings that occur in alphabetical order.
-
-                                    The following lines should help you see if your function works correctly.
-                                    */
+/*7.61 Create a function called 'topN' that takes a number (n) and an array (of at least n strings). 
+It should return the first n strings that occur in alphabetical order.
+The following lines should help you see if your function works correctly.
+*/
+const topN = (topNum, arrayN) =>
+  arrayN.length >= topNum ? arrayN.sort().slice(0, topNum) : "error";
 
 console.log("-- topN tests");
 console.log(
@@ -531,11 +532,12 @@ console.log(topN(1, ["apple"]), "=== ['apple']");
 
 // Practice using the reverse() method
 
-/*
-                                    7.7 Create a function called 'bottom3' that takes an array (of at least 3 strings) and returns the last 3 strings that occur in reverse alphabetical order.
-
-                                    The following lines should help you see if your function works correctly.
-                                    */
+/*7.7 Create a function called 'bottom3' that takes an array (of at least 3 strings) 
+and returns the last 3 strings that occur in reverse alphabetical order.
+The following lines should help you see if your function works correctly.
+*/
+const bottom3 = (arrayBottom) =>
+  arrayBottom.length >= 3 ? arrayBottom.sort().reverse().slice(0, 3) : "error";
 
 console.log("-- bottom3 tests");
 console.log(
