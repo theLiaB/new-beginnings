@@ -553,11 +553,14 @@ console.log(
   "=== ['cherry', 'banana', 'apple']"
 );
 
-/*
-                                    7.71 Create a function called 'bottomN' that takes a number (n) and an array (of at least n strings). It should return the last n strings that occur in reverse alphabetical order.
-
-                                    The following lines should help you see if your function works correctly.
-                                    */
+/*7.71 Create a function called 'bottomN' that takes a number (n) and an array (of at least n strings). 
+It should return the last n strings that occur in reverse alphabetical order.
+The following lines should help you see if your function works correctly.
+*/
+const bottomN = (botNum, botArray) =>
+  botArray.length >= botNum
+    ? botArray.sort().reverse().slice(0, botNum)
+    : "error";
 
 console.log("-- bottomN tests");
 console.log(

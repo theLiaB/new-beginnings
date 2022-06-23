@@ -1,9 +1,17 @@
-const middleIndex = (array) => Math.floor(array.length/2);
+const bottomN = (bottomNum, bottomArray) =>
+  bottomArray >= bottomNum ? bottomArray.slice(bottomNum) : "error";
 
-console.log("-- middleIndex tests");
-console.log(middleIndex([1]) === 0);
-console.log(middleIndex([1, 2]) === 1);
-console.log(middleIndex([1, 2, 3]) === 1);
-console.log(middleIndex([1, 2, 3, 4]) === 2);
-console.log(middleIndex([1, 2, 3, 4, 5]) === 2);
-
+console.log("-- bottomN tests");
+console.log(
+  bottomN(3, ["apple", "date", "cherry", "banana"]),
+  "=== ['date', 'cherry', 'banana']"
+);
+console.log(
+  bottomN(2, ["apple", "date", "cherry", "apple", "apple", "banana"]),
+  "=== ['date', 'cherry']"
+);
+console.log(
+  bottomN(1, ["apple", "date", "cherry", "Elderberry", "apple", "banana"]),
+  "=== ['date']"
+);
+console.log(bottomN(1, ["apple"]), "=== ['apple']");
