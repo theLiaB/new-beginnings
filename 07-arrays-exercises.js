@@ -594,12 +594,12 @@ console.log(oneTwoThreeFour);
 const someNames = ["Alice", "Bob", "Carol"];
 const moreNames = [...someNames, "Dave"];
 console.log(moreNames, "===['Alice', 'Bob', 'Carol', 'Dave']");
-/*
-                                    7.803 Print the following two arrays added together, so we get ['apple', 'banana', 'cherry', 'date', 'elderberry'].
-                                    */
+
+/*7.803 Print the following two arrays added together, so we get ['apple', 'banana', 'cherry', 'date', 'elderberry']*/
 const fruits = ["apple", "banana", "cherry"];
 const moreFruits = ["date", "elderberry"];
-
+const allFruits = [...fruits, ...moreFruits];
+console.log(allFruits, "=== ['apple', 'banana', 'cherry'.'date','elderberry']");
 /*
                                     7.804 Print the following 2D array with another row added to the end.
                                     */
