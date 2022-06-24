@@ -600,19 +600,17 @@ const fruits = ["apple", "banana", "cherry"];
 const moreFruits = ["date", "elderberry"];
 const allFruits = [...fruits, ...moreFruits];
 console.log(allFruits, "=== ['apple', 'banana', 'cherry'.'date','elderberry']");
-/*
-                                    7.804 Print the following 2D array with another row added to the end.
-                                    */
+
+/*7.804 Print the following 2D array with another row added to the end.*/
 const matrix3 = [
   [1, 2, 3],
   [4, 5, 6],
 ];
+const matrix3plus = [...matrix3, [5, 3, 7]];
+console.log(matrix3plus, "=== [[1, 2, 3],[4, 5, 6],[5, 3, 7]]");
 
-/*
-                                    7.81 Create a function called 'nullHead' that takes an array and returns a new array with the first element replaced with null.
-
-                                    The following lines should help you see if your function works correctly.
-                                    */
+/*7.81 Create a function called 'nullHead' that takes an array and returns a new array with the first element replaced with null.
+The following lines should help you see if your function works correctly.*/
 
 console.log("-- nullHead tests");
 console.log(nullHead([1, 2, 3]), "=== [null, 2, 3]");
