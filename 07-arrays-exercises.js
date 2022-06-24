@@ -582,17 +582,18 @@ console.log(bottomN(1, ["apple"]), "=== ['apple']");
 /*7.8 Print the following array with the number 4 added to the end, so we get [1, 2, 3, 4].
  */
 const oneTwoThree = [1, 2, 3];
-console.log(oneTwoThree);
-/*
-                                    7.801 Print the following array with the number 1 added to the beginning, so we get [1, 2, 3, 4].
-                                    */
+const oneTwoThreePlus = [...oneTwoThree, 4];
+console.log(oneTwoThreePlus, "===[1,2,3,4]");
+
+/*7.801 Print the following array with the number 1 added to the beginning, so we get [1, 2, 3, 4]. */
 const twoThreeFour = [2, 3, 4];
+const oneTwoThreeFour = [1, ...twoThreeFour];
+console.log(oneTwoThreeFour);
 
-/*
-                                    7.802 Print the following array with the name 'Dave' added to the end, so we get ['Alice', 'Bob', 'Carol', 'Dave'].
-                                    */
+/*7.802 Print the following array with the name 'Dave' added to the end, so we get ['Alice', 'Bob', 'Carol', 'Dave'].*/
 const someNames = ["Alice", "Bob", "Carol"];
-
+const moreNames = [...someNames, "Dave"];
+console.log(moreNames, "===['Alice', 'Bob', 'Carol', 'Dave']");
 /*
                                     7.803 Print the following two arrays added together, so we get ['apple', 'banana', 'cherry', 'date', 'elderberry'].
                                     */
