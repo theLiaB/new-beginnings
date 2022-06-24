@@ -619,14 +619,16 @@ console.log(nullHead([1, 2, 3]), "=== [null, 2, 3]");
 console.log(nullHead(["a", "b", "c"]), "=== [null, b, c]");
 
 /*7.82 Create a function called 'append' that takes a value and an array, and returns a new array with the value added to the end.*/
-const append = (constAppend, arrayAppend) => {
-  return [...arrayAppend, constAppend];
-};
+const append = (constAppend, arrayAppend) => [...arrayAppend, constAppend];
+
 console.log("-- append tests");
 console.log(append(1, [2, 3, 4]), "=== [2, 3, 4, 1]");
 console.log(append(1, []), "=== [1]");
 
 /*7.821 Create a function called 'appendHead' that takes an array and returns a new array with its first value added to the end.*/
+const appendHead = (headArray) => [...headArray, headArray[0]];
+
+console.log(appendHead([2, 3, 4]), "=== [2, 3, 4, 2]");
 
 /*
                                     7.83 Create a function called 'swapEnds' that takes an array and returns a new array with the first and last elements swapped.
