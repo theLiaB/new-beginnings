@@ -2,26 +2,28 @@
 
 process.stdout.write("*8·01.\n");
 /*
-*8·01. Create a function called 'eqArrays' that takes two arrays and returns true if they are equal, otherwise false. Two arrays are considered equal if they are the same length and every element is equal (in the same order).
+*8·01. Create a function called 'eqArrays' that takes two arrays and returns true if they are equal, otherwise false. 
+Two arrays are considered equal if they are the same length and every element is equal (in the same order).
 
 Tip: The every() method can use the array indexes as a second argument of the callback function. See the documentation for more detail:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
 
 The following lines should help test if your function works correctly. They should print true.
 */
+const eqArrays = (compArray1, compArray2) =>
+  
+  // console.log('eqArrays tests');
+  // console.log(eqArrays([], []));
+  // console.log(eqArrays([1, 2, 3], [1, 2, 3]));
+  // console.log(!eqArrays([1, 2, 3], [1, 3, 2]));
+  // console.log(!eqArrays([1, 2, 3], [1, 2, 3, 4]));
+  // console.log(!eqArrays([1, 2, 3, 4], [1, 2, 3]));
+  // console.log(eqArrays(['Alice', 'Bob', 'Carol'], ['Alice', 'Bob', 'Carol']));
+  // console.log(eqArrays([1, 2, 3, [4, 5, 6]], [1, 2, 3, [4, 5, 6]]));
 
-// console.log('eqArrays tests');
-// console.log(eqArrays([], []));
-// console.log(eqArrays([1, 2, 3], [1, 2, 3]));
-// console.log(!eqArrays([1, 2, 3], [1, 3, 2]));
-// console.log(!eqArrays([1, 2, 3], [1, 2, 3, 4]));
-// console.log(!eqArrays([1, 2, 3, 4], [1, 2, 3]));
-// console.log(eqArrays(['Alice', 'Bob', 'Carol'], ['Alice', 'Bob', 'Carol']));
-// console.log(eqArrays([1, 2, 3, [4, 5, 6]], [1, 2, 3, [4, 5, 6]]));
+  // Practice using the some() method
 
-// Practice using the some() method
-
-process.stdout.write("\n*8·1.\n");
+  process.stdout.write("\n*8·1.\n");
 /*
 *8·1. Create a function called 'anyOdd' that takes an array of numbers and returns true if any of them are odd, otherwise false.
 
