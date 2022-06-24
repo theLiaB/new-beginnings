@@ -612,6 +612,8 @@ console.log(matrix3plus, "=== [[1, 2, 3],[4, 5, 6],[5, 3, 7]]");
 /*7.81 Create a function called 'nullHead' that takes an array and returns a new array with the first element replaced with null.
 The following lines should help you see if your function works correctly.*/
 
+const nullHead = (arrayHead) => [null, ...arrayHead.slice(1)];
+
 console.log("-- nullHead tests");
 console.log(nullHead([1, 2, 3]), "=== [null, 2, 3]");
 console.log(nullHead(["a", "b", "c"]), "=== [null, b, c]");
