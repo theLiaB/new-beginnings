@@ -419,16 +419,9 @@ console.log(
 );
 /* 7.522 Create a function called 'inner' that takes an array and returns all the elements except the first and last.
  */
-const inner = (innerArray) => innerArray.slice(0, -1);
+const inner = (innerArray) => innerArray.slice(1, -1);
 
-console.log(
-  "The array [3,4,1,5,3,4] chopped at the middle is [4,1,5,3]",
-  inner([3, 4, 1, 5, 3, 4]) === true
-);
-console.log(
-  "The array [3,7,1,5,3,4] chopped at the middle is not [4,1,5,3]",
-  inner([3, 7, 1, 5, 3, 4]) === false
-);
+console.log(inner([3, 4, 1, 5, 3, 4]), "=== [4, 1, 5, 3]");
 
 /* 7.53 Create a function called 'take' that takes a number (n) and an array. It should return the first n elements of the array.
 The following lines should help you see if your function works correctly.*/
@@ -627,32 +620,29 @@ console.log(append(1, []), "=== [1]");
 
 /*7.821 Create a function called 'appendHead' that takes an array and returns a new array with its first value added to the end.*/
 const appendHead = (headArray) => [...headArray, headArray[0]];
-
+console.log("-- append head tests");
 console.log(appendHead([2, 3, 4]), "=== [2, 3, 4, 2]");
 
-/*
-                                    7.83 Create a function called 'swapEnds' that takes an array and returns a new array with the first and last elements swapped.
+/*7.83 Create a function called 'swapEnds' that takes an array and returns a new array with the first and last elements swapped.
+Tip: Try using our head(), last(), and inner() functions to help.
+const swapEnds = (endsArray) => [
+  last(endsArray),
+  inner(endsArray),
+  first(endsArray),
+];
+console.log(swapEnds(3, 4, 2, 4, 5), "=== [5, 4, 2, 4, 3]");*/
 
-                                    Tip: Try using our head(), last(), and inner() functions to help.
-                                    */
-
-/*
-                                    7.84 Create a function called 'countUp' that takes an array of numbers counting up and returns a new array with the next number added to the end.
-
-                                    The following lines should help you see if your function works correctly.
-
-                                    Tip: Try using our last() function to help.
-                                    */
+/*7.84 Create a function called 'countUp' that takes an array of numbers counting up and returns a new array with the next number added to the end.
+The following lines should help you see if your function works correctly.
+Tip: Try using our last() function to help.*/
+const countUp = (upArray) => [...upArray.sort(), last(upArray) + 1];
 
 console.log("-- countUp tests");
 console.log(countUp([1, 2, 3]), "=== [1, 2, 3, 4]");
 console.log(countUp([25, 26, 27, 28, 29]), "=== [25, 26, 27, 28, 29, 30]");
 
-/*
-                                    7.841 Create a function called 'countMore' that takes an array of numbers in a sequence (with a constant interval) and returns a new array with the next number in the sequence added to the end.
-
-                                    The following lines should help you see if your function works correctly.
-                                    */
+/* 7.841 Create a function called 'countMore' that takes an array of numbers in a sequence (with a constant interval) and returns a new array with the next number in the sequence added to the end.
+ The following lines should help you see if your function works correctly.*/
 
 console.log("-- countMore tests");
 console.log(countMore([1, 2, 3]), "=== [1, 2, 3, 4]");
