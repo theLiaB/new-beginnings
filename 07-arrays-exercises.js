@@ -419,7 +419,9 @@ console.log(
 );
 /* 7.522 Create a function called 'inner' that takes an array and returns all the elements except the first and last.
  */
-const inner = (innerArray) => innerArray.slice(1, -1);
+const inner = (innerArray) => {
+  innerArray.slice(1, -1);
+};
 
 console.log(inner([3, 4, 1, 5, 3, 4]), "=== [4, 1, 5, 3]");
 
@@ -624,13 +626,13 @@ console.log("-- append head tests");
 console.log(appendHead([2, 3, 4]), "=== [2, 3, 4, 2]");
 
 /*7.83 Create a function called 'swapEnds' that takes an array and returns a new array with the first and last elements swapped.
-Tip: Try using our head(), last(), and inner() functions to help.
+Tip: Try using our head(), last(), and inner() functions to help.*/
 const swapEnds = (endsArray) => [
   last(endsArray),
   inner(endsArray),
   first(endsArray),
 ];
-console.log(swapEnds(3, 4, 2, 4, 5), "=== [5, 4, 2, 4, 3]");*/
+console.log(swapEnds(3, 4, 2, 4, 5), "=== [5, 4, 2, 4, 3]");
 
 /*7.84 Create a function called 'countUp' that takes an array of numbers counting up and returns a new array with the next number added to the end.
 The following lines should help you see if your function works correctly.
@@ -641,8 +643,13 @@ console.log("-- countUp tests");
 console.log(countUp([1, 2, 3]), "=== [1, 2, 3, 4]");
 console.log(countUp([25, 26, 27, 28, 29]), "=== [25, 26, 27, 28, 29, 30]");
 
-/* 7.841 Create a function called 'countMore' that takes an array of numbers in a sequence (with a constant interval) and returns a new array with the next number in the sequence added to the end.
+/* 7.841 Create a function called 'countMore' that takes an array of numbers in a sequence (with a constant interval)
+ and returns a new array with the next number in the sequence added to the end.
  The following lines should help you see if your function works correctly.*/
+const countMore = (seqArray) => [
+  ...seqArray.sort(),
+  seqArray[seqArray.length - 1] + (seqArray[1] - seqArray[0]),
+];
 
 console.log("-- countMore tests");
 console.log(countMore([1, 2, 3]), "=== [1, 2, 3, 4]");
@@ -651,19 +658,33 @@ console.log(countMore([1, 3, 5, 7]), "=== [1, 3, 5, 7, 9]");
 console.log(countMore([10, 20, 30, 40, 50]), "=== [10, 20, 30, 40, 50, 60]");
 console.log(countMore([-1, -2, -3]), "=== [-1, -2, -3, -4]");
 
-/*
-                                    7.85 Create a function called 'insertAt' that takes an index, a value, and an array. It should return a new array with the given value inserted at the given index.
-
-                                    The following lines should help you see if your function works correctly.
-
-                                    Tip: Try using our take() and drop() functions to help.
-                                    */
+/* 7.85 Create a function called 'insertAt' that takes an index, a value, and an array. 
+It should return a new array with the given value inserted at the given index.
+The following lines should help you see if your function works correctly.
+Tip: Try using our take() and drop() functions to help.
+const insertAt = (insertIndex, insertValue, insertArray) => [
+  ...take(insertIndex, insertArray),
+  insertValue,
+  ...drop(insertIndex, insertArray),
+];*/
 
 console.log("-- insertAt tests");
 console.log(insertAt(3, 4, [1, 2, 3, 5]), "=== [1, 2, 3, 4, 5]");
 console.log(insertAt(4, 5, [1, 2, 3, 4]), "=== [1, 2, 3, 4, 5]");
 console.log(insertAt(2, "c", ["a", "b", "d"]), "=== [a, b, c, d]");
 
-/*
-                                    7.86 Create a function called 'addToShoppingList' that takes a shopping list (array of strings) and an item (string). It should return a shopping list with the new item added to it. If the item is already in the shopping list, return the shopping list unchanged.
-                                    */
+/*7.86 Create a function called 'addToShoppingList' that takes a shopping list (array of strings) and an item (string). 
+It should return a shopping list with the new item added to it. 
+If the item is already in the shopping list, return the shopping list unchanged.*/
+
+const addToShoppingList = (shoppingList, itemToAdd) =>
+  shoppingList.includes(itemToAdd)
+    ? itemToAdd + " is already on the list"
+    : [...shoppingList, itemToAdd];
+
+console.log("-- shopping list tests");
+console.log(addToShoppingList(["soap", "potato", "parsley", "tiger"], "tiger"));
+console.log(
+  addToShoppingList(["soap", "potato", "parsley", "tiger"], "yo face"),
+  "=== [ 'soap', 'potato', 'parsley', 'tiger', 'yo face' ]"
+);
