@@ -11,6 +11,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 The following lines should help test if your function works correctly. They should print true.
 */
 const eqArrays = (compArray1, compArray2) =>
+  compArray1.length() === compArray2.length() ? [...compArray1.sort()] === [...compArray2.sort()]
   
   // console.log('eqArrays tests');
   // console.log(eqArrays([], []));
