@@ -11,20 +11,22 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 The following lines should help test if your function works correctly. They should print true.
 */
 const eqArrays = (compArray1, compArray2) =>
-  compArray1.length() === compArray2.length() ? [...compArray1.sort()] === [...compArray2.sort()]
-  
-  // console.log('eqArrays tests');
-  // console.log(eqArrays([], []));
-  // console.log(eqArrays([1, 2, 3], [1, 2, 3]));
-  // console.log(!eqArrays([1, 2, 3], [1, 3, 2]));
-  // console.log(!eqArrays([1, 2, 3], [1, 2, 3, 4]));
-  // console.log(!eqArrays([1, 2, 3, 4], [1, 2, 3]));
-  // console.log(eqArrays(['Alice', 'Bob', 'Carol'], ['Alice', 'Bob', 'Carol']));
-  // console.log(eqArrays([1, 2, 3, [4, 5, 6]], [1, 2, 3, [4, 5, 6]]));
+  compArray1.length() === compArray2.length()
+    ? [...compArray1.sort()] === [...compArray2.sort()]
+    : false;
 
-  // Practice using the some() method
+console.log("eqArrays tests");
+console.log(eqArrays([], []));
+console.log(eqArrays([1, 2, 3], [1, 2, 3]));
+console.log(!eqArrays([1, 2, 3], [1, 3, 2]));
+console.log(!eqArrays([1, 2, 3], [1, 2, 3, 4]));
+console.log(!eqArrays([1, 2, 3, 4], [1, 2, 3]));
+console.log(eqArrays(["Alice", "Bob", "Carol"], ["Alice", "Bob", "Carol"]));
+console.log(eqArrays([1, 2, 3, [4, 5, 6]], [1, 2, 3, [4, 5, 6]]));
 
-  //process.stdout.write("\n*8·1.\n");
+// Practice using the some() method
+
+//process.stdout.write("\n*8·1.\n");
 /*
 *8·1. Create a function called 'anyOdd' that takes an array of numbers and returns true if any of them are odd, otherwise false.
 
