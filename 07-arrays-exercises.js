@@ -407,7 +407,7 @@ console.log(init([]), "=== []");
 7.521 Create a function called 'lastIsRepeated' that takes an array and returns true if the last element exists more than once in the array, otherwise false.
  */
 const lastIsRepeated = (lastArray) =>
-  lastArray.slice(0, -1).includes(lastArray[lastArray.length - 1]);
+  init(lastArray).includes(lastArray[lastArray.length - 1]);
 
 console.log(
   "The array [3,4,1,5,3,4] has a final element of 4 more than once in it",
@@ -419,9 +419,7 @@ console.log(
 );
 /* 7.522 Create a function called 'inner' that takes an array and returns all the elements except the first and last.
  */
-const inner = (innerArray) => {
-  innerArray.slice(1, -1);
-};
+const inner = (innerArray) => tail(init(innerArray));
 
 console.log(inner([3, 4, 1, 5, 3, 4]), "=== [4, 1, 5, 3]");
 
@@ -629,10 +627,10 @@ console.log(appendHead([2, 3, 4]), "=== [2, 3, 4, 2]");
 Tip: Try using our head(), last(), and inner() functions to help.*/
 const swapEnds = (endsArray) => [
   last(endsArray),
-  inner(endsArray),
-  first(endsArray),
+  ...inner(endsArray),
+  head(endsArray),
 ];
-console.log(swapEnds(3, 4, 2, 4, 5), "=== [5, 4, 2, 4, 3]");
+console.log(swapEnds([3, 4, 2, 4, 5]), "=== [5, 4, 2, 4, 3]");
 
 /*7.84 Create a function called 'countUp' that takes an array of numbers counting up and returns a new array with the next number added to the end.
 The following lines should help you see if your function works correctly.
@@ -661,12 +659,12 @@ console.log(countMore([-1, -2, -3]), "=== [-1, -2, -3, -4]");
 /* 7.85 Create a function called 'insertAt' that takes an index, a value, and an array. 
 It should return a new array with the given value inserted at the given index.
 The following lines should help you see if your function works correctly.
-Tip: Try using our take() and drop() functions to help.
+Tip: Try using our take() and drop() functions to help.*/
 const insertAt = (insertIndex, insertValue, insertArray) => [
   ...take(insertIndex, insertArray),
   insertValue,
   ...drop(insertIndex, insertArray),
-];*/
+];
 
 console.log("-- insertAt tests");
 console.log(insertAt(3, 4, [1, 2, 3, 5]), "=== [1, 2, 3, 4, 5]");

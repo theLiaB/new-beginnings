@@ -1,6 +1,6 @@
 // Before anything else, we need a function that allows us to compare arrays so we can write better tests!
 
-//process.stdout.write("\n*8·01.\n");
+process.stdout.write("\n*8·01.\n");
 /*
 *8·01. Create a function called 'eqArrays' that takes two arrays and returns true if they are equal, otherwise false. 
 Two arrays are considered equal if they are the same length and every element is equal (in the same order).
@@ -24,7 +24,7 @@ console.log(eqArrays([1, 2, 3, [4, 5, 6]], [1, 2, 3, [4, 5, 6]]));
 
 // Practice using the some() method
 
-//process.stdout.write("\n*8·1.\n");
+process.stdout.write("\n*8·1.\n");
 /*
 *8·1. Create a function called 'anyOdd' that takes an array of numbers and returns true if any of them are odd, otherwise false.
 
@@ -36,24 +36,24 @@ The following lines should help test if your function works correctly. They shou
 // console.log(anyOdd([2, 4, 6, 7]));
 // console.log(!anyOdd([2, 4, 6, 8]));
 
-//process.stdout.write("\n*8·11.\n");
+process.stdout.write("\n*8·11.\n");
 /*
 *8·11. Create a function called 'anyNegative' that takes an array of numbers and returns true if any of them are negative, otherwise false.
 
 Remember to write tests!
 */
 
-//process.stdout.write("\n*8·12.\n");
+process.stdout.write("\n*8·12.\n");
 /*
  *8·12. Create a function called 'anyZs' that takes an array of words (strings) and returns true if the letter "z" (lowercase or uppercase) is found in any of the words, otherwise false.
  */
 
-//process.stdout.write("\n*8·13.\n");
+process.stdout.write("\n*8·13.\n");
 /*
  *8·13. Create a function called 'overTheLimit' that takes a limit (number) and an array of account balances (numbers). It should return true if any of the account balances is greater than the given limit, otherwise false.
  */
 
-//process.stdout.write("\n*8·14.\n");
+process.stdout.write("\n*8·14.\n");
 /*
 *8·14. Create a function called 'addNewLetterName' that takes a new name (string) and an array of names (strings). The goal is to add the new name to the names if there isn't already a name that starts with the same letter. The function should return a new array of names that contains the original names plus the new one if it starts with a unique letter, otherwise return the original names.
 
