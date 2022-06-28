@@ -10,8 +10,18 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 The following lines should help test if your function works correctly. They should print true.
 */
-const eqArrays = (arr1, arr2) =>
-  arr1.sort().every((element, index) => element === arr2[index]);
+const eqArrays = (arr1, arr2) => {
+  return (
+    arr1.length === arr2.length &&
+    arr1.every((element, index) => {
+      if (Array.isArray(element) && Array.isArray(arr2[index])) {
+        return eqArrays(element, arr2[index]);
+      } else {
+        return element === arr2[index];
+      }
+    })
+  );
+};
 
 console.log("eqArrays tests");
 console.log(eqArrays([], []));
