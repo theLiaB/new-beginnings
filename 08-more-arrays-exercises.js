@@ -37,21 +37,24 @@ console.log(eqArrays([1, 2, 3, [4, 5, 6]], [1, 2, 3, [4, 5, 6]]));
 process.stdout.write("\n*8·1.\n");
 /*
 *8·1. Create a function called 'anyOdd' that takes an array of numbers and returns true if any of them are odd, otherwise false.
-
 The following lines should help test if your function works correctly. They should print true.
 */
-
-// console.log('anyOdd tests');
-// console.log(anyOdd([1, 2, 4, 6]));
-// console.log(anyOdd([2, 4, 6, 7]));
-// console.log(!anyOdd([2, 4, 6, 8]));
+const anyOdd = (arrOdd) => arrOdd.some((element) => element % 2 === 1);
+console.log("anyOdd tests");
+console.log(anyOdd([1, 2, 4, 6]));
+console.log(anyOdd([2, 4, 6, 7]));
+console.log(!anyOdd([2, 4, 6, 8]));
 
 process.stdout.write("\n*8·11.\n");
 /*
 *8·11. Create a function called 'anyNegative' that takes an array of numbers and returns true if any of them are negative, otherwise false.
-
 Remember to write tests!
 */
+const anyNegative = (arrNegative) => arrNegative.some((element) => element < 0);
+console.log("anyNegative tests");
+console.log(anyNegative([-1, 2, 4, 6]));
+console.log(anyNegative([2, 4, -6, 7]));
+console.log(!anyNegative([2, 4, 6, 8]));
 
 process.stdout.write("\n*8·12.\n");
 /*
