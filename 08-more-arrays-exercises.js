@@ -58,13 +58,29 @@ console.log(!anyNegative([2, 4, 6, 8]));
 
 process.stdout.write("\n*8·12.\n");
 /*
- *8·12. Create a function called 'anyZs' that takes an array of words (strings) and returns true if the letter "z" (lowercase or uppercase) is found in any of the words, otherwise false.
+ *8·12. Create a function called 'anyZs' that takes an array of words (strings) and returns true if the letter "z" 
+ (lowercase or uppercase) is found in any of the words, otherwise false.
  */
+const anyZs = (arrZs) =>
+  arrZs.some((letter) => letter === "z" || letter === "Z");
+
+console.log("anyZs tests");
+console.log(anyZs(["a", "b", "t", "z"]));
+console.log(anyZs(["a", 4, "Z", 5]));
+console.log(!anyZs([2, 4, "w", "t"]));
 
 process.stdout.write("\n*8·13.\n");
 /*
- *8·13. Create a function called 'overTheLimit' that takes a limit (number) and an array of account balances (numbers). It should return true if any of the account balances is greater than the given limit, otherwise false.
+ *8·13. Create a function called 'overTheLimit' that takes a limit (number) and an array of account balances (numbers). 
+ It should return true if any of the account balances is greater than the given limit, otherwise false.
  */
+const overTheLimit = (limitNum, acctBalances) =>
+  acctBalances.some((balances) => balances > limitNum);
+
+console.log("overTheLimit tests");
+console.log(overTheLimit(200, [535, 320, 445]));
+console.log(overTheLimit(43, [55, 67, 445]));
+console.log(!overTheLimit(615, [535, 320, 445]));
 
 process.stdout.write("\n*8·14.\n");
 /*
