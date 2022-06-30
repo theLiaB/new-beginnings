@@ -128,12 +128,23 @@ console.log(irishGroup(["McJune", "McMac"]));
 console.log(irishGroup(["McFlurry", "McMain", "McFranks"]));
 console.log(!irishGroup(["McFlurry", "Main", "Franks"]));
 
-//process.stdout.write("\n*8·21.\n");
+process.stdout.write("\n*8·21.\n");
 /*
- *8·21. Create a function called 'allWhole' that takes an array of numbers and returns true if they are all whole numbers, otherwise false. Whole numbers are the numbers starting from 0 and counting up forever: 0, 1, 2, 3, 4, 5, ... . Negative numbers and decimals (e.g. 1.5) are not whole numbers.
+ *8·21. Create a function called 'allWhole' that takes an array of numbers
+and returns true if they are all whole numbers, otherwise false. 
+Whole numbers are the numbers starting from 0 and counting up forever: 
+0, 1, 2, 3, 4, 5, ... . Negative numbers and decimals (e.g. 1.5) are not whole numbers.
  */
+const allWhole = (arrWhole) =>
+  arrWhole.every((wholeNum) => wholeNum % 1 === 0 && wholeNum >= 0);
 
-//process.stdout.write("\n*8·22.\n");
+console.log("wholeNum tests");
+console.log(allWhole([1, 2, 4, 6]));
+console.log(allWhole([2, 4, 6666666, 7]));
+console.log(!allWhole([2, 4, 16, -8]));
+console.log(!allWhole([2, 4, 16, 8.32]));
+
+process.stdout.write("\n*8·22.\n");
 /*
 *8·22. Create a function called 'britishGang' that takes an array of surnames (strings) and returns true if they are all likely British. A surname that is likely British starts with "Mac" or "Mc", or is any of the top 10 British surnames: Smith, Jones, Williams, Taylor, Davies, Brown, Wilson, Evans, Thomas, Johson.
 
