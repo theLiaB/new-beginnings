@@ -84,20 +84,34 @@ console.log(!overTheLimit(615, [535, 320, 445]));
 
 process.stdout.write("\n*8·14.\n");
 /*
-*8·14. Create a function called 'addNewLetterName' that takes a new name (string) and an array of names (strings). The goal is to add the new name to the names if there isn't already a name that starts with the same letter. The function should return a new array of names that contains the original names plus the new one if it starts with a unique letter, otherwise return the original names.
-
+*8·14. Create a function called 'addNewLetterName' that takes a new name (string) and an array of names (strings). 
+The goal is to add the new name to the names if there isn't already a name that starts with the same letter. 
+The function should return a new array of names that contains the original names plus the new one if it starts with a unique letter,
+otherwise return the original names.
 The following lines should help test if your function works correctly. They should print true.
 */
+const addNewLetterName = (newName, arrOfNames) =>
+  arrOfNames.some((nameToTest) => nameToTest[0] === newName[0])
+    ? arrOfNames
+    : arrOfNames.concat(newName);
 
-// console.log('addNewLetterName tests');
-// console.log(eqArrays(
-//   addNewLetterName('Bob', ['Alice', 'Carol', 'Dave']),
-//   ['Alice', 'Carol', 'Dave', 'Bob']
-// ));
-// console.log(eqArrays(
-//   addNewLetterName('Bob', ['Alice', 'Beatrice', 'Carol', 'Dave']),
-//   ['Alice', 'Beatrice', 'Carol', 'Dave']
-// ));
+console.log("addNewLetterName tests");
+console.log(
+  eqArrays(addNewLetterName("Bob", ["Alice", "Carol", "Dave"]), [
+    "Alice",
+    "Carol",
+    "Dave",
+    "Bob",
+  ])
+);
+console.log(
+  eqArrays(addNewLetterName("Bob", ["Alice", "Beatrice", "Carol", "Dave"]), [
+    "Alice",
+    "Beatrice",
+    "Carol",
+    "Dave",
+  ])
+);
 
 // Practice using the every() method
 
