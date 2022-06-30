@@ -115,10 +115,18 @@ console.log(
 
 // Practice using the every() method
 
-//process.stdout.write("\n*8·2.\n");
+process.stdout.write("\n*8·2.\n");
 /*
- *8·2. Create a function called 'irishGroup' that takes an array of surnames (strings) and returns true if they all begin with "Mc", otherwise false.
+ *8·2. Create a function called 'irishGroup' that takes an array of surnames (strings) 
+ and returns true if they all begin with "Mc", otherwise false.
  */
+const irishGroup = (testSurnames) =>
+  testSurnames.every((testSrnm) => testSrnm.slice(0, 2) === "Mc");
+
+console.log("irishGroup tests");
+console.log(irishGroup(["McJune", "McMac"]));
+console.log(irishGroup(["McFlurry", "McMain", "McFranks"]));
+console.log(!irishGroup(["McFlurry", "Main", "Franks"]));
 
 //process.stdout.write("\n*8·21.\n");
 /*
